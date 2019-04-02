@@ -60,7 +60,7 @@ def sort_by_closest_neigbour_HEADER(data):
     return new_data[1:]
 
 
-def cluster_hierarcical(data_uncut, linkage_method = 'ward', linkage_metric = 'euclidean', fcluster_value = 800, fcluster_metric = 'distance', driftAll = False):
+def cluster_hierarcical(data_uncut, linkage_method = 'ward', linkage_metric = 'euclidean', fcluster_value = 800, fcluster_metric = 'distance', driftAll = False, noSort = False):
     # first step is to use only those constrains that are changing
     data_uncut = remove_redundant_timeseries_HEADER(data_uncut)
 
@@ -98,7 +98,8 @@ def cluster_hierarcical(data_uncut, linkage_method = 'ward', linkage_metric = 'e
     order_cluster = [key for key, _ in order_cluster]
 
     for key in order_cluster:
-        d[key] = sort_by_closest_neigbour_HEADER(d[key])
+        if not noSort:
+            d[key] = sort_by_closest_neigbour_HEADER(d[key])
 
 
         clusters_with_declare_names[key] = [d[key][0][:3]]
@@ -123,12 +124,12 @@ def cluster_hierarcical(data_uncut, linkage_method = 'ward', linkage_metric = 'e
 
 #    EXPERIMENTING WITH PARTIAL DETECTION
     def dingOptimalNumberOfPoints(algo):
-        point_detection_penalty = 1000
+        point_detection_penalty = 50
         x_lines = algo.predict(pen=point_detection_penalty)
 
 
-        while point_detection_penalty >= len(x_lines) :
-            point_detection_penalty = len(x_lines)
+        while point_detection_penalty >= len(x_lines):
+            point_detection_penalty -= 1
             x_lines = algo.predict(pen=point_detection_penalty)
         return x_lines
 

@@ -2,7 +2,7 @@
 
 
 Example run:
-python3 draw_graph.py -logName bpi_challenge_2013_open -logFolder bpic2013 -subL 100 -sliBy 50 -caseID 0 -timestampID 3 -noMinerful -driftFull
+python3 draw_graph.py -logName bpi_challenge_2013_open -logFolder bpic2013 -subL 100 -sliBy 50 -caseID 0 -timestampID 3 -noMinerful -driftAll
 
 Author: Anton Yeshchenko
 '''
@@ -42,6 +42,11 @@ parser.add_argument('-noMinerful', action='store_true', default=False,
 parser.add_argument('-driftAll', action='store_true', default=False,
                     dest='driftAll',
                     help='set this optional parameter if you want to generale change points for the whole set at the same time (if not set, every cluster will get its own changepoint)')
+
+parser.add_argument('-noSort', action='store_true', default=False,
+                    dest='noSort',
+                    help='set this optional parameter if the constrains shouldn\'t be sorted inside of clusters')
+
 #parser.add_argument("-type", type=int, help='0 support, 1 confidence, 2 interstFactor')
 # parser.add_argument("-colors", help="[bw] for black and while, [yb] for yellow to blue")
 
@@ -149,7 +154,7 @@ plot_with_hierarchy_clustering = True
 if plot_with_hierarchy_clustering:
     linkage_method = 'ward'
     linkage_metric = 'euclidean'
-    fcluster_value = 900
+    fcluster_value = 2000
     fcluster_metric = 'distance'
 
     confidence, \
@@ -158,7 +163,7 @@ if plot_with_hierarchy_clustering:
     clusters_with_declare_names, \
     clusters_dict, \
     cluster_order =\
-        cluster_hierarcical(confidence, linkage_method, linkage_metric, fcluster_value, fcluster_metric, args.driftAll)
+        cluster_hierarcical(confidence, linkage_method, linkage_metric, fcluster_value, fcluster_metric, args.driftAll, args.noSort)
     pp = pprint.PrettyPrinter(indent=4)
     pp.pprint(clusters_with_declare_names)
 
@@ -196,10 +201,10 @@ if plot_with_hierarchy_clustering:
     heatmaplike_graph_with_subplots(confidence, file_name_out, ts=ts, y_lines=cluster_bounds, x_lines_all=horisontal_separation_bounds_by_cluster, cluster_order = cluster_order)
     print('confidence graph drawn with a name: ' + file_name_out)
 
-    drawStackedAll(ts=ts, clusters_dict=clusters_dict, cluster_order = cluster_order)
-
-    drawStackedOne(ts=ts, clusters_dict=clusters_dict,key=cluster_order[5])
-    drawStackedOne(ts=ts, clusters_dict=clusters_dict,key=cluster_order[6])
+    # drawStackedAll(ts=ts, clusters_dict=clusters_dict, cluster_order = cluster_order)
+    #
+    # drawStackedOne(ts=ts, clusters_dict=clusters_dict,key=cluster_order[5])
+    # drawStackedOne(ts=ts, clusters_dict=clusters_dict,key=cluster_order[6])
     drawStackedOne(ts=ts, clusters_dict=clusters_dict,key=cluster_order[7])
 
 
