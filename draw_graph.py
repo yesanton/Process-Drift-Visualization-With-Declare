@@ -23,7 +23,7 @@ import subprocess
 from clustering_methods import cluster_hierarcical
 from core_drawing import heatmaplike_graph_with_subplots
 from core_stackedPlot_drawing import drawStackedAll, drawStackedOne
-from extra_methods import timestamp_ticks, importData
+from extra_methods import timestamp_ticks, importData, saveConstrainsPerCluster
 
 parser = argparse.ArgumentParser()
 # parser.add_argument("--tStart", type=int)
@@ -130,7 +130,7 @@ ts = timestamp_ticks(sliding_window_step=sliBy,
                      case_ind=caseID,
                      timestamp_ind=timestampID)
 
-print (ts)
+# print (ts)
 dataset_link = Path("data_from_minerful/"+dataset_moto+"_"+ str(tStart) + "_" + str(subL) + "_"+ str(sliBy) + '.csv')
 sequences, hea , _= importData(dataset_link)
 
@@ -154,8 +154,9 @@ plot_with_hierarchy_clustering = True
 if plot_with_hierarchy_clustering:
     linkage_method = 'ward'
     linkage_metric = 'euclidean'
-    fcluster_value = 2000
+    fcluster_value = 3000
     fcluster_metric = 'distance'
+    # fcluster_metric = 'maxclust'
 
     confidence, \
     cluster_bounds, \
@@ -164,8 +165,9 @@ if plot_with_hierarchy_clustering:
     clusters_dict, \
     cluster_order =\
         cluster_hierarcical(confidence, linkage_method, linkage_metric, fcluster_value, fcluster_metric, args.driftAll, args.noSort)
-    pp = pprint.PrettyPrinter(indent=4)
-    pp.pprint(clusters_with_declare_names)
+
+    # pp = pprint.PrettyPrinter(indent=4)
+    # pp.pprint(clusters_with_declare_names)
 
     # draw_graph(confidence, plot_type, file_name_out)
 
@@ -203,9 +205,24 @@ if plot_with_hierarchy_clustering:
 
     # drawStackedAll(ts=ts, clusters_dict=clusters_dict, cluster_order = cluster_order)
     #
-    # drawStackedOne(ts=ts, clusters_dict=clusters_dict,key=cluster_order[5])
+
+
+
+    for i,j in zip(cluster_order, range(len(cluster_order))):
+
+        # output the declare constraints in the good format for minerful to draw
+        saveConstrainsPerCluster(clusters_with_declare_names[i], save_name = file_name_out[:-4] + 'cl-' + str(j) +  '.json',
+                       logFolder = args.logFolder)
+
+
+
+        drawStackedOne(ts=ts, clusters_dict=clusters_dict,key=i,
+                   vertical = horisontal_separation_bounds_by_cluster,
+                       name_save = file_name_out[:-4] + 'cl-' + str(j) +  '.png',
+                       logFolder = args.logFolder)
     # drawStackedOne(ts=ts, clusters_dict=clusters_dict,key=cluster_order[6])
-    drawStackedOne(ts=ts, clusters_dict=clusters_dict,key=cluster_order[7])
+    #drawStackedOne(ts=ts, clusters_dict=clusters_dict,key=cluster_order[7])
+
 
 
 

@@ -1,0 +1,1 @@
+-logName italian_help_desk -logFolder italian_help_desk -subL 100 -sliBy 50 -caseID 0 -timestampID 3 -noMinerful -driftAll

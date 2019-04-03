@@ -131,6 +131,9 @@ def cluster_hierarcical(data_uncut, linkage_method = 'ward', linkage_metric = 'e
         while point_detection_penalty >= len(x_lines):
             point_detection_penalty -= 1
             x_lines = algo.predict(pen=point_detection_penalty)
+
+        if len(x_lines) > 15:
+            x_lines = x_lines[-1:]
         return x_lines
 
 

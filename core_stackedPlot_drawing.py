@@ -26,14 +26,14 @@ def drawStackedAll(ts = None, clusters_dict=None, cluster_order = None):
     plt.show()
 
 
-def drawStackedOne(ts = None, clusters_dict=None, key = None):
+def drawStackedOne(ts = None, clusters_dict=None, key = None, vertical = None, name_save = "graph.png", logFolder = ''):
     averaged_line = [0] * (len(clusters_dict[key][0]) - 3)
     for i in range(len(clusters_dict[key])):
         for j in range(len(averaged_line)):
             averaged_line[j] += clusters_dict[key][i][j + 3]
 
     for j in range(len(averaged_line)):
-        averaged_line[j] /= len(clusters_dict[key])
+        averaged_line[j] /= len(clusters_dict[key]) * 100
 
     from scipy.interpolate import make_interp_spline, BSpline
 
@@ -47,23 +47,50 @@ def drawStackedOne(ts = None, clusters_dict=None, key = None):
     plt.clf()
     # Plot
     plt.stackplot(xnew, power_smooth)  # , labels=['A', 'B', 'C']
+    if vertical:
+        if len(vertical) > 1:
+            vert = vertical[key]
+        else:
+            vert = vertical[0]
 
-    ynew = [(power_smooth[0]+power_smooth[1] + power_smooth[2])/3] + \
-           [(power_smooth[0] + power_smooth[1] + power_smooth[2] + power_smooth[3]) / 4] + \
-           [(i+j+k+l+g)/5 for i, j, k, l, g in zip(power_smooth[:-4],power_smooth[1:-3],power_smooth[2:-2], power_smooth[3:-1], power_smooth[4:])] + \
-           [(power_smooth[-4] + power_smooth[-3] + power_smooth[-2] + power_smooth[-1])/4] + \
-           [(power_smooth[-3] + power_smooth[-2] + power_smooth[-1]) / 3]
+        vert = vert[:-1]
+        for line in vert:
+            plt.axvline(x=line, color='black', dashes=(2,2))
+    plt.xticks(xnew, ts, rotation='vertical')
+    plt.ylim(top=1)
 
-    plt.plot(xnew,ynew)
-    plt.xticks(xnew, ts,rotation='vertical')
-    plt.legend(loc='upper left')
-    plt.show()
+    import os
+
+    new_path = 'graphs_produced_detailed' + '/' + 'plots'+'/'+ logFolder
+
+    if not os.path.exists(new_path):
+        os.makedirs(new_path)
+
+    plt.savefig(new_path + '/' + name_save, bbox_inches='tight')
+    #plt.show()
+
+    #TODO this is the smoothing line
+    # plt.clf()
+    # ynew = [(power_smooth[0]+power_smooth[1] + power_smooth[2])/3] + \
+    #        [(power_smooth[0] + power_smooth[1] + power_smooth[2] + power_smooth[3]) / 4] + \
+    #        [(i+j+k+l+g)/5 for i, j, k, l, g in zip(power_smooth[:-4],power_smooth[1:-3],power_smooth[2:-2], power_smooth[3:-1], power_smooth[4:])] + \
+    #        [(power_smooth[-4] + power_smooth[-3] + power_smooth[-2] + power_smooth[-1])/4] + \
+    #        [(power_smooth[-3] + power_smooth[-2] + power_smooth[-1]) / 3]
+    #
+    # plt.plot(xnew,ynew)
+    # plt.xticks(xnew, ts,rotation='vertical')
+    # plt.legend(loc='upper left')
+    # if vert:
+    #     for line in vert:
+    #         plt.axvline(x=line, color='black', dashes=(2,2))
+    # plt.ylim(top=1)
+    # plt.show()
 
     dis_should_be = 0
     dis_is_with_a_drift = 9
 
-    y_0 = ynew[0]
-    for y in ynew[1:]:
+    y_0 = power_smooth[0]
+    for y in power_smooth[1:]:
         dis_should_be += xnew[1] - xnew[0]
         dis_is_with_a_drift += numpy.math.sqrt((xnew[1] - xnew[0]) ** 2 + (y - y_0)**2)
         y_0 = y
@@ -78,4 +105,4 @@ def drawStackedOne(ts = None, clusters_dict=None, key = None):
     # spl = make_interp_spline(range(len(averaged_line)), averaged_line, k=1)  # BSpline object
     # power_smooth = spl(xnew)
     # plt.plot(xnew, power_smooth)
-    # plt.show()
+

@@ -1,7 +1,8 @@
 import csv
 import math
 from pathlib import Path
-
+import os
+import json
 
 def importData(DATASET_NAME, c = True):
     if c == True:
@@ -124,3 +125,28 @@ def timestamp_ticks(sliding_window_step, window_size, dataset_folder, dataset_na
             time_out.append(" ")
         n_th += 1
     return time_out
+
+
+def saveConstrainsPerCluster(constraints, save_name, logFolder):
+    dict_out = {}
+    dict_out["constraints"] = []
+
+    for constraint in constraints:
+        temp_dict = {}
+        temp_dict["template"] = constraint[0]
+        temp_dict['parameters'] = []
+        for par in constraint[1:]:
+            if par != '':
+                temp_dict['parameters'].append([par])
+
+        dict_out["constraints"].append(temp_dict)
+
+    new_path = 'graphs_produced_detailed' + '/' + 'constraints' + '/' + logFolder
+
+    if not os.path.exists(new_path):
+        os.makedirs(new_path)
+
+    with open(new_path + '/' + save_name, 'w') as fp:
+        json.dump(dict_out, fp)
+
+    dict_out = None
