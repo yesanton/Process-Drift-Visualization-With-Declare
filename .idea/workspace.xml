@@ -2,71 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1ddfbb2-da29-459d-a9ec-afc77cb68739" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data_initial/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphs_produced/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphs_produced_detailed/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clustering_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/clustering_changePoint_methods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core_drawing.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_driftMap_drawing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core_stackedPlot_drawing.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_driftPlot_drawing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_minerful/bpic_2011_hospital_0_100_50.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_from_minerful/bpic_2011_hospital_0_100_50.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/draw_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/draw_graph.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/extra_methods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced/ConditionalMoveplot_confidence_0_100_50_ward_euclidean_2500_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced/ConditionalMoveplot_confidence_0_100_50_ward_euclidean_2500_distance_changepoints_separately.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced/ConditionalMoveplot_confidence_0_100_50_ward_euclidean_3000_distance.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced/ConditionalMoveplot_confidence_0_100_50_ward_euclidean_3000_distance.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced/ConditionalRemovalplot_confidence_0_100_50_ward_euclidean_2500_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced/ConditionalRemovalplot_confidence_0_100_50_ward_euclidean_2500_distance_changepoints_separately.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced/ConditionalToSequenceplot_confidence_0_100_50_ward_euclidean_2500_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced/Loopplot_confidence_0_100_50_ward_euclidean_3000_distance_changepoints_separately.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced/Loopplot_confidence_0_100_50_ward_euclidean_3000_distance_changepoints_separately.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced/bpic_2011_hospitalplot_confidence_0_40_20_ward_euclidean_2000_distance.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced/bpic_2011_hospitalplot_confidence_0_40_20_ward_euclidean_2000_distance.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-0ConditionalMoveplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-0italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-0italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-10italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-10italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-11italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-11italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-12italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-12italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-13italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-13italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-14italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-14italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-15italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-15italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-16italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-16italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-1italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-1italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-2italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-2italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-3italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-3italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-4italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-4italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-5italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-5italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-6italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-6italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-7italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-7italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-8italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-8italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-9italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-9italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/constraints/synthetic/Loopplot_confidence_0_100_50_ward_euclidean_3000_distancecl-0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/incidents_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nohup.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/bpic2011hospital/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/results/bpic2011hospital/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/bpic2011hospital/bpic_2011_hospitalplot_confidence_0_40_20_ward_euclidean_4_maxclust.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/bpic2011hospital/bpic_2011_hospitalplot_confidence_0_40_20_ward_euclidean_4_maxclust_changepoints_separately.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/bpic2011hospital/cluster4-bpic_2011_hospitalplot_confidence_0_40_20_ward_euclidea.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/bpic2011hospital/cluster4-smoothed-bpic_2011_hospitalplot_confidence_0_40_20_ward_euclidea.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/italian_help_desk/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/results/italian_help_desk/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,11 +29,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/minerful_scripts/README.md">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor />
+              <first_editor relative-caret-position="468">
+                <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+              </first_editor>
               <second_editor />
             </state>
           </provider>
@@ -129,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/extra_methods.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="239">
-              <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+              <caret line="129" selection-start-line="129" selection-end-line="129" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -187,12 +125,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_initial/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="180">
-                <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+              <first_editor relative-caret-position="234">
+                <caret line="13" selection-start-line="13" selection-end-line="13" />
               </first_editor>
               <second_editor />
             </state>
@@ -238,7 +176,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/minerful_scripts/run-MINERfulSlider.sh" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/TEST.py" />
         <option value="$PROJECT_DIR$/extra_methods.py" />
         <option value="$PROJECT_DIR$/core_drawing.py" />
@@ -250,6 +187,7 @@
         <option value="$PROJECT_DIR$/graphs_produced_detailed/README.md" />
         <option value="$PROJECT_DIR$/graphs_produced/README.md" />
         <option value="$PROJECT_DIR$/data_initial/README.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -270,22 +208,6 @@
             <path>
               <item name="DriftVisWithDeclare" type="b2602c69:ProjectViewProjectNode" />
               <item name="DriftVisWithDeclare" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DriftVisWithDeclare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DriftVisWithDeclare" type="462c0819:PsiDirectoryNode" />
-              <item name="data_initial" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DriftVisWithDeclare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DriftVisWithDeclare" type="462c0819:PsiDirectoryNode" />
-              <item name="data_initial" type="462c0819:PsiDirectoryNode" />
-              <item name="italian_traffic_fines" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DriftVisWithDeclare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DriftVisWithDeclare" type="462c0819:PsiDirectoryNode" />
-              <item name="minerful_scripts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -375,12 +297,12 @@
       <workItem from="1554619484788" duration="4630000" />
       <workItem from="1554647140302" duration="6535000" />
       <workItem from="1554703402971" duration="1824000" />
-      <workItem from="1555329038227" duration="1730000" />
+      <workItem from="1555329038227" duration="2656000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103616000" />
+    <option name="totallyTimeSpent" value="104542000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-10" width="1280" height="730" extended-state="6" />
@@ -453,16 +375,6 @@
     <SUITE FILE_PATH="coverage/DriftVisWithDeclare$distance.coverage" NAME="distance Coverage Results" MODIFIED="1554193703835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/.local/lib/python3.6/site-packages/scipy/spatial" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="108">
-            <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/InstalledApps/anaconda3/lib/python3.6/subprocess.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24534">
@@ -549,19 +461,9 @@
     <entry file="file://$PROJECT_DIR$/extra_methods.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
-          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw_graph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" selection-start-line="5" selection-end-line="6" selection-end-column="3" />
-          <folding>
-            <element signature="e#192#207#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -629,8 +531,28 @@
     <entry file="file://$PROJECT_DIR$/data_initial/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="180">
-            <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <first_editor relative-caret-position="234">
+            <caret line="13" selection-start-line="13" selection-end-line="13" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw_graph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" selection-start-line="5" selection-end-line="6" selection-end-column="3" />
+          <folding>
+            <element signature="e#192#207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="468">
+            <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
           </first_editor>
           <second_editor />
         </state>
