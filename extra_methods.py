@@ -1,3 +1,8 @@
+''' Methods put aside from the core technique functions
+
+
+Author: Anton Yeshchenko
+'''
 import csv
 import math
 from pathlib import Path
@@ -69,13 +74,12 @@ def importData(DATASET_NAME, c = True):
 
     return sequences, header_output,corresponding_number_of_traces
 
+# Method produces the timestamps for the graphs
 def timestamp_ticks(sliding_window_step, window_size, dataset_folder, dataset_name, case_ind, timestamp_ind):
     dataset_link = Path("./data_initial/"+dataset_folder + dataset_name+"_timestamp_sorted.csv")
 
-
     csvfile = open(dataset_link, 'r')
     csv_reader = csv.reader(csvfile, delimiter=',', quotechar='|')
-
     hh = next(csv_reader, None)
 
     # FOR ITALIAN HELP DESK
@@ -109,9 +113,7 @@ def timestamp_ticks(sliding_window_step, window_size, dataset_folder, dataset_na
     #results_writer = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
 
     time_out = []
-
     n_th = 0
-
     number_of_timestamps = (len(timestamps) - window_size) / sliding_window_step
     skip_every_n_th = math.ceil(number_of_timestamps / 30)
 
@@ -126,7 +128,8 @@ def timestamp_ticks(sliding_window_step, window_size, dataset_folder, dataset_na
         n_th += 1
     return time_out
 
-
+# output the declare specifications in json format
+# per each discovered cluster (behaviour change patch)
 def saveConstrainsPerCluster(constraints, save_name, logFolder):
     dict_out = {}
     dict_out["constraints"] = []

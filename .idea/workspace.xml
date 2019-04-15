@@ -2,15 +2,71 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1ddfbb2-da29-459d-a9ec-afc77cb68739" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/data_initial/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphs_produced/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphs_produced_detailed/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clustering_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/clustering_methods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core_stackedPlot_drawing.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_stackedPlot_drawing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clustering_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/clustering_changePoint_methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core_drawing.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_driftMap_drawing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core_stackedPlot_drawing.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_driftPlot_drawing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_from_minerful/bpic_2011_hospital_0_100_50.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_from_minerful/bpic_2011_hospital_0_100_50.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_initial/bpic2011hospital/bpic_2011_hospital_timestamp_sorted.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_initial/bpic2011hospital/bpic_2011_hospital_timestamp_sorted.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_initial/bpic2011hospital/bpic_2011_hospital_timestamp_sorted.xes.gz" beforeDir="false" afterPath="$PROJECT_DIR$/data_initial/bpic2011hospital/bpic_2011_hospital_timestamp_sorted.xes.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/draw_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/draw_graph.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/extra_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/extra_methods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced/bpic_2011_hospitalplot_confidence_0_100_50_ward_euclidean_2000_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced/ConditionalMoveplot_confidence_0_100_50_ward_euclidean_2500_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced/ConditionalMoveplot_confidence_0_100_50_ward_euclidean_2500_distance_changepoints_separately.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced/ConditionalMoveplot_confidence_0_100_50_ward_euclidean_3000_distance.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced/ConditionalMoveplot_confidence_0_100_50_ward_euclidean_3000_distance.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced/ConditionalRemovalplot_confidence_0_100_50_ward_euclidean_2500_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced/ConditionalRemovalplot_confidence_0_100_50_ward_euclidean_2500_distance_changepoints_separately.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced/ConditionalToSequenceplot_confidence_0_100_50_ward_euclidean_2500_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced/Loopplot_confidence_0_100_50_ward_euclidean_3000_distance_changepoints_separately.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced/Loopplot_confidence_0_100_50_ward_euclidean_3000_distance_changepoints_separately.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced/bpic_2011_hospitalplot_confidence_0_40_20_ward_euclidean_2000_distance.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced/bpic_2011_hospitalplot_confidence_0_40_20_ward_euclidean_2000_distance.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-0ConditionalMoveplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-0italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-0italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-10italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-10italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-11italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-11italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-12italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-12italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-13italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-13italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-14italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-14italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-15italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-15italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-16italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-16italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-1italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-1italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-2italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-2italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-3italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-3italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-4italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-4italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-5italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-5italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-6italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-6italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-7italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-7italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-8italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-8italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-9italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/cl-9italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/constraints/synthetic/Loopplot_confidence_0_100_50_ward_euclidean_3000_distancecl-0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/incidents_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nohup.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/bpic2011hospital/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/results/bpic2011hospital/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/bpic2011hospital/bpic_2011_hospitalplot_confidence_0_40_20_ward_euclidean_4_maxclust.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/bpic2011hospital/bpic_2011_hospitalplot_confidence_0_40_20_ward_euclidean_4_maxclust_changepoints_separately.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/bpic2011hospital/cluster4-bpic_2011_hospitalplot_confidence_0_40_20_ward_euclidea.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/bpic2011hospital/cluster4-smoothed-bpic_2011_hospitalplot_confidence_0_40_20_ward_euclidea.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/italian_help_desk/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/results/italian_help_desk/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,11 +81,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/draw_graph.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-91">
-              <caret line="156" column="23" selection-start-line="156" selection-start-column="23" selection-end-line="156" selection-end-column="23" />
+            <state relative-caret-position="90">
+              <caret line="5" selection-start-line="5" selection-end-line="6" selection-end-column="3" />
               <folding>
                 <element signature="e#192#207#0" expanded="true" />
               </folding>
@@ -38,64 +94,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/incidents_2.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core_drawing.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-224">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        <entry file="file://$PROJECT_DIR$/minerful_scripts/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/InstalledApps/anaconda3/lib/python3.6/codecs.py">
+        <entry file="file://$PROJECT_DIR$/core_driftMap_drawing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5580">
-              <caret line="310" selection-start-line="310" selection-end-line="310" />
+            <state>
+              <caret column="19" selection-start-column="19" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/scipy/spatial/distance.py">
+        <entry file="file://$PROJECT_DIR$/core_driftPlot_drawing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35694">
-              <caret line="1983" column="19" selection-start-line="1983" selection-start-column="19" selection-end-line="1983" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core_stackedPlot_drawing.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="68" column="42" selection-start-line="61" selection-start-column="4" selection-end-line="68" selection-end-column="42" />
+            <state>
+              <caret selection-end-line="3" selection-end-column="3" />
               <folding>
-                <element signature="e#10#41#0" expanded="true" />
-                <element signature="e#134#809#0" />
+                <element signature="e#32#63#0" expanded="true" />
+                <marker date="1555330481624" expanded="true" signature="2348:2828" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/InstalledApps/anaconda3/lib/python3.6/site-packages/matplotlib/axes/_axes.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90324">
-              <caret line="5058" selection-start-line="5058" selection-end-line="5058" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/minerful_scripts/run-MINERfulSlider.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -103,8 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/extra_methods.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="145" column="26" selection-start-line="145" selection-start-column="26" selection-end-line="145" selection-end-column="26" />
+            <state relative-caret-position="239">
+              <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -113,13 +138,63 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clustering_methods.py">
+        <entry file="file://$PROJECT_DIR$/clustering_changePoint_methods.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1044">
-              <caret line="62" column="4" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
+            <state relative-caret-position="401">
+              <caret line="182" column="24" selection-start-line="182" selection-start-column="24" selection-end-line="182" selection-end-column="24" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#80#90#0" expanded="true" />
+                <element signature="e#183#1170#0" />
+                <element signature="e#1220#1841#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/results/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="36">
+                <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graphs_produced_detailed/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="36">
+                <caret line="2" column="118" selection-start-line="2" selection-start-column="118" selection-end-line="2" selection-end-column="118" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graphs_produced/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="36">
+                <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data_initial/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="180">
+                <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -146,8 +221,14 @@
       <find>cluster_order</find>
       <find>dingOptimalNumberOfPoints</find>
       <find>ynew</find>
-      <find>folder</find>
       <find>print</find>
+      <find>folder</find>
+      <find>chainrespo</find>
+      <find>Take in charge ticket</find>
+      <find>ChainPrecedence</find>
+      <find>AlternatePrecedence</find>
+      <find>AlternateResponse</find>
+      <find>atmostone</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,19 +240,23 @@
         <option value="$PROJECT_DIR$/minerful_scripts/run-MINERfulSlider.sh" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/TEST.py" />
-        <option value="$PROJECT_DIR$/clustering_methods.py" />
-        <option value="$PROJECT_DIR$/core_drawing.py" />
-        <option value="$PROJECT_DIR$/core_stackedPlot_drawing.py" />
         <option value="$PROJECT_DIR$/extra_methods.py" />
+        <option value="$PROJECT_DIR$/core_drawing.py" />
         <option value="$PROJECT_DIR$/draw_graph.py" />
+        <option value="$PROJECT_DIR$/core_stackedPlot_drawing.py" />
+        <option value="$PROJECT_DIR$/clustering_methods.py" />
+        <option value="$PROJECT_DIR$/clustering_changePoint_methods.py" />
+        <option value="$PROJECT_DIR$/results/README.md" />
+        <option value="$PROJECT_DIR$/graphs_produced_detailed/README.md" />
+        <option value="$PROJECT_DIR$/graphs_produced/README.md" />
+        <option value="$PROJECT_DIR$/data_initial/README.md" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="160" />
-    <option name="y" value="90" />
-    <option name="width" value="960" />
-    <option name="height" value="540" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="-10" />
+    <option name="width" value="1280" />
+    <option name="height" value="730" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -190,6 +275,17 @@
               <item name="DriftVisWithDeclare" type="b2602c69:ProjectViewProjectNode" />
               <item name="DriftVisWithDeclare" type="462c0819:PsiDirectoryNode" />
               <item name="data_initial" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DriftVisWithDeclare" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DriftVisWithDeclare" type="462c0819:PsiDirectoryNode" />
+              <item name="data_initial" type="462c0819:PsiDirectoryNode" />
+              <item name="italian_traffic_fines" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DriftVisWithDeclare" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DriftVisWithDeclare" type="462c0819:PsiDirectoryNode" />
+              <item name="minerful_scripts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -222,29 +318,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.draw_graph">
-    <configuration name="distance" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="DriftVisWithDeclare" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/.local/lib/python3.6/site-packages/scipy/spatial" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/.local/lib/python3.6/site-packages/scipy/spatial/distance.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="draw_graph" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DriftVisWithDeclare" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -259,7 +333,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/draw_graph.py" />
-      <option name="PARAMETERS" value="-logName Loop -logFolder synthetic -subL 100 -sliBy 50 -caseID 0 -timestampID 3 -noSort -noMinerful" />
+      <option name="PARAMETERS" value="-logName italian_help_desk -logFolder  italian_help_desk  -subL 100 -sliBy 50 -caseID 0 -timestampID 2 -noMinerful -driftAll" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -267,14 +341,9 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Python.draw_graph" />
-      <item itemvalue="Python.distance" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.draw_graph" />
-        <item itemvalue="Python.distance" />
       </list>
     </recent_temporary>
   </component>
@@ -301,23 +370,51 @@
       <workItem from="1553836646634" duration="5520000" />
       <workItem from="1554085777757" duration="12459000" />
       <workItem from="1554194163670" duration="8804000" />
-      <workItem from="1554250715660" duration="4735000" />
+      <workItem from="1554250715660" duration="17779000" />
+      <workItem from="1554357057081" duration="10824000" />
+      <workItem from="1554619484788" duration="4630000" />
+      <workItem from="1554647140302" duration="6535000" />
+      <workItem from="1554703402971" duration="1824000" />
+      <workItem from="1555329038227" duration="1730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65029000" />
+    <option name="totallyTimeSpent" value="103616000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-10" width="1280" height="730" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15721232" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21555915" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32715008" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4994664" visible="true" weight="0.33389544" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4994664" weight="0.4890388" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053364" side_tool="true" weight="0.39978448" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.29342327" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.27471638" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20907618" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297414" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4994664" visible="true" weight="0.35581788" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4994664" visible="true" weight="0.27150086" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4994664" weight="0.36593592" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -326,35 +423,12 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053364" side_tool="true" weight="0.39978448" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.31871837" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.29342327" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.27471638" />
-      <window_info anchor="right" id="Database" order="4" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26467448" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3297414" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994664" weight="0.43806645" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4994664" weight="0.39978448" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053364" side_tool="true" weight="0.39978448" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3297414" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.27471638" />
       <window_info anchor="right" id="Database" order="4" />
     </layout-to-restore>
   </component>
@@ -365,51 +439,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/TEST.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/core_stackedPlot_drawing.py</url>
-          <line>103</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/core_stackedPlot_drawing.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/core_stackedPlot_drawing.py</url>
-          <line>39</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/clustering_methods.py</url>
-          <line>172</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/clustering_methods.py</url>
-          <line>135</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/draw_graph.py</url>
-          <line>210</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/extra_methods.py</url>
-          <line>133</line>
-          <option name="timeStamp" value="38" />
+          <url>file://$PROJECT_DIR$/core_driftMap_drawing.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DriftVisWithDeclare$TEST.coverage" NAME="TEST Coverage Results" MODIFIED="1553746320128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DriftVisWithDeclare$draw_graph.coverage" NAME="draw_graph Coverage Results" MODIFIED="1554255454055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DriftVisWithDeclare$draw_graph.coverage" NAME="draw_graph Coverage Results" MODIFIED="1554728963414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DriftVisWithDeclare$clustering_methods.coverage" NAME="clustering_methods Coverage Results" MODIFIED="1553747597617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DriftVisWithDeclare$distance.coverage" NAME="distance Coverage Results" MODIFIED="1554193703835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/.local/lib/python3.6/site-packages/scipy/spatial" />
   </component>
@@ -421,16 +460,6 @@
             <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TEST.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="e#51#63#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -452,6 +481,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="402">
           <caret line="1077" selection-start-line="1077" selection-end-line="1077" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_initial/italian_traffic_fines/traffic_fines_timestamp_sorted.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="432">
+          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -483,12 +519,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clustering_methods.py">
+    <entry file="file://$PROJECT_DIR$/data_from_minerful/bpi_challenge_2013_closed_0_50_25.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minerful_scripts/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nohup.out">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TEST.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1044">
-          <caret line="62" column="4" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
+        <state relative-caret-position="216">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#51#63#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -496,41 +546,93 @@
     <entry file="file://$PROJECT_DIR$/incidents_2.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/core_stackedPlot_drawing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="68" column="42" selection-start-line="61" selection-start-column="4" selection-end-line="68" selection-end-column="42" />
-          <folding>
-            <element signature="e#10#41#0" expanded="true" />
-            <element signature="e#134#809#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/extra_methods.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="145" column="26" selection-start-line="145" selection-start-column="26" selection-end-line="145" selection-end-column="26" />
+        <state relative-caret-position="239">
+          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core_drawing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-224">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/draw_graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-91">
-          <caret line="156" column="23" selection-start-line="156" selection-start-column="23" selection-end-line="156" selection-end-column="23" />
+        <state relative-caret-position="90">
+          <caret line="5" selection-start-line="5" selection-end-line="6" selection-end-column="3" />
           <folding>
             <element signature="e#192#207#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core_driftMap_drawing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core_driftPlot_drawing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="3" selection-end-column="3" />
+          <folding>
+            <element signature="e#32#63#0" expanded="true" />
+            <marker date="1555330481624" expanded="true" signature="2348:2828" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clustering_changePoint_methods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="182" column="24" selection-start-line="182" selection-start-column="24" selection-end-line="182" selection-end-column="24" />
+          <folding>
+            <element signature="e#80#90#0" expanded="true" />
+            <element signature="e#183#1170#0" />
+            <element signature="e#1220#1841#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="36">
+            <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graphs_produced_detailed/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="36">
+            <caret line="2" column="118" selection-start-line="2" selection-start-column="118" selection-end-line="2" selection-end-column="118" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graphs_produced/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="36">
+            <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_initial/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="180">
+            <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

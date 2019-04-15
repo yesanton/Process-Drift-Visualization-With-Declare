@@ -1,0 +1,1 @@
+{"constraints": [{"template": "NotChainSuccession", "parameters": [["Payment"], [" Send Fine"]]}, {"template": "NotSuccession", "parameters": [["Payment"], [" Send Fine"]]}, {"template": "NotChainSuccession", "parameters": [["Send Fine"], [" Payment"]]}]}

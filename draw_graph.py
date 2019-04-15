@@ -1,9 +1,8 @@
-'''
-
-
+''' main script for the algorithm execution
 Example run:
 python3 draw_graph.py -logName bpi_challenge_2013_open -logFolder bpic2013 -subL 100 -sliBy 50 -caseID 0 -timestampID 3 -noMinerful -driftAll
 
+call help to see argument list
 Author: Anton Yeshchenko
 '''
 
@@ -20,9 +19,9 @@ from math import sqrt
 import subprocess
 
 # window size
-from clustering_methods import cluster_hierarcical
-from core_drawing import heatmaplike_graph_with_subplots
-from core_stackedPlot_drawing import drawStackedAll, drawStackedOne
+from clustering_changePoint_methods import do_cluster_changePoint
+from core_driftMap_drawing import draw_drift_map_with_clusters
+from core_driftPlot_drawing import drawDriftPlotforAllClusters, drawDriftPlotforOneCluster
 from extra_methods import timestamp_ticks, importData, saveConstrainsPerCluster
 
 parser = argparse.ArgumentParser()
@@ -35,6 +34,7 @@ parser.add_argument("-caseID", type=int)
 parser.add_argument("-timestampID", type=int)
 parser.add_argument("-subL", type=int)
 parser.add_argument("-sliBy", type=int)
+parser.add_argument("-cluCut", type=int, help="Cutoff threshold for cluster algorithm")
 parser.add_argument('-noMinerful', action='store_true', default=False,
                     dest='noMinerful',
                     help='set this optional parameter if there are already minerful mined constraints')
@@ -152,9 +152,13 @@ plot_with_hierarchy_clustering = True
 
 #confidence = sort_by_closest_neigbour(confidence)
 if plot_with_hierarchy_clustering:
+    # Few parameters of the clustering
     linkage_method = 'ward'
     linkage_metric = 'euclidean'
-    fcluster_value = 3000
+    if not args.cluCut:
+        fcluster_value =  300
+    else:
+        fcluster_value = args.cluCut
     fcluster_metric = 'distance'
     # fcluster_metric = 'maxclust'
 
@@ -164,7 +168,7 @@ if plot_with_hierarchy_clustering:
     clusters_with_declare_names, \
     clusters_dict, \
     cluster_order =\
-        cluster_hierarcical(confidence, linkage_method, linkage_metric, fcluster_value, fcluster_metric, args.driftAll, args.noSort)
+        do_cluster_changePoint(confidence, linkage_method, linkage_metric, fcluster_value, fcluster_metric, args.driftAll, args.noSort)
 
     # pp = pprint.PrettyPrinter(indent=4)
     # pp.pprint(clusters_with_declare_names)
@@ -193,6 +197,13 @@ if plot_with_hierarchy_clustering:
     # plt.plot(xnew, power_smooth)
     # plt.show()
 
+    def Average(lst):
+        return sum(lst) / len(lst)
+    for i in clusters_dict[cluster_order[4]]:
+        print(i[0], i[1], i[2])
+        print(min(i[3:]))
+        print(max(i[3:]))
+        print(Average(i[3:]))
 
 
 
@@ -200,14 +211,14 @@ if plot_with_hierarchy_clustering:
     if not args.driftAll:
          append_name += "_changepoints_separately"
     file_name_out = dataset_moto + "plot_confidence_" + str(tStart) + "_" + str(subL) + "_" + str(sliBy) + '_' + append_name + ".png"
-    heatmaplike_graph_with_subplots(confidence, file_name_out, ts=ts, y_lines=cluster_bounds, x_lines_all=horisontal_separation_bounds_by_cluster, cluster_order = cluster_order)
+    draw_drift_map_with_clusters(confidence, file_name_out, ts=ts, y_lines=cluster_bounds, x_lines_all=horisontal_separation_bounds_by_cluster, cluster_order = cluster_order)
     print('confidence graph drawn with a name: ' + file_name_out)
 
     # drawStackedAll(ts=ts, clusters_dict=clusters_dict, cluster_order = cluster_order)
     #
 
 
-
+    # draw for each cluster results and write to file
     for i,j in zip(cluster_order, range(len(cluster_order))):
 
         # output the declare constraints in the good format for minerful to draw
@@ -216,10 +227,10 @@ if plot_with_hierarchy_clustering:
 
 
 
-        drawStackedOne(ts=ts, clusters_dict=clusters_dict,key=i,
-                   vertical = horisontal_separation_bounds_by_cluster,
-                       name_save = file_name_out[:-4] + 'cl-' + str(j) +  '.png',
-                       logFolder = args.logFolder)
+        drawDriftPlotforOneCluster(ts=ts, clusters_dict=clusters_dict, key=i,
+                                   vertical = horisontal_separation_bounds_by_cluster,
+                                   name_save = file_name_out[:-4] + 'cl-' + str(j) +  '.png',
+                                   logFolder = args.logFolder)
     # drawStackedOne(ts=ts, clusters_dict=clusters_dict,key=cluster_order[6])
     #drawStackedOne(ts=ts, clusters_dict=clusters_dict,key=cluster_order[7])
 

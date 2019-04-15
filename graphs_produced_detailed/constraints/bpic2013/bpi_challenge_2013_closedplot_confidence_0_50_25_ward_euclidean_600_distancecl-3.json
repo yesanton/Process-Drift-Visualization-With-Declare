@@ -1,0 +1,1 @@
+{"constraints": [{"template": "ChainSuccession", "parameters": [["Accepted-In Progress"], [" Completed-Closed"]]}, {"template": "AlternateResponse", "parameters": [["Accepted-In Progress"], [" Completed-Closed"]]}, {"template": "AtMostOne", "parameters": [["Accepted-In Progress"]]}, {"template": "ChainResponse", "parameters": [["Accepted-In Progress"], [" Completed-Closed"]]}]}

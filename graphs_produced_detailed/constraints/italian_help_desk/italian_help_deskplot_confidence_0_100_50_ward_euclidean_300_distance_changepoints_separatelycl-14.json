@@ -1,0 +1,1 @@
+{"constraints": [{"template": "Precedence", "parameters": [["Assign seriousness"], [" VERIFIED"]]}, {"template": "AlternatePrecedence", "parameters": [["Assign seriousness"], [" VERIFIED"]]}, {"template": "Precedence", "parameters": [["Take in charge ticket"], [" VERIFIED"]]}, {"template": "AlternatePrecedence", "parameters": [["Take in charge ticket"], [" VERIFIED"]]}]}
