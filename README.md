@@ -21,6 +21,6 @@ Code support any event log with that features case ID, timestamps, and activity 
 
 
 
-This is the source code supporting the full paper submission to the ER2019 conference titled:
+This is the source code supporting the full paper submission to the ER2019 (<http://www.inf.ufrgs.br/er2019/>) conference titled:
 
 Anton Yeshchenko, Claudio Di Ciccio, Jan Mendling, Artem Polyvyanyy: Comprehensive Process Drift Detection with Visual Analytics
