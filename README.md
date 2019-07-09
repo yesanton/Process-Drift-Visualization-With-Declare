@@ -1,4 +1,4 @@
-# Comprehensive Process Drift Detection with Visual Analytics (VDD)
+# Comprehensive Process Drift Detection with Visual Analytics (VDD technique)
 
 
 ## How to run
