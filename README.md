@@ -11,7 +11,7 @@ draw_graph.py (use -help to see parameter list)
 ## Requirements
 
 - Python 3 
-- Requires java 10 (for MINERful module)
+- Requires java 10 (for the MINERful module – [fork MINERful](https://github.com/cdc08x/MINERful/wiki))
 
 ## Datasets
 
