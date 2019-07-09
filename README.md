@@ -1,4 +1,4 @@
-# Drift Visualization with Declare
+# Comprehensive Process Drift Detection with Visual Analytics (VDD)
 
 
 ## How to run
