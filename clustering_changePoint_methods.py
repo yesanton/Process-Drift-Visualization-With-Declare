@@ -140,6 +140,9 @@ def do_cluster_changePoint(data_uncut, linkage_method ='ward', linkage_metric ='
 
     x_all_lines = {}
     # in ths case we want to detect the drifts in the whole range of constrains at the same time
+
+    c = rpt.costs.CostRbf();
+
     if driftAll:
         dd = []
         for dk in order_cluster:
@@ -148,7 +151,7 @@ def do_cluster_changePoint(data_uncut, linkage_method ='ward', linkage_metric ='
 
         sig = np.array(dd)
         signal = np.transpose(sig)
-        algo = rpt.Pelt(model="rbf").fit(signal)
+        algo = rpt.Pelt(model="rbf", custom_cost=c).fit(signal)
 
         x_lines = dingOptimalNumberOfPoints(algo)
         x_all_lines[0] = x_lines
@@ -164,7 +167,7 @@ def do_cluster_changePoint(data_uncut, linkage_method ='ward', linkage_metric ='
 
             sig = np.array(dd)
             signal = np.transpose(sig)
-            algo = rpt.Pelt(model="rbf", min_size=2,jump=2).fit(signal)
+            algo = rpt.Pelt(model="rbf", custom_cost=c, min_size=2,jump=2).fit(signal)
 
             x_lines = dingOptimalNumberOfPoints(algo)
 

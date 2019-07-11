@@ -92,4 +92,6 @@ def drawDriftPlotforOneCluster(ts = None, clusters_dict=None, key = None, vertic
     print ("without DRIFT: " + str(dis_should_be))
     print("current DRIFT: " + str(dis_is_with_a_drift))
 
+    return dis_should_be, dis_is_with_a_drift
+
 

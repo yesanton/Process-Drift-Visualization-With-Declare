@@ -10,15 +10,11 @@ import argparse
 import csv
 from pathlib import Path
 import pprint
-
 import matplotlib.pyplot as plt
 import numpy
 import seaborn as sns
-
 from math import sqrt
 import subprocess
-
-# window size
 from clustering_changePoint_methods import do_cluster_changePoint
 from core_driftMap_drawing import draw_drift_map_with_clusters
 from core_driftPlot_drawing import drawDriftPlotforAllClusters, drawDriftPlotforOneCluster
@@ -26,8 +22,9 @@ from extra_methods import timestamp_ticks, importData, saveConstrainsPerCluster
 
 parser = argparse.ArgumentParser()
 # parser.add_argument("--tStart", type=int)
-
 # https://pymotw.com/2/argparse/
+
+# These are the argument list  of the script
 parser.add_argument("-logName", help="the log name")
 parser.add_argument("-logFolder", help="the folder with a timestamp sorted log, check https://github.com/yesanton/Event-Log-Preprocessing-Tools for timeseoring of CSVs")
 parser.add_argument("-caseID", type=int)
@@ -47,23 +44,25 @@ parser.add_argument('-noSort', action='store_true', default=False,
                     dest='noSort',
                     help='set this optional parameter if the constrains shouldn\'t be sorted inside of clusters')
 
+parser.add_argument('-colorTheme', action='store', type=str, default="plasma", dest='colorTheme',
+                    help='set the option for the colors of the Drift Map, the option can be found https://matplotlib.org/users/colormaps.html, we recommend \'plasma\' or \'PiYG\' or \'bw\'')
+
 #parser.add_argument("-type", type=int, help='0 support, 1 confidence, 2 interstFactor')
 # parser.add_argument("-colors", help="[bw] for black and while, [yb] for yellow to blue")
 
+
+# Initialization of the default parameters for the command line arguments
 args = parser.parse_args()
 tStart = 0
-
-# THese are standard parameters
 if args.subL:
     subL = args.subL
 else:
-    subL = 1000
+    subL = 100
 
 if args.sliBy:
     sliBy = args.sliBy
 else:
-    sliBy = 500
-
+    sliBy = 50
 # if args.type:
 #     iii = args.type
 # else:
@@ -73,7 +72,6 @@ else:
 #     colors = args.colors
 # else:
 #     colors = 'bw'
-
 if args.logFolder:
     dataset_folder = args.logFolder
 else:
@@ -97,14 +95,14 @@ else:
 if dataset_folder:
     dataset_folder += '/'
 
-
+colorTheme = args.colorTheme
 
 
 # first we run minerful with parameters!
 completed = subprocess.run(['ls', '-1'])
 print('returncode:', completed.returncode)
 
-data_path = '../data_initial/'+dataset_folder + dataset_moto+'_timestamp_sorted.xes.gz'
+data_path = '../data_initial/'+dataset_folder + dataset_moto+'_timestamp_sorted.xes'
 
 if not args.noMinerful:
     subprocess.run(["./run-MINERfulSlider.sh",
@@ -211,12 +209,17 @@ if plot_with_hierarchy_clustering:
     if not args.driftAll:
          append_name += "_changepoints_separately"
     file_name_out = dataset_moto + "plot_confidence_" + str(tStart) + "_" + str(subL) + "_" + str(sliBy) + '_' + append_name + ".png"
-    draw_drift_map_with_clusters(confidence, file_name_out, ts=ts, y_lines=cluster_bounds, x_lines_all=horisontal_separation_bounds_by_cluster, cluster_order = cluster_order)
+    draw_drift_map_with_clusters(confidence, file_name_out, ts=ts, y_lines=cluster_bounds, x_lines_all=horisontal_separation_bounds_by_cluster, cluster_order = cluster_order, color_theme=colorTheme)
     print('confidence graph drawn with a name: ' + file_name_out)
 
     # drawStackedAll(ts=ts, clusters_dict=clusters_dict, cluster_order = cluster_order)
     #
 
+
+    # save erratic measure measurements
+    writeErraticFile = open('graphs_produced_detailed/' + dataset_moto + "_" + str(tStart) + "_" + str(subL) + "_" + str(sliBy) + '_' + append_name + '.csv', 'w')
+    writerErratic = csv.writer(writeErraticFile)
+    writerErratic.writerow(["Cluster number","Erratic measure without drift", "Erratic measure of the cluster"])
 
     # draw for each cluster results and write to file
     for i,j in zip(cluster_order, range(len(cluster_order))):
@@ -227,10 +230,13 @@ if plot_with_hierarchy_clustering:
 
 
 
-        drawDriftPlotforOneCluster(ts=ts, clusters_dict=clusters_dict, key=i,
+        standard_erratic, real_erratic_score = drawDriftPlotforOneCluster(ts=ts, clusters_dict=clusters_dict, key=i,
                                    vertical = horisontal_separation_bounds_by_cluster,
                                    name_save = file_name_out[:-4] + 'cl-' + str(j) +  '.png',
                                    logFolder = args.logFolder)
+
+        writerErratic.writerow([j, standard_erratic, real_erratic_score])
+
     # drawStackedOne(ts=ts, clusters_dict=clusters_dict,key=cluster_order[6])
     #drawStackedOne(ts=ts, clusters_dict=clusters_dict,key=cluster_order[7])
 

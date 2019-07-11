@@ -8,7 +8,7 @@ import copy
 import pandas as pd
 
 #https://stackoverflow.com/questions/33282368/plotting-a-2d-heatmap-with-matplotlib
-def draw_drift_map_with_clusters(data, PATHoUT, ts = None, y_lines = None, x_lines_all = None, cluster_order = None):
+def draw_drift_map_with_clusters(data, PATHoUT, ts = None, y_lines = None, x_lines_all = None, cluster_order = None, color_theme = "plasma"):
     PATHoUT = "graphs_produced/" + PATHoUT
 
     data_c = copy.deepcopy(data)
@@ -20,7 +20,7 @@ def draw_drift_map_with_clusters(data, PATHoUT, ts = None, y_lines = None, x_lin
     # copper
     # viridis
 
-    ax = sns.heatmap(data_c, linewidth=0, cmap="plasma", xticklabels=ts) #cmap="PiYG"
+    ax = sns.heatmap(data_c, linewidth=0, cmap=color_theme, xticklabels=ts) #cmap="PiYG"
 
     # in case of debug to show directly here
     #plt.show()
