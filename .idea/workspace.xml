@@ -2,41 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1ddfbb2-da29-459d-a9ec-afc77cb68739" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clustering_changePoint_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/clustering_changePoint_methods.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core_driftMap_drawing.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_driftMap_drawing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core_driftPlot_drawing.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_driftPlot_drawing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/draw_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/draw_graph.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_2000_distancecl-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_2000_distancecl-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_3000_distancecl-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_400_distancecl-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_400_distancecl-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_400_distancecl-10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_400_distancecl-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_400_distancecl-12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_400_distancecl-13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_400_distancecl-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_400_distancecl-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_400_distancecl-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_400_distancecl-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_400_distancecl-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_400_distancecl-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_400_distancecl-8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_400_distancecl-9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_500_distancecl-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_500_distancecl-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_500_distancecl-10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_500_distancecl-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_500_distancecl-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_500_distancecl-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_500_distancecl-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_500_distancecl-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_500_distancecl-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_500_distancecl-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_500_distancecl-8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_500_distancecl-9.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/draw_graph.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="219" column="73" selection-start-line="219" selection-start-column="73" selection-end-line="219" selection-end-column="73" />
+            <state relative-caret-position="443">
+              <caret line="232" column="73" selection-start-line="232" selection-start-column="47" selection-end-line="232" selection-end-column="73" />
               <folding>
                 <element signature="e#261#276#0" expanded="true" />
               </folding>
@@ -63,11 +32,23 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="693">
+                <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core_driftMap_drawing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="55" selection-start-column="50" selection-end-column="55" />
+            <state relative-caret-position="198">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -75,11 +56,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core_driftPlot_drawing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="81" selection-start-line="81" selection-end-line="81" />
+            <state relative-caret-position="-49">
+              <caret line="56" column="8" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="8" />
               <folding>
                 <element signature="e#51#82#0" expanded="true" />
-                <marker date="1562837071106" expanded="true" signature="2348:2828" ph="..." />
               </folding>
             </state>
           </provider>
@@ -102,10 +82,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clustering_changePoint_methods.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="145" column="12" selection-start-line="145" selection-start-column="7" selection-end-line="145" selection-end-column="12" />
+            <state relative-caret-position="972">
+              <caret line="182" column="21" lean-forward="true" selection-start-line="182" selection-start-column="21" selection-end-line="182" selection-end-column="21" />
               <folding>
-                <element signature="e#80#90#0" expanded="true" />
+                <element signature="e#81#127#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,18 +96,6 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/results/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="36">
-                <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
-              </first_editor>
               <second_editor />
             </state>
           </provider>
@@ -199,8 +167,9 @@
       <find>AlternatePrecedence</find>
       <find>AlternateResponse</find>
       <find>atmostone</find>
-      <find>DRIFT</find>
       <find>withot</find>
+      <find>drawDriftPlotforOneCluster</find>
+      <find>DRIFT</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -219,11 +188,11 @@
         <option value="$PROJECT_DIR$/graphs_produced_detailed/README.md" />
         <option value="$PROJECT_DIR$/graphs_produced/README.md" />
         <option value="$PROJECT_DIR$/data_initial/README.md" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/clustering_changePoint_methods.py" />
+        <option value="$PROJECT_DIR$/draw_graph.py" />
         <option value="$PROJECT_DIR$/core_driftMap_drawing.py" />
         <option value="$PROJECT_DIR$/core_driftPlot_drawing.py" />
-        <option value="$PROJECT_DIR$/draw_graph.py" />
+        <option value="$PROJECT_DIR$/clustering_changePoint_methods.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -343,23 +312,23 @@
       <workItem from="1562593792770" duration="1077000" />
       <workItem from="1562666403121" duration="262000" />
       <workItem from="1562676613129" duration="2570000" />
-      <workItem from="1562834864192" duration="4486000" />
+      <workItem from="1562834864192" duration="6407000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119893000" />
+    <option name="totallyTimeSpent" value="121814000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1200" y="273" width="2560" height="1413" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23906125" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.07637232" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32715008" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4994664" visible="true" weight="0.2999217" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994664" weight="0.2999217" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49920446" weight="0.31401724" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -368,7 +337,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50079554" side_tool="true" weight="0.3101018" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49960223" weight="0.29287392" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49960223" visible="true" weight="0.29287392" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -408,7 +377,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/core_driftMap_drawing.py</url>
-          <line>47</line>
+          <line>45</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
@@ -477,16 +446,6 @@
     <entry file="file://$PROJECT_DIR$/nohup.out" />
     <entry file="file://$PROJECT_DIR$/TEST.py" />
     <entry file="file://$PROJECT_DIR$/incidents_2.png" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="432">
-            <caret line="24" selection-start-line="24" selection-end-line="24" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/results/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -535,19 +494,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/draw_graph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="232" column="73" selection-start-line="232" selection-start-column="47" selection-end-line="232" selection-end-column="73" />
+          <folding>
+            <element signature="e#261#276#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core_driftPlot_drawing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-49">
+          <caret line="56" column="8" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="8" />
+          <folding>
+            <element signature="e#51#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core_driftMap_drawing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="55" selection-start-column="50" selection-end-column="55" />
+        <state relative-caret-position="198">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/clustering_changePoint_methods.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="145" column="12" selection-start-line="145" selection-start-column="7" selection-end-line="145" selection-end-column="12" />
+        <state relative-caret-position="972">
+          <caret line="182" column="21" lean-forward="true" selection-start-line="182" selection-start-column="21" selection-end-line="182" selection-end-column="21" />
           <folding>
-            <element signature="e#80#90#0" expanded="true" />
+            <element signature="e#81#127#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -564,24 +543,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core_driftPlot_drawing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
-          <folding>
-            <element signature="e#51#82#0" expanded="true" />
-            <marker date="1562837071106" expanded="true" signature="2348:2828" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw_graph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="219" column="73" selection-start-line="219" selection-start-column="73" selection-end-line="219" selection-end-column="73" />
-          <folding>
-            <element signature="e#261#276#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="693">
+            <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

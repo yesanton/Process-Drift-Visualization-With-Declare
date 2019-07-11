@@ -2,19 +2,15 @@
 
 Author: Anton Yeshchenko
 '''
-
-import csv
-from pathlib import Path
 from sklearn.metrics import mean_squared_error
 import numpy as np
 import ruptures as rpt
 from scipy.cluster.hierarchy import dendrogram, linkage
-import matplotlib.pyplot as plt
 from scipy.cluster.hierarchy import fcluster
 
-
-# method used in the main processing method
-# removes all unchanging or stable time-series
+'''method used in the main processing method for cleaning data
+   removes all unchanging or stable time-series
+'''
 def remove_redundant_timeseries_HEADER(data_uncut):
     data = []
     zeros_removed = 0
@@ -47,6 +43,10 @@ def remove_redundant_timeseries_HEADER(data_uncut):
 
     return data
 
+
+'''
+
+'''
 def sort_by_closest_neigbour_HEADER(data):
     print ('there were : ' + str(len(data)) + " values")
     # we start attaching other vectors to this one
@@ -69,6 +69,9 @@ def sort_by_closest_neigbour_HEADER(data):
     return new_data[1:]
 
 
+''' main method of data analysis
+    the clusters and the change points are found here
+'''
 def do_cluster_changePoint(data_uncut, linkage_method ='ward', linkage_metric ='euclidean', fcluster_value = 800, fcluster_metric ='distance', driftAll = False, noSort = False):
     # first step is to use only those constrains that are changing
     data_uncut = remove_redundant_timeseries_HEADER(data_uncut)
@@ -78,7 +81,7 @@ def do_cluster_changePoint(data_uncut, linkage_method ='ward', linkage_metric ='
     for data_point in data_uncut:
         data_cut.append(data_point[3:])
 
-    # build the clustering method
+    '''build the clustering method'''
     Z = linkage(data_cut, method=linkage_method, metric=linkage_metric) # metric='correlation'
     a = fcluster(Z, fcluster_value, fcluster_metric)
 
@@ -117,11 +120,9 @@ def do_cluster_changePoint(data_uncut, linkage_method ='ward', linkage_metric ='
     print ('number of clusters: ' + str(len(d)))
 
 
-
-
-    # NOW find the horisontal cluster
-    # now we use unclastured cut data(without header)
-
+    '''NOW find the horisontal cluster
+       now we use unclastured cut data(without header)
+    '''
     # algorithm of how to detect the best penalty value for the
     # change point detection
     def dingOptimalNumberOfPoints(algo):

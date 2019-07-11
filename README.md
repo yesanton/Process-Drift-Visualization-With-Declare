@@ -1,21 +1,46 @@
 # Comprehensive Process Drift Detection with Visual Analytics (VDD technique)
 
+This technique supports the discovery of process drifts in the processes from event logs. 
+Load your [timestamp sorted csv](https://github.com/yesanton/Event-Log-Preprocessing-Tools) and xes files to the tool to discover Drfit Maps, Drift charts, and 
+Declare relations that see which part of the log is changing.
 
 ## How to run
 
-The main script is:
+In order to run the tool, one runs the following command in the terminal:
 
-draw_graph.py (use -help to see parameter list)
+> python3 draw_graph.py 
+
+To discover the parameters useful for the analysis, run the previous command with a \'-help\' parameter
+
+Here is one way to run the tool
+
+> python3 draw_graph.py -logName italian_help_desk -logFolder  italian_help_desk  -subL 100 -sliBy 50 -caseID 0 -timestampID 2  -driftAll
+
+\'-logFolder\' is an the subfolder dedicated to the log inside of \'data_initial/\'folder in the project folder 
+
+the '-logName' refers to the .xes and .csv files name found in the folder \'data_initial/logFolder \'
+
+\'-subL\' the sublog size
+
+\'sliBy\' slide by argument
+
+\'-caseID\' the case id (the column with case id in the csv file)
+
+\'-timestampID\' the timestamp id (the column with timestamps in the csv file)
+
+\'-driftAll\' this indicates that for discovering the points where the drifts are most redically changing, we use information from all subs-drifts at the same time.
 
 
-## Requirements
+## Requirements for running software
 
 - Python 3 
-- Requires java 10 (for the MINERful module – [fork MINERful](https://github.com/cdc08x/MINERful/wiki))
+- Requires java 10 (for the MINERful module (included in this software distribution), also find the original repo of MINERful – [fork MINERful](https://github.com/cdc08x/MINERful/wiki))
+- Command line
+- You can use disco, prom or any other tool for conversion between .csv and .xes files
 
 ## Datasets
 
-Code support any event log with that features case ID, timestamps, and activity labels.
+Code support any standard event log with that features case ID, timestamps, and activity labels.
 
 ## Why
 

@@ -5,31 +5,13 @@ Author: Anton Yeshchenko
 import matplotlib.pyplot as plt
 import numpy
 
-
-def drawDriftPlotforAllClusters(ts = None, clusters_dict=None, cluster_order = None):
-    lines_for_lineplot = []
-    for key in cluster_order:
-        averaged_line = [0] * (len(clusters_dict[key][0]) - 3)
-        for i in range(len(clusters_dict[key])):
-            for j in range(len(averaged_line)):
-                averaged_line[j] += clusters_dict[key][i][j + 3]
-
-        # for j in range(len(averaged_line)):
-        #     averaged_line[j] /= len(clusters_dict[key])
-
-        lines_for_lineplot.append(averaged_line)
-
-    # Data
-    x = range(0, len(lines_for_lineplot[0]))
-    plt.clf()
-    # Plot
-    plt.stackplot(x, lines_for_lineplot)  # , labels=['A', 'B', 'C']
-    plt.xticks(x, ts, rotation='vertical')
-    plt.legend(loc='upper left')
-    plt.show()
+''' This function draws Drift plots for each cluster and returns the Erratic measure of that cluster
+'''
 
 
-def drawDriftPlotforOneCluster(ts = None, clusters_dict=None, key = None, vertical = None, name_save ="graph.png", logFolder =''):
+def drawDriftPlotforOneCluster(ts=None, clusters_dict=None, key=None, vertical=None, name_save="graph.png",
+                               logFolder=''):
+
     averaged_line = [0] * (len(clusters_dict[key][0]) - 3)
     for i in range(len(clusters_dict[key])):
         for j in range(len(averaged_line)):
@@ -55,27 +37,29 @@ def drawDriftPlotforOneCluster(ts = None, clusters_dict=None, key = None, vertic
 
         vert = vert[:-1]
         for line in vert:
-            plt.axvline(x=line, color='black', dashes=(2,2))
+            plt.axvline(x=line, color='black', dashes=(2, 2))
     plt.xticks(xnew, ts, rotation='vertical')
     plt.ylim(top=1)
 
     import os
-    new_path = 'graphs_produced_detailed' + '/' + 'plots'+'/'+ logFolder
+    new_path = 'graphs_produced_detailed' + '/' + 'plots' + '/' + logFolder
     if not os.path.exists(new_path):
         os.makedirs(new_path)
     plt.savefig(new_path + '/' + name_save, bbox_inches='tight')
 
     # debug line
-    #plt.show()
+    # plt.show()
 
     # this is the smoothing line
     # plt.clf()
-    ynew = [(power_smooth[0]+power_smooth[1] + power_smooth[2])/3] + \
-           [(power_smooth[0] + power_smooth[1] + power_smooth[2] + power_smooth[3]) / 4] + \
-           [(i+j+k+l+g)/5 for i, j, k, l, g in zip(power_smooth[:-4],power_smooth[1:-3],power_smooth[2:-2], power_smooth[3:-1], power_smooth[4:])] + \
-           [(power_smooth[-4] + power_smooth[-3] + power_smooth[-2] + power_smooth[-1])/4] + \
-           [(power_smooth[-3] + power_smooth[-2] + power_smooth[-1]) / 3]
 
+    # some dumb way to smooth the line
+    ynew = [(power_smooth[0] + power_smooth[1] + power_smooth[2]) / 3] + \
+           [(power_smooth[0] + power_smooth[1] + power_smooth[2] + power_smooth[3]) / 4] + \
+           [(i + j + k + l + g) / 5 for i, j, k, l, g in
+            zip(power_smooth[:-4], power_smooth[1:-3], power_smooth[2:-2], power_smooth[3:-1], power_smooth[4:])] + \
+           [(power_smooth[-4] + power_smooth[-3] + power_smooth[-2] + power_smooth[-1]) / 4] + \
+           [(power_smooth[-3] + power_smooth[-2] + power_smooth[-1]) / 3]
 
     dis_should_be = 0
     dis_is_with_a_drift = 9
@@ -86,12 +70,31 @@ def drawDriftPlotforOneCluster(ts = None, clusters_dict=None, key = None, vertic
         dis_should_be += xnew[1] - xnew[0]
         # multiplied by len(averaged_line)
         # to get the calculation of the line as in the squared plot
-        dis_is_with_a_drift += numpy.math.sqrt((xnew[1] - xnew[0]) ** 2 + ((y  - y_0) * len(averaged_line) )**2)
+        dis_is_with_a_drift += numpy.math.sqrt((xnew[1] - xnew[0]) ** 2 + ((y - y_0) * len(averaged_line)) ** 2)
         y_0 = y
 
-    print ("without DRIFT: " + str(dis_should_be))
+    print("without DRIFT: " + str(dis_should_be))
     print("current DRIFT: " + str(dis_is_with_a_drift))
 
     return dis_should_be, dis_is_with_a_drift
+
+
+def drawDriftPlotforAllClusters(ts = None, clusters_dict=None, cluster_order = None):
+    lines_for_lineplot = []
+    for key in cluster_order:
+        averaged_line = [0] * (len(clusters_dict[key][0]) - 3)
+        for i in range(len(clusters_dict[key])):
+            for j in range(len(averaged_line)):
+                averaged_line[j] += clusters_dict[key][i][j + 3]
+        lines_for_lineplot.append(averaged_line)
+
+    # Data
+    x = range(0, len(lines_for_lineplot[0]))
+    plt.clf()
+    # Plot
+    plt.stackplot(x, lines_for_lineplot)
+    plt.xticks(x, ts, rotation='vertical')
+    plt.legend(loc='upper left')
+    plt.show()
 
 
