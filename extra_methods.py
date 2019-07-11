@@ -74,7 +74,8 @@ def importData(DATASET_NAME, c = True):
 
     return sequences, header_output,corresponding_number_of_traces
 
-# Method produces the timestamps for the graphs
+'''# Method produces the timestamps for the graphs
+'''
 def timestamp_ticks(sliding_window_step, window_size, dataset_folder, dataset_name, case_ind, timestamp_ind):
     dataset_link = Path("./data_initial/"+dataset_folder + dataset_name+"_timestamp_sorted.csv")
 
@@ -128,8 +129,9 @@ def timestamp_ticks(sliding_window_step, window_size, dataset_folder, dataset_na
         n_th += 1
     return time_out
 
-# output the declare specifications in json format
-# per each discovered cluster (behaviour change patch)
+'''output the declare specifications in json format
+per each discovered cluster (behaviour change patch)
+'''
 def saveConstrainsPerCluster(constraints, save_name, logFolder):
     dict_out = {}
     dict_out["constraints"] = []

@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1ddfbb2-da29-459d-a9ec-afc77cb68739" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clustering_changePoint_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/clustering_changePoint_methods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core_driftMap_drawing.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_driftMap_drawing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core_driftPlot_drawing.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_driftPlot_drawing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/extra_methods.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +29,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -65,15 +62,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/extra_methods.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+            <state relative-caret-position="29">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               <folding>
+                <element signature="e#87#97#0" expanded="true" />
                 <element signature="e#202#2043#0" />
                 <element signature="e#2207#3782#0" />
-                <element signature="e#3959#4572#0" />
               </folding>
             </state>
           </provider>
@@ -180,7 +177,6 @@
       <list>
         <option value="$PROJECT_DIR$/minerful_scripts/run-MINERfulSlider.sh" />
         <option value="$PROJECT_DIR$/TEST.py" />
-        <option value="$PROJECT_DIR$/extra_methods.py" />
         <option value="$PROJECT_DIR$/core_drawing.py" />
         <option value="$PROJECT_DIR$/core_stackedPlot_drawing.py" />
         <option value="$PROJECT_DIR$/clustering_methods.py" />
@@ -193,6 +189,7 @@
         <option value="$PROJECT_DIR$/core_driftPlot_drawing.py" />
         <option value="$PROJECT_DIR$/clustering_changePoint_methods.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/extra_methods.py" />
       </list>
     </option>
   </component>
@@ -312,18 +309,18 @@
       <workItem from="1562593792770" duration="1077000" />
       <workItem from="1562666403121" duration="262000" />
       <workItem from="1562676613129" duration="2570000" />
-      <workItem from="1562834864192" duration="6407000" />
+      <workItem from="1562834864192" duration="7060000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121814000" />
+    <option name="totallyTimeSpent" value="122467000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1200" y="273" width="2560" height="1413" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.07637232" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.07637232" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -337,7 +334,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50079554" side_tool="true" weight="0.3101018" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49960223" visible="true" weight="0.29287392" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49960223" visible="true" weight="0.29287392" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -531,18 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extra_methods.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-          <folding>
-            <element signature="e#202#2043#0" />
-            <element signature="e#2207#3782#0" />
-            <element signature="e#3959#4572#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -550,6 +535,18 @@
             <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra_methods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#87#97#0" expanded="true" />
+            <element signature="e#202#2043#0" />
+            <element signature="e#2207#3782#0" />
+          </folding>
         </state>
       </provider>
     </entry>
