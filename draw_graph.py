@@ -226,14 +226,14 @@ if plot_with_hierarchy_clustering:
 
         # output the declare constraints in the good format for minerful to draw
         saveConstrainsPerCluster(clusters_with_declare_names[i], save_name = file_name_out[:-4] + 'cl-' + str(j) +  '.json',
-                       logFolder = args.logFolder)
+                       logFolder = args.logFolderName)
 
 
 
         standard_erratic, real_erratic_score = drawDriftPlotforOneCluster(ts=ts, clusters_dict=clusters_dict, key=i,
                                    vertical = horisontal_separation_bounds_by_cluster,
                                    name_save = file_name_out[:-4] + 'cl-' + str(j) +  '.png',
-                                   logFolder = args.logFolder)
+                                   logFolder = args.logFolderName)
 
         writerErratic.writerow([j, standard_erratic, real_erratic_score])
 
