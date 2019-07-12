@@ -8,6 +8,7 @@ import math
 from pathlib import Path
 import os
 import json
+import subprocess
 
 def importData(DATASET_NAME, c = True):
     if c == True:
@@ -151,7 +152,45 @@ def saveConstrainsPerCluster(constraints, save_name, logFolder):
     if not os.path.exists(new_path):
         os.makedirs(new_path)
 
-    with open(new_path + '/' + save_name, 'w') as fp:
+    for key in range(len(dict_out['constraints'])):
+        dict_out['constraints'][key]['template'] = dict_out['constraints'][key]['template'].rstrip().lstrip()
+
+        #TODO put real numbers for confidence support etc.
+
+        dict_out['constraints'][key]['support'] = 1
+        dict_out['constraints'][key]['confidence'] = 1
+        dict_out['constraints'][key]['interestFactor'] = 1
+
+
+        for el in dict_out['constraints'][key]['parameters']:
+            el[0] = el[0]
+
+
+    path_to_save = new_path + '/' + save_name
+    with open(path_to_save, 'w') as fp:
         json.dump(dict_out, fp)
+        fp.close()
+
+
+    new_file_path = 'graphs_produced_detailed' + '/' + 'constraints_pruned' + '/' + logFolder
+    if not os.path.exists(new_file_path):
+        os.makedirs(new_file_path)
+
+
+    new_file_path = "../" + new_file_path +  '/' + save_name[:-4] + 'csv'
+    # this works from the minerful folder
+    # ./run-MINERfulSimplifier.sh -iMF
+    #                       ../graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-0.json
+
+    #                       -iME json -oCSV 1.csv  -prune hierarchyconflictredundancy
+    subprocess.run(["./run-MINERfulSimplifier.sh",
+                    "-iMF",
+                    '../' + path_to_save,
+                    "-iME", 'json',
+                    "-oCSV", new_file_path,
+                    "-prune", "hierarchyconflictredundancy"],
+                    cwd="minerful_scripts")
 
     dict_out = None
+
+# ./run-MINERfulSimplifier.sh -iMF path_to_save  -iME json -oCSV new_file_path -prune hierarchyconflictredundancy

@@ -26,7 +26,7 @@ parser = argparse.ArgumentParser()
 
 # These are the argument list  of the script
 parser.add_argument("-logName", help="the log name")
-parser.add_argument("-logFolder", help="the folder with a timestamp sorted log, check https://github.com/yesanton/Event-Log-Preprocessing-Tools for timeseoring of CSVs")
+parser.add_argument("-logFolderName", help="the folder with a timestamp sorted log, check https://github.com/yesanton/Event-Log-Preprocessing-Tools for timeseoring of CSVs")
 parser.add_argument("-caseID", type=int)
 parser.add_argument("-timestampID", type=int)
 parser.add_argument("-subL", type=int)
@@ -72,8 +72,8 @@ else:
 #     colors = args.colors
 # else:
 #     colors = 'bw'
-if args.logFolder:
-    dataset_folder = args.logFolder
+if args.logFolderName:
+    dataset_folder = args.logFolderName
 else:
     dataset_folder = "BPIC15_1"
 
@@ -108,12 +108,12 @@ if not args.noMinerful:
     subprocess.run(["./run-MINERfulSlider.sh",
                     "-iLF",
                     data_path,
-                    "-tStart", str(tStart),"-subL",str(subL),
-                    '-p', '4',
+                    "-iLStartAt", str(tStart),"-iLSubLen",str(subL),
+                    '-para', '4',
                     '-s', '0.000000001',
                     '-c', '0.0',
                     '-i', '0.0' ,
-                    '-ppAT', 'none',
+                    '-prune', 'none',
                     '-sliOut',
                     "../data_from_minerful/"+dataset_moto+"_"+
                     str(tStart) + "_" + str(subL) + "_"+ str(sliBy) + '.csv',

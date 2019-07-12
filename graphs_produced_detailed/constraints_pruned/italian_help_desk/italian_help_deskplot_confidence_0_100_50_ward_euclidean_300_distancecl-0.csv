@@ -1,0 +1,25 @@
+'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
+'ChainPrecedence(Wait,  Create SW anomaly)';'ChainPrecedence';' Create SW anomaly';'Wait';1.000;1.000;1.000
+'AlternatePrecedence(Wait,  INVALID)';'AlternatePrecedence';' INVALID';'Wait';1.000;1.000;1.000
+'AlternatePrecedence(Wait,  RESOLVED)';'AlternatePrecedence';' RESOLVED';'Wait';1.000;1.000;1.000
+'ChainPrecedence(Wait,  Require upgrade)';'ChainPrecedence';' Require upgrade';'Wait';1.000;1.000;1.000
+'ChainPrecedence(Take in charge ticket,  Resolve SW anomaly)';'ChainPrecedence';' Resolve SW anomaly';'Take in charge ticket';1.000;1.000;1.000
+'AlternatePrecedence(Wait,  VERIFIED)';'AlternatePrecedence';' VERIFIED';'Wait';1.000;1.000;1.000
+'ChainPrecedence(Assign seriousness,  Wait)';'ChainPrecedence';' Wait';'Assign seriousness';1.000;1.000;1.000
+'RespondedExistence(Assign seriousness,  Insert ticket)';'RespondedExistence';'Assign seriousness';' Insert ticket';1.000;1.000;1.000
+'NotCoExistence(Assign seriousness,  Insert ticket)';'NotCoExistence';'Assign seriousness';' Insert ticket';1.000;1.000;1.000
+'ChainSuccession(Assign seriousness,  Resolve ticket)';'ChainSuccession';'Assign seriousness';' Resolve ticket';1.000;1.000;1.000
+'RespondedExistence(Closed,  Insert ticket)';'RespondedExistence';'Closed';' Insert ticket';1.000;1.000;1.000
+'NotCoExistence(Closed,  Insert ticket)';'NotCoExistence';'Closed';' Insert ticket';1.000;1.000;1.000
+'AtMostOne(Insert ticket)';'AtMostOne';'Insert ticket';;1.000;1.000;1.000
+'ChainResponse(Insert ticket,  Assign seriousness)';'ChainResponse';'Insert ticket';' Assign seriousness';1.000;1.000;1.000
+'NotCoExistence(Insert ticket,  Assign seriousness)';'NotCoExistence';'Insert ticket';' Assign seriousness';1.000;1.000;1.000
+'AlternateResponse(Insert ticket,  Closed)';'AlternateResponse';'Insert ticket';' Closed';1.000;1.000;1.000
+'AlternateResponse(Insert ticket,  Resolve ticket)';'AlternateResponse';'Insert ticket';' Resolve ticket';1.000;1.000;1.000
+'AlternateResponse(Insert ticket,  Take in charge ticket)';'AlternateResponse';'Insert ticket';' Take in charge ticket';1.000;1.000;1.000
+'NotCoExistence(Resolve ticket,  Insert ticket)';'NotCoExistence';'Resolve ticket';' Insert ticket';1.000;1.000;1.000
+'ChainSuccession(Resolve ticket,  Take in charge ticket)';'ChainSuccession';'Resolve ticket';' Take in charge ticket';1.000;1.000;1.000
+'RespondedExistence(Take in charge ticket,  Insert ticket)';'RespondedExistence';'Take in charge ticket';' Insert ticket';1.000;1.000;1.000
+'NotCoExistence(Take in charge ticket,  Insert ticket)';'NotCoExistence';'Take in charge ticket';' Insert ticket';1.000;1.000;1.000
+'NotCoExistence(Wait,  Insert ticket)';'NotCoExistence';'Wait';' Insert ticket';1.000;1.000;1.000
+'ChainSuccession(Wait,  Take in charge ticket)';'ChainSuccession';'Wait';' Take in charge ticket';1.000;1.000;1.000
