@@ -30,6 +30,19 @@ the '-logName' refers to the .xes and .csv files name found in the folder \'data
 
 \'-driftAll\' this indicates that for discovering the points where the drifts are most redically changing, we use information from all subs-drifts at the same time.
 
+## Fastest way to get up to speed (if you have all required libraries)
+
+### Run all these in terminal in a folder in your computer, and right away you have your analysis.
+
+> git clone git@github.com:yesanton/Process-Drift-Visualization-With-Declare.git
+
+> cd Process-Drift-Visualization-With-Declare
+
+> python3 draw_graph.py -logName italian_help_desk -logFolderName italian_help_desk -caseID 0 -timestampID 3 -subL 400 -sliBy 200
+
+> cd graphs_produced
+
+
 
 ## Requirements for running software
 
