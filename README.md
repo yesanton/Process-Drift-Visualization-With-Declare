@@ -40,8 +40,6 @@ the '-logName' refers to the .xes and .csv files name found in the folder \'data
 
 > python3 draw_graph.py -logName italian_help_desk -logFolderName italian_help_desk -caseID 0 -timestampID 3 -subL 400 -sliBy 200
 
-> cd graphs_produced
-
 
 
 ## Requirements for running software
