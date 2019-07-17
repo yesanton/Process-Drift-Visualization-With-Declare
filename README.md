@@ -4,6 +4,8 @@ This technique supports the discovery of process drifts in the processes from ev
 Load your [timestamp sorted csv](https://github.com/yesanton/Event-Log-Preprocessing-Tools) and xes files to the tool to discover Drfit Maps, Drift charts, and 
 Declare relations that see which part of the log is changing.
 
+Watch a [youtube video explaining this method here](https://youtu.be/_AZpI_YTjO8)
+
 ## How to run
 
 In order to run the tool, one runs the following command in the terminal:
@@ -57,4 +59,6 @@ Code support any standard event log with that features case ID, timestamps, and 
 
 
 This is the source code and tool supporting the conference paper:
-Anton Yeshchenko, Claudio Di Ciccio, Jan Mendling, Artem Polyvyanyy: *Comprehensive Process Drift Detection with Visual Analytics*. In: Proc. of [ER](http://www.inf.ufrgs.br/er2019/) (in print). 2019. [Open the pre-print](https://github.com/yesanton/Process-Drift-Visualization-With-Declare/blob/master/Yeshchenko-etal-ER2019.pdf).
+Anton Yeshchenko, Claudio Di Ciccio, Jan Mendling, Artem Polyvyanyy: *Comprehensive Process Drift Detection with Visual Analytics*. In: Proc. of [ER](http://www.inf.ufrgs.br/er2019/) (in print). 2019. [Open arXiv pre-print](https://arxiv.org/abs/1907.06386).
+
+
