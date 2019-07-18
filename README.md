@@ -4,7 +4,7 @@ This technique supports the discovery of process drifts in the processes from ev
 Load your [timestamp sorted csv](https://github.com/yesanton/Event-Log-Preprocessing-Tools) and xes files to the tool to discover Drfit Maps, Drift charts, and 
 Declare relations that see which part of the log is changing.
 
-Watch a [youtube video explaining this method here](https://youtu.be/_AZpI_YTjO8)
+### Watch a [youtube video explaining this method here](https://youtu.be/_AZpI_YTjO8)
 
 ## How to run
 
