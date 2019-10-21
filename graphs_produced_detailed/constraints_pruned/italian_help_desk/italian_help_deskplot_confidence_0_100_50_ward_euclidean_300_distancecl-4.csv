@@ -1,0 +1,11 @@
+'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
+'NotCoExistence(Assign seriousness,  Insert ticket)';'NotCoExistence';'Assign seriousness';' Insert ticket';1.000;1.000;1.000
+'NotCoExistence(Closed,  Insert ticket)';'NotCoExistence';'Closed';' Insert ticket';1.000;1.000;1.000
+'NotCoExistence(Insert ticket,  Assign seriousness)';'NotCoExistence';'Insert ticket';' Assign seriousness';1.000;1.000;1.000
+'NotCoExistence(Insert ticket,  Closed)';'NotCoExistence';'Insert ticket';' Closed';1.000;1.000;1.000
+'NotCoExistence(Insert ticket,  Resolve ticket)';'NotCoExistence';'Insert ticket';' Resolve ticket';1.000;1.000;1.000
+'NotCoExistence(Insert ticket,  Take in charge ticket)';'NotCoExistence';'Insert ticket';' Take in charge ticket';1.000;1.000;1.000
+'NotCoExistence(Insert ticket,  Wait)';'NotCoExistence';'Insert ticket';' Wait';1.000;1.000;1.000
+'NotCoExistence(Resolve ticket,  Insert ticket)';'NotCoExistence';'Resolve ticket';' Insert ticket';1.000;1.000;1.000
+'NotCoExistence(Take in charge ticket,  Insert ticket)';'NotCoExistence';'Take in charge ticket';' Insert ticket';1.000;1.000;1.000
+'NotCoExistence(Wait,  Insert ticket)';'NotCoExistence';'Wait';' Insert ticket';1.000;1.000;1.000

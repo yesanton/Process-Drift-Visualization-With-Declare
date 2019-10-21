@@ -99,26 +99,55 @@ colorTheme = args.colorTheme
 
 
 # first we run minerful with parameters!
-completed = subprocess.run(['ls', '-1'])
-print('returncode:', completed.returncode)
+#completed = subprocess.run(['ls', '-1'])
+#print('returncode:', completed.returncode)
 
 data_path = '../data_initial/'+dataset_folder + dataset_moto+'_timestamp_sorted.xes'
 
-if not args.noMinerful:
-    subprocess.run(["./run-MINERfulSlider.sh",
-                    "-iLF",
+import os
+env = dict(os.environ)
+env['JAVA_OPTS'] = 'foo'
+#testing on what is being called in the next lines to the minerful
+print (' '.join(['java', "-Xmx16G", '-cp', 'MINERful.jar', 'minerful.MinerFulMinerSlider',
+                     "-iLF",
                     data_path,
-                    "-iLStartAt", str(tStart),"-iLSubLen",str(subL),
+                    "-iLStartAt", str(tStart), "-iLSubLen", str(subL),
                     '-para', '4',
                     '-s', '0.000000001',
                     '-c', '0.0',
-                    '-i', '0.0' ,
-                    '-prune', 'none',
+                    '-i', '0.0',
                     '-sliOut',
-                    "../data_from_minerful/"+dataset_moto+"_"+
-                    str(tStart) + "_" + str(subL) + "_"+ str(sliBy) + '.csv',
-                    "-sliBy", str(sliBy),
-                    " -shush"], cwd="minerful_scripts")
+                    "../data_from_minerful/" + dataset_moto + "_" +
+                    str(tStart) + "_" + str(subL) + "_" + str(sliBy) + '.csv']))
+if not args.noMinerful:
+    subprocess.call(['java', '-version'])
+    subprocess.call(['java', "-Xmx16G", "--add-modules", "java.xml.bind", '-cp', 'MINERful.jar', 'minerful.MinerFulMinerSlider',
+                     "-iLF",
+                    data_path,
+                    "-iLStartAt", str(tStart), "-iLSubLen", str(subL),
+                    '-para', '4',
+                    '-s', '0.000000001',
+                    '-c', '0.0',
+                    '-i', '0.0',
+                    '-sliOut',
+                    "../data_from_minerful/" + dataset_moto + "_" +
+                    str(tStart) + "_" + str(subL) + "_" + str(sliBy) + '.csv'], env=env,
+                    cwd="minerful_scripts")
+
+    # subprocess.run(["./run-MINERfulSlider.sh",
+    #                 "-iLF",
+    #                 data_path,
+    #                 "-iLStartAt", str(tStart),"-iLSubLen",str(subL),
+    #                 '-para', '4',
+    #                 '-s', '0.000000001',
+    #                 '-c', '0.0',
+    #                 '-i', '0.0' ,
+    #                 '-prune', 'none',
+    #                 '-sliOut',
+    #                 "../data_from_minerful/"+dataset_moto+"_"+
+    #                 str(tStart) + "_" + str(subL) + "_"+ str(sliBy) + '.csv',
+    #                 "-sliBy", str(sliBy),
+    #                 " -shush"], cwd="minerful_scripts")
 
 # prepare timestamp headers for the plot
 ts = timestamp_ticks(sliding_window_step=sliBy,

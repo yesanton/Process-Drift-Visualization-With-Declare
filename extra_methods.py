@@ -183,13 +183,25 @@ def saveConstrainsPerCluster(constraints, save_name, logFolder):
     #                       ../graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-0.json
 
     #                       -iME json -oCSV 1.csv  -prune hierarchyconflictredundancy
-    subprocess.run(["./run-MINERfulSimplifier.sh",
-                    "-iMF",
+
+    # Make a copy of the environment
+    env = dict(os.environ)
+    env['JAVA_OPTS'] = 'foo'
+
+    subprocess.call(['java', "-Xmx16G", "--add-modules", "java.xml.bind", '-cp', 'MINERful.jar', 'minerful.MinerFulSimplificationStarter',
+         "-iMF",
                     '../' + path_to_save,
                     "-iME", 'json',
                     "-oCSV", new_file_path,
-                    "-prune", "hierarchyconflictredundancy"],
+                    "-prune", "hierarchyconflictredundancy"], env=env,
                     cwd="minerful_scripts")
+    # subprocess.run(["./run-MINERfulSimplifier.sh",
+    #                 "-iMF",
+    #                 '../' + path_to_save,
+    #                 "-iME", 'json',
+    #                 "-oCSV", new_file_path,
+    #                 "-prune", "hierarchyconflictredundancy"],
+    #                 cwd="minerful_scripts")
 
     dict_out = None
 

@@ -1,0 +1,3 @@
+'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
+'AlternateResponse(Wait,  Closed)';'AlternateResponse';'Wait';' Closed';1.000;1.000;1.000
+'AlternateResponse(Wait,  Resolve ticket)';'AlternateResponse';'Wait';' Resolve ticket';1.000;1.000;1.000

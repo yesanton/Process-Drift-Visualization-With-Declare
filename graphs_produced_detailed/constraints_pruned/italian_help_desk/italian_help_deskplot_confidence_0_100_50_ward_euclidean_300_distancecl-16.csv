@@ -1,0 +1,4 @@
+'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
+'AlternatePrecedence(Wait,  INVALID)';'AlternatePrecedence';' INVALID';'Wait';1.000;1.000;1.000
+'AlternatePrecedence(Wait,  RESOLVED)';'AlternatePrecedence';' RESOLVED';'Wait';1.000;1.000;1.000
+'AlternatePrecedence(Wait,  VERIFIED)';'AlternatePrecedence';' VERIFIED';'Wait';1.000;1.000;1.000
