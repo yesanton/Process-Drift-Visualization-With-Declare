@@ -2,30 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1ddfbb2-da29-459d-a9ec-afc77cb68739" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/experiments_vis/pm4py.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/DriftVisWithDeclare.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DriftVisWithDeclare.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_minerful/italian_help_desk_0_100_50.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_from_minerful/italian_help_desk_0_100_50.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/draw_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/draw_graph.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/extra_methods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distance.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-0.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-0.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-1.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-10.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-10.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-11.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-11.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-12.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-12.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-13.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-13.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-14.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-14.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-15.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-15.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-16.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-16.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-3.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-4.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-5.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-5.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-6.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-6.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-7.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-7.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-8.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-8.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-9.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/constraints/italian_help_desk/italian_help_deskplot_confidence_0_100_50_ward_euclidean_300_distancecl-9.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +39,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -168,15 +147,39 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pm4py" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DriftVisWithDeclare" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments_vis" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments_vis/pm4py.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.draw_graph" />
       <item itemvalue="Python.extra_methods" />
       <item itemvalue="Python.1" />
       <item itemvalue="Python.1 (1)" />
+      <item itemvalue="Python.pm4py" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.draw_graph" />
+        <item itemvalue="Python.pm4py" />
         <item itemvalue="Python.1 (1)" />
         <item itemvalue="Python.1" />
         <item itemvalue="Python.extra_methods" />
@@ -232,6 +235,17 @@
       <workItem from="1568363108778" duration="3178000" />
       <workItem from="1568374423070" duration="248000" />
       <workItem from="1570629977125" duration="591000" />
+      <workItem from="1571645216396" duration="1371000" />
+      <workItem from="1571647360107" duration="68000" />
+      <workItem from="1571647664902" duration="484000" />
+      <workItem from="1571648204359" duration="3665000" />
+      <workItem from="1571652517102" duration="822000" />
+      <workItem from="1571656864597" duration="1537000" />
+      <workItem from="1571747850033" duration="1546000" />
+      <workItem from="1571815182632" duration="603000" />
+      <workItem from="1572354684006" duration="5901000" />
+      <workItem from="1572526753113" duration="1118000" />
+      <workItem from="1572536246576" duration="730000" />
     </task>
     <servers />
   </component>
@@ -273,6 +287,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$pm4py.coverage" NAME="pm4py Coverage Results" MODIFIED="1571657289822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments_vis" />
     <SUITE FILE_PATH="coverage/DriftVisWithDeclare$TEST.coverage" NAME="TEST Coverage Results" MODIFIED="1553746320128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DriftVisWithDeclare$extra_methods.coverage" NAME="extra_methods Coverage Results" MODIFIED="1562861685982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DriftVisWithDeclare$draw_graph.coverage" NAME="draw_graph Coverage Results" MODIFIED="1562863487219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -280,6 +295,6 @@
     <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$1__1_.coverage" NAME="1 (1) Coverage Results" MODIFIED="1568361600407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DriftVisWithDeclare$distance.coverage" NAME="distance Coverage Results" MODIFIED="1554193703835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/.local/lib/python3.6/site-packages/scipy/spatial" />
     <SUITE FILE_PATH="coverage/DriftVisWithDeclare$clustering_methods.coverage" NAME="clustering_methods Coverage Results" MODIFIED="1553747597617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$draw_graph.coverage" NAME="draw_graph Coverage Results" MODIFIED="1568374675180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$draw_graph.coverage" NAME="draw_graph Coverage Results" MODIFIED="1572526784336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
