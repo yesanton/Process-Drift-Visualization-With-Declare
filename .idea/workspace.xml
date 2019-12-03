@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42fb79c6-5da8-4b9f-8b9d-4b52de7dd6fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Process-Drift-Visualization-With-Declare.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DriftVisWithDeclare.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/yesant.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_from_minerful/italian_help_desk_0_1000_500.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_from_minerful/italian_help_desk_0_1000_500.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separately.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/italian_help_desk_0_1000_500_ward_euclidean_300_distance_changepoints_separately.csv" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/italian_help_desk_0_1000_500_ward_euclidean_300_distance_changepoints_separately.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-0.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-5.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +73,7 @@
       <updated>1575360251177</updated>
       <workItem from="1575360255505" duration="92000" />
       <workItem from="1575360370116" duration="14000" />
-      <workItem from="1575360399020" duration="4879000" />
+      <workItem from="1575360399020" duration="6654000" />
     </task>
     <servers />
   </component>
