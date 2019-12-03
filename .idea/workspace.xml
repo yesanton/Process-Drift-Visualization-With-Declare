@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1ddfbb2-da29-459d-a9ec-afc77cb68739" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/experiments_vis/pm4py.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DriftVisWithDeclare.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DriftVisWithDeclare.iml" afterDir="false" />
+    <list default="true" id="42fb79c6-5da8-4b9f-8b9d-4b52de7dd6fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Process-Drift-Visualization-With-Declare.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DriftVisWithDeclare.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/yesant.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_from_minerful/italian_help_desk_0_1000_500.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_from_minerful/italian_help_desk_0_1000_500.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separately.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/italian_help_desk_0_1000_500_ward_euclidean_300_distance_changepoints_separately.csv" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/italian_help_desk_0_1000_500_ward_euclidean_300_distance_changepoints_separately.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-0.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_1000_500_ward_euclidean_300_distance_changepoints_separatelycl-5.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,39 +27,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/DriftVisWithDeclare$draw_graph.coverage" NAME="draw_graph Coverage Results" MODIFIED="1553671665856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DriftVisWithDeclare$clustering_methods.coverage" NAME="clustering_methods Coverage Results" MODIFIED="1553654633072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DriftVisWithDeclare$core_drawing.coverage" NAME="core_drawing Coverage Results" MODIFIED="1553602076673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1Qgue1PZWbSqLMrUl9iSY7QARiW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1USqGptAAQX9QmYhqlz7fpQpxHU" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\anton\Documents\WritePrograms\Process-Drift-Visualization-With-Declare" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -58,53 +49,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.draw_graph">
-    <configuration name="1 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="DriftVisWithDeclare" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="DriftVisWithDeclare" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/minerful_scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\anton\Documents\WritePrograms\Process-Drift-Visualization-With-Declare\1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="draw_graph" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="DriftVisWithDeclare" />
+      <module name="Process-Drift-Visualization-With-Declare" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -117,7 +64,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/draw_graph.py" />
-      <option name="PARAMETERS" value="-logName italian_help_desk -logFolder  italian_help_desk  -subL 100 -sliBy 50 -caseID 0 -timestampID 2  -driftAll -noMinerful" />
+      <option name="PARAMETERS" value="-logName italian_help_desk -logFolderName italian_help_desk -caseID 0 -timestampID 3 -subL 800 -sliBy 400" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -125,64 +72,9 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="extra_methods" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="DriftVisWithDeclare" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/extra_methods.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pm4py" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="DriftVisWithDeclare" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments_vis" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments_vis/pm4py.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Python.draw_graph" />
-      <item itemvalue="Python.extra_methods" />
-      <item itemvalue="Python.1" />
-      <item itemvalue="Python.1 (1)" />
-      <item itemvalue="Python.pm4py" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.draw_graph" />
-        <item itemvalue="Python.pm4py" />
-        <item itemvalue="Python.1 (1)" />
-        <item itemvalue="Python.1" />
-        <item itemvalue="Python.extra_methods" />
       </list>
     </recent_temporary>
   </component>
@@ -191,61 +83,14 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a1ddfbb2-da29-459d-a9ec-afc77cb68739" name="Default Changelist" comment="" />
-      <created>1553578252658</created>
+      <changelist id="42fb79c6-5da8-4b9f-8b9d-4b52de7dd6fb" name="Default Changelist" comment="" />
+      <created>1575360251177</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1553578252658</updated>
-      <workItem from="1553578254573" duration="3619000" />
-      <workItem from="1553582100155" duration="550000" />
-      <workItem from="1553582845321" duration="761000" />
-      <workItem from="1553585191439" duration="306000" />
-      <workItem from="1553585832957" duration="9128000" />
-      <workItem from="1553651975022" duration="10623000" />
-      <workItem from="1553671635738" duration="653000" />
-      <workItem from="1553742145853" duration="2783000" />
-      <workItem from="1553757308814" duration="641000" />
-      <workItem from="1553775611089" duration="4447000" />
-      <workItem from="1553836646634" duration="5520000" />
-      <workItem from="1554085777757" duration="12459000" />
-      <workItem from="1554194163670" duration="8804000" />
-      <workItem from="1554250715660" duration="17779000" />
-      <workItem from="1554357057081" duration="10824000" />
-      <workItem from="1554619484788" duration="4630000" />
-      <workItem from="1554647140302" duration="6535000" />
-      <workItem from="1554703402971" duration="1824000" />
-      <workItem from="1555329038227" duration="3403000" />
-      <workItem from="1555575290669" duration="635000" />
-      <workItem from="1556023822621" duration="736000" />
-      <workItem from="1556515524138" duration="1669000" />
-      <workItem from="1558474497125" duration="19000" />
-      <workItem from="1562506483967" duration="3150000" />
-      <workItem from="1562593792770" duration="1077000" />
-      <workItem from="1562666403121" duration="262000" />
-      <workItem from="1562676613129" duration="2570000" />
-      <workItem from="1562834864192" duration="15725000" />
-      <workItem from="1562910745226" duration="552000" />
-      <workItem from="1562912604546" duration="387000" />
-      <workItem from="1568204653498" duration="6692000" />
-      <workItem from="1568279478427" duration="1572000" />
-      <workItem from="1568285900385" duration="3236000" />
-      <workItem from="1568297529799" duration="247000" />
-      <workItem from="1568298153186" duration="2518000" />
-      <workItem from="1568358701111" duration="2867000" />
-      <workItem from="1568363108778" duration="3178000" />
-      <workItem from="1568374423070" duration="248000" />
-      <workItem from="1570629977125" duration="591000" />
-      <workItem from="1571645216396" duration="1371000" />
-      <workItem from="1571647360107" duration="68000" />
-      <workItem from="1571647664902" duration="484000" />
-      <workItem from="1571648204359" duration="3665000" />
-      <workItem from="1571652517102" duration="822000" />
-      <workItem from="1571656864597" duration="1537000" />
-      <workItem from="1571747850033" duration="1546000" />
-      <workItem from="1571815182632" duration="603000" />
-      <workItem from="1572354684006" duration="5901000" />
-      <workItem from="1572526753113" duration="1118000" />
-      <workItem from="1572536246576" duration="730000" />
+      <updated>1575360251177</updated>
+      <workItem from="1575360255505" duration="92000" />
+      <workItem from="1575360370116" duration="14000" />
+      <workItem from="1575360399020" duration="4879000" />
     </task>
     <servers />
   </component>
@@ -269,32 +114,69 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/core_driftMap_drawing.py</url>
-          <line>45</line>
-          <option name="timeStamp" value="44" />
+          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
+          <line>141</line>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/extra_methods.py</url>
-          <line>198</line>
-          <option name="timeStamp" value="56" />
+          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
+          <line>172</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
+          <line>129</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
+          <line>128</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
+          <line>134</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
+          <line>133</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
+          <line>136</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
+          <line>137</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
+          <line>132</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
+          <line>156</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
+          <line>168</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/draw_graph.py</url>
           <line>152</line>
-          <option name="timeStamp" value="58" />
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$pm4py.coverage" NAME="pm4py Coverage Results" MODIFIED="1571657289822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments_vis" />
-    <SUITE FILE_PATH="coverage/DriftVisWithDeclare$TEST.coverage" NAME="TEST Coverage Results" MODIFIED="1553746320128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DriftVisWithDeclare$extra_methods.coverage" NAME="extra_methods Coverage Results" MODIFIED="1562861685982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DriftVisWithDeclare$draw_graph.coverage" NAME="draw_graph Coverage Results" MODIFIED="1562863487219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$1.coverage" NAME="1 Coverage Results" MODIFIED="1568361517321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/minerful_scripts" />
-    <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$1__1_.coverage" NAME="1 (1) Coverage Results" MODIFIED="1568361600407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DriftVisWithDeclare$distance.coverage" NAME="distance Coverage Results" MODIFIED="1554193703835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/.local/lib/python3.6/site-packages/scipy/spatial" />
-    <SUITE FILE_PATH="coverage/DriftVisWithDeclare$clustering_methods.coverage" NAME="clustering_methods Coverage Results" MODIFIED="1553747597617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$draw_graph.coverage" NAME="draw_graph Coverage Results" MODIFIED="1572526784336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$draw_graph.coverage" NAME="draw_graph Coverage Results" MODIFIED="1575365615176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
