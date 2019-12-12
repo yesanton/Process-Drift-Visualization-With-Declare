@@ -2,13 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42fb79c6-5da8-4b9f-8b9d-4b52de7dd6fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/experiments/experiments_autocorrelation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core_driftPlot_drawing.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_driftPlot_drawing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_from_minerful/italian_help_desk_0_200_50.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_from_minerful/italian_help_desk_0_200_50.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/draw_graph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separately.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separately.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/italian_help_desk_0_200_50_ward_euclidean_300_distance_changepoints_separately.csv" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/italian_help_desk_0_200_50_ward_euclidean_300_distance_changepoints_separately.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-0.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-10.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-11.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-12.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-13.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-14.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-15.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-16.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-7.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-8.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-9.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphs_produced_detailed/plots/italian_help_desk/italian_help_deskplot_confidence_0_200_50_ward_euclidean_300_distance_changepoints_separatelycl-9.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -19,6 +49,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\anton\Documents\WritePrograms\Process-Drift-Visualization-With-Declare\experiments" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -32,7 +67,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.draw_graph">
     <configuration name="draw_graph" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Process-Drift-Visualization-With-Declare" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -47,7 +82,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/draw_graph.py" />
-      <option name="PARAMETERS" value="-logName italian_help_desk -logFolderName italian_help_desk -caseID 0 -timestampID 3 -subL 800 -sliBy 400" />
+      <option name="PARAMETERS" value="-logName ConditionalMove -logFolderName synthetic -caseID 0 -timestampID 3 -subL 200 -sliBy 50" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -55,9 +90,36 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="experiments_autocorrelation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Process-Drift-Visualization-With-Declare" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/experiments_autocorrelation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.draw_graph" />
+      <item itemvalue="Python.experiments_autocorrelation" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.draw_graph" />
+        <item itemvalue="Python.experiments_autocorrelation" />
       </list>
     </recent_temporary>
   </component>
@@ -73,7 +135,11 @@
       <updated>1575360251177</updated>
       <workItem from="1575360255505" duration="92000" />
       <workItem from="1575360370116" duration="14000" />
-      <workItem from="1575360399020" duration="6654000" />
+      <workItem from="1575360399020" duration="14408000" />
+      <workItem from="1575963058253" duration="1698000" />
+      <workItem from="1575995801343" duration="628000" />
+      <workItem from="1576143826854" duration="8396000" />
+      <workItem from="1576169433478" duration="2834000" />
     </task>
     <servers />
   </component>
@@ -98,68 +164,24 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
-          <line>141</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
-          <line>172</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
-          <line>129</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
-          <line>128</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
-          <line>134</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
-          <line>133</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
-          <line>136</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
-          <line>137</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
-          <line>132</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
           <line>156</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/clustering_changePoint_methods.py</url>
-          <line>168</line>
-          <option name="timeStamp" value="14" />
+          <url>file://$PROJECT_DIR$/core_driftPlot_drawing.py</url>
+          <line>72</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/draw_graph.py</url>
-          <line>152</line>
-          <option name="timeStamp" value="15" />
+          <url>file://$PROJECT_DIR$/core_driftPlot_drawing.py</url>
+          <line>56</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$draw_graph.coverage" NAME="draw_graph Coverage Results" MODIFIED="1575365615176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$experiments_autocorrelation.coverage" NAME="experiments_autocorrelation Coverage Results" MODIFIED="1575964473342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments" />
+    <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$draw_graph.coverage" NAME="draw_graph Coverage Results" MODIFIED="1576151483636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

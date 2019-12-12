@@ -2,6 +2,8 @@
 
 Author: Anton Yeshchenko
 '''
+import csv
+
 import matplotlib.pyplot as plt
 import numpy
 
@@ -46,6 +48,13 @@ def drawDriftPlotforOneCluster(ts=None, clusters_dict=None, key=None, vertical=N
     if not os.path.exists(new_path):
         os.makedirs(new_path)
     plt.savefig(new_path + '/' + name_save, bbox_inches='tight')
+
+    new_path = 'graphs_produced_detailed' + '/' + 'timeseries' + '/' + logFolder
+    if not os.path.exists(new_path):
+        os.makedirs(new_path)
+    with open(new_path +  name_save + '.csv', mode='w') as save_time_series_per_cl:
+        wr = csv.writer(save_time_series_per_cl, dialect='excel')
+        wr.writerow(averaged_line)
 
     # debug line
     # plt.show()

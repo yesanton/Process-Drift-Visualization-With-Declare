@@ -103,7 +103,7 @@ colorTheme = args.colorTheme
 #print('returncode:', completed.returncode)
 
 data_path = '../data_initial/'+dataset_folder + dataset_moto+'_timestamp_sorted.xes'
-
+# TODO check if java lib takes CSV files instead of XES
 import os
 env = dict(os.environ)
 env['JAVA_OPTS'] = 'foo'
@@ -116,6 +116,7 @@ print (' '.join(['java', "-Xmx16G", '-cp', 'MINERful.jar', 'minerful.MinerFulMin
                     '-s', '0.000000001',
                     '-c', '0.0',
                     '-i', '0.0',
+                    # '-prune', 'none',
                     '-sliOut',
                     "../data_from_minerful/" + dataset_moto + "_" +
                     str(tStart) + "_" + str(subL) + "_" + str(sliBy) + '.csv']))
@@ -124,11 +125,14 @@ if not args.noMinerful:
     subprocess.call(['java', "-Xmx16G", "--add-modules", "java.xml.bind", '-cp', 'MINERful.jar', 'minerful.MinerFulMinerSlider',
                      "-iLF",
                     data_path,
-                    "-iLStartAt", str(tStart), "-iLSubLen", str(subL),
+                    "-iLStartAt", str(tStart),
+                     "-iLSubLen", str(subL),
+                     "-sliBy", str(sliBy),
                     '-para', '4',
                     '-s', '0.000000001',
                     '-c', '0.0',
                     '-i', '0.0',
+                     '-prune', 'none', # this is the pruning or not pruning options of constraints
                     '-sliOut',
                     "../data_from_minerful/" + dataset_moto + "_" +
                     str(tStart) + "_" + str(subL) + "_" + str(sliBy) + '.csv'], env=env,
