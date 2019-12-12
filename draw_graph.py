@@ -3,7 +3,7 @@ Example run:
 python3 draw_graph.py -logName bpi_challenge_2013_open -logFolder bpic2013 -subL 100 -sliBy 50 -caseID 0 -timestampID 3 -noMinerful -driftAll
 
 call help to see argument list
-Author: Anton Yeshchenko
+Author:  Anton Yeshchenko
 '''
 
 import argparse
