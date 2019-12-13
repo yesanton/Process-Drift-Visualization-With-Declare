@@ -1,3 +1,4 @@
-data_initial/synthetic/*
-data_from_minerful/*
+data/data_initial/synthetic/*
+data/data_from_minerful/*
 .idea/*
+__pycache__/*

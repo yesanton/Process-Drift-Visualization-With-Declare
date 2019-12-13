@@ -1,0 +1,1 @@
+{"constraints": [{"template": "AlternateResponse", "parameters": [["Assign seriousness"], [" Take in charge ticket"]], "support": 1, "confidence": 1, "interestFactor": 1}, {"template": "ChainResponse", "parameters": [["Assign seriousness"], [" Take in charge ticket"]], "support": 1, "confidence": 1, "interestFactor": 1}]}

@@ -1,0 +1,1 @@
+{"constraints": [{"template": "Precedence", "parameters": [["Queued+Awaiting Assignment"], [" Accepted+Wait - Implementation"]]}, {"template": "AlternatePrecedence", "parameters": [["Queued+Awaiting Assignment"], [" Accepted+Wait - Implementation"]]}]}

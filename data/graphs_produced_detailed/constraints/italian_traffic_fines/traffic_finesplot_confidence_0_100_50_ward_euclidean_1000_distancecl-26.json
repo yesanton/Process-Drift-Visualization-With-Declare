@@ -1,0 +1,1 @@
+{"constraints": [{"template": "Precedence", "parameters": [["Add penalty"], [" Insert Date Appeal to Prefecture"]]}, {"template": "AlternatePrecedence", "parameters": [["Add penalty"], [" Insert Date Appeal to Prefecture"]]}, {"template": "ChainPrecedence", "parameters": [["Add penalty"], [" Insert Date Appeal to Prefecture"]]}]}

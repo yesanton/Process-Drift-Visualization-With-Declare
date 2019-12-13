@@ -1,0 +1,15 @@
+'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
+'RespondedExistence(Assign seriousness,  Insert ticket)';'RespondedExistence';'Assign seriousness';' Insert ticket';1.000;1.000;1.000
+'NotSuccession(Assign seriousness,  Insert ticket)';'NotSuccession';'Assign seriousness';' Insert ticket';1.000;1.000;1.000
+'RespondedExistence(Closed,  Insert ticket)';'RespondedExistence';'Closed';' Insert ticket';1.000;1.000;1.000
+'NotSuccession(Closed,  Insert ticket)';'NotSuccession';'Closed';' Insert ticket';1.000;1.000;1.000
+'AtMostOne(Insert ticket)';'AtMostOne';'Insert ticket';;1.000;1.000;1.000
+'ChainResponse(Insert ticket,  Assign seriousness)';'ChainResponse';'Insert ticket';' Assign seriousness';1.000;1.000;1.000
+'AlternateResponse(Insert ticket,  Closed)';'AlternateResponse';'Insert ticket';' Closed';1.000;1.000;1.000
+'AlternateResponse(Insert ticket,  Resolve ticket)';'AlternateResponse';'Insert ticket';' Resolve ticket';1.000;1.000;1.000
+'AlternateResponse(Insert ticket,  Take in charge ticket)';'AlternateResponse';'Insert ticket';' Take in charge ticket';1.000;1.000;1.000
+'RespondedExistence(Resolve ticket,  Insert ticket)';'RespondedExistence';'Resolve ticket';' Insert ticket';1.000;1.000;1.000
+'NotSuccession(Resolve ticket,  Insert ticket)';'NotSuccession';'Resolve ticket';' Insert ticket';1.000;1.000;1.000
+'RespondedExistence(Take in charge ticket,  Insert ticket)';'RespondedExistence';'Take in charge ticket';' Insert ticket';1.000;1.000;1.000
+'NotSuccession(Take in charge ticket,  Insert ticket)';'NotSuccession';'Take in charge ticket';' Insert ticket';1.000;1.000;1.000
+'NotSuccession(Wait,  Insert ticket)';'NotSuccession';'Wait';' Insert ticket';1.000;1.000;1.000

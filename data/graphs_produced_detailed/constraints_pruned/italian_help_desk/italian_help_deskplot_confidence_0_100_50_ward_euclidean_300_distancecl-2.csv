@@ -1,0 +1,11 @@
+'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
+'NotCoExistence(Assign seriousness,  Require upgrade)';'NotCoExistence';'Assign seriousness';' Require upgrade';1.000;1.000;1.000
+'RespondedExistence(Closed,  Require upgrade)';'RespondedExistence';'Closed';' Require upgrade';1.000;1.000;1.000
+'NotCoExistence(Closed,  Require upgrade)';'NotCoExistence';'Closed';' Require upgrade';1.000;1.000;1.000
+'NotCoExistence(Require upgrade,  Assign seriousness)';'NotCoExistence';'Require upgrade';' Assign seriousness';1.000;1.000;1.000
+'AlternateResponse(Require upgrade,  Closed)';'AlternateResponse';'Require upgrade';' Closed';1.000;1.000;1.000
+'NotCoExistence(Require upgrade,  Closed)';'NotCoExistence';'Require upgrade';' Closed';1.000;1.000;1.000
+'ChainResponse(Require upgrade,  Resolve ticket)';'ChainResponse';'Require upgrade';' Resolve ticket';1.000;1.000;1.000
+'NotCoExistence(Resolve ticket,  Require upgrade)';'NotCoExistence';'Resolve ticket';' Require upgrade';1.000;1.000;1.000
+'ChainResponse(Take in charge ticket,  Require upgrade)';'ChainResponse';'Take in charge ticket';' Require upgrade';1.000;1.000;1.000
+'NotCoExistence(Take in charge ticket,  Require upgrade)';'NotCoExistence';'Take in charge ticket';' Require upgrade';1.000;1.000;1.000

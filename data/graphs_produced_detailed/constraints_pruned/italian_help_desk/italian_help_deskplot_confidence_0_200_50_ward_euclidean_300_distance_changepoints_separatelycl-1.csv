@@ -1,0 +1,20 @@
+'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
+'ChainPrecedence(Assign seriousness,  Create SW anomaly)';'ChainPrecedence';' Create SW anomaly';'Assign seriousness';1.000;1.000;1.000
+'ChainPrecedence(Assign seriousness,  Require upgrade)';'ChainPrecedence';' Require upgrade';'Assign seriousness';1.000;1.000;1.000
+'AlternatePrecedence(Wait,  Require upgrade)';'AlternatePrecedence';' Require upgrade';'Wait';1.000;1.000;1.000
+'ChainPrecedence(Take in charge ticket,  Resolve SW anomaly)';'ChainPrecedence';' Resolve SW anomaly';'Take in charge ticket';1.000;1.000;1.000
+'AlternateResponse(Assign seriousness,  Require upgrade)';'AlternateResponse';'Assign seriousness';' Require upgrade';1.000;1.000;1.000
+'NotCoExistence(Assign seriousness,  Require upgrade)';'NotCoExistence';'Assign seriousness';' Require upgrade';1.000;1.000;1.000
+'ChainSuccession(Assign seriousness,  Resolve ticket)';'ChainSuccession';'Assign seriousness';' Resolve ticket';1.000;1.000;1.000
+'NotCoExistence(Assign seriousness,  Take in charge ticket)';'NotCoExistence';'Assign seriousness';' Take in charge ticket';1.000;1.000;1.000
+'RespondedExistence(Closed,  Require upgrade)';'RespondedExistence';'Closed';' Require upgrade';1.000;1.000;1.000
+'NotCoExistence(Closed,  Take in charge ticket)';'NotCoExistence';'Closed';' Take in charge ticket';1.000;1.000;1.000
+'AtMostOne(Require upgrade)';'AtMostOne';'Require upgrade';;1.000;1.000;1.000
+'RespondedExistence(Require upgrade,  Assign seriousness)';'RespondedExistence';'Require upgrade';' Assign seriousness';1.000;1.000;1.000
+'NotCoExistence(Require upgrade,  Assign seriousness)';'NotCoExistence';'Require upgrade';' Assign seriousness';1.000;1.000;1.000
+'AlternateResponse(Require upgrade,  Closed)';'AlternateResponse';'Require upgrade';' Closed';1.000;1.000;1.000
+'AlternateResponse(Require upgrade,  Resolve ticket)';'AlternateResponse';'Require upgrade';' Resolve ticket';1.000;1.000;1.000
+'RespondedExistence(Require upgrade,  Take in charge ticket)';'RespondedExistence';'Require upgrade';' Take in charge ticket';1.000;1.000;1.000
+'RespondedExistence(Resolve ticket,  Require upgrade)';'RespondedExistence';'Resolve ticket';' Require upgrade';1.000;1.000;1.000
+'NotCoExistence(Resolve ticket,  Take in charge ticket)';'NotCoExistence';'Resolve ticket';' Take in charge ticket';1.000;1.000;1.000
+'AlternateResponse(Take in charge ticket,  Require upgrade)';'AlternateResponse';'Take in charge ticket';' Require upgrade';1.000;1.000;1.000

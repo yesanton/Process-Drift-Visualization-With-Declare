@@ -1,0 +1,17 @@
+'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
+'AlternatePrecedence(Take in charge ticket,  Closed)';'AlternatePrecedence';' Closed';'Take in charge ticket';1.000;1.000;1.000
+'AlternatePrecedence(Assign seriousness,  Resolve ticket)';'AlternatePrecedence';' Resolve ticket';'Assign seriousness';1.000;1.000;1.000
+'AlternatePrecedence(Take in charge ticket,  Resolve ticket)';'AlternatePrecedence';' Resolve ticket';'Take in charge ticket';1.000;1.000;1.000
+'Precedence(Take in charge ticket,  Wait)';'Precedence';' Wait';'Take in charge ticket';1.000;1.000;1.000
+'NotChainSuccession(Assign seriousness,  Resolve ticket)';'NotChainSuccession';'Assign seriousness';' Resolve ticket';1.000;1.000;1.000
+'Succession(Assign seriousness,  Take in charge ticket)';'Succession';'Assign seriousness';' Take in charge ticket';1.000;1.000;1.000
+'CoExistence(Closed,  Take in charge ticket)';'CoExistence';'Closed';' Take in charge ticket';1.000;1.000;1.000
+'NotSuccession(Closed,  Take in charge ticket)';'NotSuccession';'Closed';' Take in charge ticket';1.000;1.000;1.000
+'CoExistence(Resolve ticket,  Take in charge ticket)';'CoExistence';'Resolve ticket';' Take in charge ticket';1.000;1.000;1.000
+'NotSuccession(Resolve ticket,  Take in charge ticket)';'NotSuccession';'Resolve ticket';' Take in charge ticket';1.000;1.000;1.000
+'Participation(Take in charge ticket)';'Participation';'Take in charge ticket';;1.000;1.000;1.000
+'CoExistence(Take in charge ticket,  Assign seriousness)';'CoExistence';'Take in charge ticket';' Assign seriousness';1.000;1.000;1.000
+'NotSuccession(Take in charge ticket,  Assign seriousness)';'NotSuccession';'Take in charge ticket';' Assign seriousness';1.000;1.000;1.000
+'Succession(Take in charge ticket,  Closed)';'Succession';'Take in charge ticket';' Closed';1.000;1.000;1.000
+'NotChainSuccession(Take in charge ticket,  Closed)';'NotChainSuccession';'Take in charge ticket';' Closed';1.000;1.000;1.000
+'Succession(Take in charge ticket,  Resolve ticket)';'Succession';'Take in charge ticket';' Resolve ticket';1.000;1.000;1.000

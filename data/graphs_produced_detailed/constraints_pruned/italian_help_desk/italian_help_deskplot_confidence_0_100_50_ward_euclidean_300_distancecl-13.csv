@@ -1,0 +1,7 @@
+'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
+'Succession(Assign seriousness,  Take in charge ticket)';'Succession';'Assign seriousness';' Take in charge ticket';1.000;1.000;1.000
+'CoExistence(Closed,  Take in charge ticket)';'CoExistence';'Closed';' Take in charge ticket';1.000;1.000;1.000
+'CoExistence(Resolve ticket,  Take in charge ticket)';'CoExistence';'Resolve ticket';' Take in charge ticket';1.000;1.000;1.000
+'CoExistence(Take in charge ticket,  Assign seriousness)';'CoExistence';'Take in charge ticket';' Assign seriousness';1.000;1.000;1.000
+'Succession(Take in charge ticket,  Closed)';'Succession';'Take in charge ticket';' Closed';1.000;1.000;1.000
+'Succession(Take in charge ticket,  Resolve ticket)';'Succession';'Take in charge ticket';' Resolve ticket';1.000;1.000;1.000

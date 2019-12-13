@@ -1,0 +1,4 @@
+'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
+'AlternatePrecedence(Take in charge ticket,  Closed)';'AlternatePrecedence';' Closed';'Take in charge ticket';1.000;1.000;1.000
+'Precedence(Take in charge ticket,  Resolve ticket)';'Precedence';' Resolve ticket';'Take in charge ticket';1.000;1.000;1.000
+'Participation(Take in charge ticket)';'Participation';'Take in charge ticket';;1.000;1.000;1.000

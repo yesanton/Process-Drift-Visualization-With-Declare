@@ -1,0 +1,8 @@
+'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
+'Response(Assign seriousness,  Closed)';'Response';'Assign seriousness';' Closed';1.000;1.000;1.000
+'NotChainSuccession(Assign seriousness,  Closed)';'NotChainSuccession';'Assign seriousness';' Closed';1.000;1.000;1.000
+'Response(Assign seriousness,  Resolve ticket)';'Response';'Assign seriousness';' Resolve ticket';1.000;1.000;1.000
+'RespondedExistence(Closed,  Assign seriousness)';'RespondedExistence';'Closed';' Assign seriousness';1.000;1.000;1.000
+'NotSuccession(Closed,  Assign seriousness)';'NotSuccession';'Closed';' Assign seriousness';1.000;1.000;1.000
+'RespondedExistence(Resolve ticket,  Assign seriousness)';'RespondedExistence';'Resolve ticket';' Assign seriousness';1.000;1.000;1.000
+'NotSuccession(Resolve ticket,  Assign seriousness)';'NotSuccession';'Resolve ticket';' Assign seriousness';1.000;1.000;1.000

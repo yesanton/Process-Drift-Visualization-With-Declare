@@ -1,4 +1,0 @@
-'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
-'AtMostOne(Assign seriousness)';'AtMostOne';'Assign seriousness';;1.000;1.000;1.000
-'AlternateResponse(Assign seriousness,  Closed)';'AlternateResponse';'Assign seriousness';' Closed';1.000;1.000;1.000
-'AlternateResponse(Assign seriousness,  Resolve ticket)';'AlternateResponse';'Assign seriousness';' Resolve ticket';1.000;1.000;1.000

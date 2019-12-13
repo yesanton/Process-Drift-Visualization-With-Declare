@@ -1,0 +1,4 @@
+'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
+'AtMostOne(Take in charge ticket)';'AtMostOne';'Take in charge ticket';;1.000;1.000;1.000
+'AlternateResponse(Take in charge ticket,  Closed)';'AlternateResponse';'Take in charge ticket';' Closed';1.000;1.000;1.000
+'AlternateResponse(Take in charge ticket,  Resolve ticket)';'AlternateResponse';'Take in charge ticket';' Resolve ticket';1.000;1.000;1.000

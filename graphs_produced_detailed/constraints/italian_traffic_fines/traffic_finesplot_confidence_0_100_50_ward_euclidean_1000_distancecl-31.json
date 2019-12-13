@@ -1,1 +1,0 @@
-{"constraints": [{"template": "Precedence", "parameters": [["Create Fine"], [" Send Fine"]]}, {"template": "AlternatePrecedence", "parameters": [["Create Fine"], [" Send Fine"]]}, {"template": "ChainPrecedence", "parameters": [["Create Fine"], [" Send Fine"]]}]}

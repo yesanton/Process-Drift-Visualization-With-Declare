@@ -1,0 +1,10 @@
+'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
+'AlternatePrecedence(Assign seriousness,  INVALID)';'AlternatePrecedence';' INVALID';'Assign seriousness';1.000;1.000;1.000
+'AlternatePrecedence(Resolve ticket,  INVALID)';'AlternatePrecedence';' INVALID';'Resolve ticket';1.000;1.000;1.000
+'AlternatePrecedence(Take in charge ticket,  INVALID)';'AlternatePrecedence';' INVALID';'Take in charge ticket';1.000;1.000;1.000
+'AlternatePrecedence(Assign seriousness,  RESOLVED)';'AlternatePrecedence';' RESOLVED';'Assign seriousness';1.000;1.000;1.000
+'ChainPrecedence(Resolve ticket,  RESOLVED)';'ChainPrecedence';' RESOLVED';'Resolve ticket';1.000;1.000;1.000
+'AlternatePrecedence(Take in charge ticket,  RESOLVED)';'AlternatePrecedence';' RESOLVED';'Take in charge ticket';1.000;1.000;1.000
+'AlternatePrecedence(Assign seriousness,  VERIFIED)';'AlternatePrecedence';' VERIFIED';'Assign seriousness';1.000;1.000;1.000
+'AlternatePrecedence(Resolve ticket,  VERIFIED)';'AlternatePrecedence';' VERIFIED';'Resolve ticket';1.000;1.000;1.000
+'AlternatePrecedence(Take in charge ticket,  VERIFIED)';'AlternatePrecedence';' VERIFIED';'Take in charge ticket';1.000;1.000;1.000
