@@ -1,1 +1,0 @@
-{"constraints": [{"template": "Precedence", "parameters": [["Accepted-In Progress"], [" Completed-Closed"]]}, {"template": "AlternatePrecedence", "parameters": [["Accepted-In Progress"], [" Completed-Closed"]]}, {"template": "ChainPrecedence", "parameters": [["Accepted-In Progress"], [" Completed-Closed"]]}]}

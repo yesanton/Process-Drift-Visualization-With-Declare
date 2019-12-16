@@ -1,1 +1,0 @@
-{"constraints": [{"template": "AlternateSuccession", "parameters": [["Take in charge ticket"], [" Closed"]], "support": 1, "confidence": 1, "interestFactor": 1}, {"template": "AlternateSuccession", "parameters": [["Take in charge ticket"], [" Resolve ticket"]], "support": 1, "confidence": 1, "interestFactor": 1}]}

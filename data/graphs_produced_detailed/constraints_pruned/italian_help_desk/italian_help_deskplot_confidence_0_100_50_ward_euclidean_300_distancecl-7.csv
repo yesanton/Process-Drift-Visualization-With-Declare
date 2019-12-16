@@ -1,6 +1,0 @@
-'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
-'AtMostOne(Closed)';'AtMostOne';'Closed';;1.000;1.000;1.000
-'End(Closed)';'End';'Closed';;1.000;1.000;1.000
-'CoExistence(Closed,  Resolve ticket)';'CoExistence';'Closed';' Resolve ticket';1.000;1.000;1.000
-'Participation(Resolve ticket)';'Participation';'Resolve ticket';;1.000;1.000;1.000
-'Succession(Resolve ticket,  Closed)';'Succession';'Resolve ticket';' Closed';1.000;1.000;1.000

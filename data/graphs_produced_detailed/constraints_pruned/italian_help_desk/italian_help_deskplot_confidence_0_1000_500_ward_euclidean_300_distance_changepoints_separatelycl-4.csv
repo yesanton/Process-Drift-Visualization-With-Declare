@@ -1,4 +1,0 @@
-'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
-'AlternatePrecedence(Assign seriousness,  Schedule intervention)';'AlternatePrecedence';' Schedule intervention';'Assign seriousness';1.000;1.000;1.000
-'ChainPrecedence(Take in charge ticket,  Schedule intervention)';'ChainPrecedence';' Schedule intervention';'Take in charge ticket';1.000;1.000;1.000
-'ChainPrecedence(Closed,  VERIFIED)';'ChainPrecedence';' VERIFIED';'Closed';1.000;1.000;1.000

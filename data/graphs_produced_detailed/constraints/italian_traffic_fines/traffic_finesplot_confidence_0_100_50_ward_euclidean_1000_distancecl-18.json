@@ -1,1 +1,0 @@
-{"constraints": [{"template": "Precedence", "parameters": [["Create Fine"], [" Add penalty"]]}, {"template": "AlternatePrecedence", "parameters": [["Create Fine"], [" Add penalty"]]}, {"template": "Precedence", "parameters": [["Create Fine"], [" Insert Fine Notification"]]}, {"template": "AlternatePrecedence", "parameters": [["Create Fine"], [" Insert Fine Notification"]]}]}

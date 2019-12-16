@@ -1,1 +1,0 @@
-{"constraints": [{"template": "Precedence", "parameters": [["Add penalty"], [" Payment"]]}, {"template": "AlternatePrecedence", "parameters": [["Add penalty"], [" Payment"]]}, {"template": "ChainPrecedence", "parameters": [["Add penalty"], [" Payment"]]}]}

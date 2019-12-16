@@ -2,3 +2,6 @@ data/data_initial/synthetic/*
 data/data_from_minerful/*
 .idea/*
 __pycache__/*
+data/data_initial/*
+data/data_intermediate/*
+data/data_results_final/*

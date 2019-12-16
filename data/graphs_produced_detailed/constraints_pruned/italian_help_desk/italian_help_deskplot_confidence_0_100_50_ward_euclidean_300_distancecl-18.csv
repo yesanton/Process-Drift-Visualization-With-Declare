@@ -1,4 +1,0 @@
-'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
-'AlternateResponse(Assign seriousness,  Wait)';'AlternateResponse';'Assign seriousness';' Wait';1.000;1.000;1.000
-'ChainResponse(Take in charge ticket,  Wait)';'ChainResponse';'Take in charge ticket';' Wait';1.000;1.000;1.000
-'AtMostOne(Wait)';'AtMostOne';'Wait';;1.000;1.000;1.000
