@@ -1,25 +1,22 @@
 import csv
 
-from src.auxiliary.constant_definitions import FOLDER_TIMESTAMP_TICKS_FOR_GRAPHS
-
-
-def import_timestamp_ticks(name_file, folder_name = FOLDER_TIMESTAMP_TICKS_FOR_GRAPHS):
-    full_path_file = folder_name / name_file
+def import_timestamp_ticks(fileMngm):
+    full_path_file = fileMngm.get_path_timestamp_ticks()
 
     if not full_path_file.is_file():
         return None
 
-    with open(folder_name / name_file, 'r') as myfile:
+    with open(fileMngm.get_path_timestamp_ticks(), 'r') as myfile:
         reader = csv.reader(myfile)
         your_list = list(reader)
         return your_list[0]
 
-def import_check(name_file, folder_name):
-    return (folder_name / name_file).is_file()
+def import_check(file):
+    return file.is_file()
 
 
-def import_minerful_constraints_data(name_file, folder_name, constraint_type = "confidence"):
-    csvfile = open(folder_name / name_file, 'r')
+def import_minerful_constraints_data(fileMngm, algoPrmts):
+    csvfile = open(fileMngm.get_path_minerful_constraints(), 'r')
     csv_reader = csv.reader(csvfile, delimiter=';', quotechar='|')
 
     hea = next(csv_reader, None)
@@ -43,7 +40,6 @@ def import_minerful_constraints_data(name_file, folder_name, constraint_type = "
             # now we split the string
             name_of_constraint_end_index = temp.find('(')
             tem_h.append(temp[:name_of_constraint_end_index])
-
             temp = temp[name_of_constraint_end_index+1:]
             #find if we have two events or one
             separated_constraints_index = temp.find(', ')
@@ -65,12 +61,10 @@ def import_minerful_constraints_data(name_file, folder_name, constraint_type = "
         sequences.append(list())
 
     corresponding_number_of_traces = []
-
     n_lines =0
     for r in csv_reader:
         corresponding_number_of_traces.append(r[:2])
         n_lines += 1
-
         counter = 0
         for i in range(len(r)):
             if counter > 1:
@@ -79,12 +73,15 @@ def import_minerful_constraints_data(name_file, folder_name, constraint_type = "
                 counter += 1
 
     # For now we only concentrate on confidence as it is most representative measure
-    if constraint_type == "confidence":
-        confidence = []
-        for i, j in zip(sequences, header_output):
-            if j[0] == "Confidence":
-                confidence.append(j[1:] + i)
+    if algoPrmts.constraint_type_used not in set(['confidence', 'support', 'interestFactor']):
+        raise ValueError(algoPrmts.constraint_type_used + " is not a constraint type")
+    elif algoPrmts.constraint_type_used == 'confidence': cn = "Confidence"
+    elif algoPrmts.constraint_type_used == 'support': cn = "Support"
+    else: cn = "InterestF"
 
-        return confidence
-    #return sequences, header_output, corresponding_number_of_traces
-    return None
+    constraints = []
+    for i, j in zip(sequences, header_output):
+        if j[0] == "Confidence":
+            constraints.append(j[1:] + i)
+
+    return constraints

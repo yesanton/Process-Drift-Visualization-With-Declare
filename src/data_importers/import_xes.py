@@ -3,8 +3,8 @@ from pathlib import Path
 from pm4py.objects.log.importer.xes import factory as xes_import_factory
 
 
-def import_xes_and_sort_timestamp(name_file, folder_name):
-    full_path_file = folder_name / name_file
+def import_xes_and_sort_timestamp(fileMngm):
+    full_path_file = fileMngm.get_path_input_xes()
 
     if not full_path_file.is_file():
         raise FileNotFoundError('File is now found at ' + str(full_path_file))
@@ -12,11 +12,8 @@ def import_xes_and_sort_timestamp(name_file, folder_name):
     parameters = {"timestamp_sort": True}
     return xes_import_factory.apply(str(full_path_file), parameters=parameters)
 
-def import_xes(name_file, folder_file):
-    full_path_file = folder_file / name_file
-
-    if not full_path_file.is_file():
+def import_xes(fileMngm):
+    if not fileMngm.get_path_input_sorted_xes().is_file():
         return None
-
-    return xes_import_factory.apply(str(full_path_file))
+    return xes_import_factory.apply(str(fileMngm.get_path_input_sorted_xes()))
 

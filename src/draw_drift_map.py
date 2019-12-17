@@ -10,9 +10,7 @@ import pandas as pd
 # more details on the python lib:
 # https://stackoverflow.com/questions/33282368/plotting-a-2d-heatmap-with-matplotlib
 
-def draw_drift_map_with_clusters(data, PATHoUT, folder_out, ts = None, y_lines = None, x_lines_all = None, cluster_order = None, color_theme = "plasma"):
-    PATHoUT = folder_out / PATHoUT
-
+def draw_drift_map_with_clusters(data, fileMngm, algoPrmts, ts = None, y_lines = None, x_lines_all = None, cluster_order = None):
     data_c = copy.deepcopy(data)
     for i in range(len(data)):
         for j in range(len(data[i])):
@@ -21,7 +19,7 @@ def draw_drift_map_with_clusters(data, PATHoUT, folder_out, ts = None, y_lines =
     #https://matplotlib.org/examples/color/colormaps_reference.html
     # copper
     # viridis
-    ax = sns.heatmap(data_c, linewidth=0, cmap=color_theme, xticklabels=ts) #cmap="PiYG"
+    ax = sns.heatmap(data_c, linewidth=0, cmap=algoPrmts.color_theme_drift_map, xticklabels=ts) #cmap="PiYG"
 
     # in case of debug to show directly here
     #plt.show()
@@ -45,4 +43,4 @@ def draw_drift_map_with_clusters(data, PATHoUT, folder_out, ts = None, y_lines =
                 for k in x_lines_all[i]:
                     plt.plot([k,k],[from_ind, to_ind], linestyle='-.', color='white', linewidth=1)
    # ax.tight_layout()
-    ax.get_figure().savefig(PATHoUT, bbox_inches='tight')
+    ax.get_figure().savefig(fileMngm.get_path_drift_map(), bbox_inches='tight')

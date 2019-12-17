@@ -73,7 +73,7 @@ def sort_by_closest_neigbour_HEADER(data):
 ''' main method of data analysis
     the clusters and the change points are found here
 '''
-def do_cluster_changePoint(data_uncut, linkage_method ='ward', linkage_metric ='euclidean', fcluster_value = 800, fcluster_metric ='distance', driftAll = False, noSort = False):
+def do_cluster_changePoint(data_uncut, algoPrmts):
     # first step is to use only those constrains that are changing
     data_uncut = remove_redundant_timeseries_HEADER(data_uncut)
 
@@ -83,8 +83,8 @@ def do_cluster_changePoint(data_uncut, linkage_method ='ward', linkage_metric ='
         data_cut.append(data_point[3:])
 
     '''build the clustering method'''
-    Z = linkage(data_cut, method=linkage_method, metric=linkage_metric) # metric='correlation'
-    a = fcluster(Z, fcluster_value, fcluster_metric)
+    Z = linkage(data_cut, method=algoPrmts.linkage_method, metric=algoPrmts.linkage_metric) # metric='correlation'
+    a = fcluster(Z, algoPrmts.clustering_cutoff_param, algoPrmts.fcluster_metric)
 
     d = dict()
     for cluster_n, data in zip(a,data_uncut):
@@ -104,7 +104,7 @@ def do_cluster_changePoint(data_uncut, linkage_method ='ward', linkage_metric ='
 
     for key in order_cluster:
         # preprocess the clusters for plotting better (sorting them by similarity)
-        if not noSort:
+        if not algoPrmts.no_sort_in_clusters:
             d[key] = sort_by_closest_neigbour_HEADER(d[key])
 
 
@@ -145,7 +145,7 @@ def do_cluster_changePoint(data_uncut, linkage_method ='ward', linkage_metric ='
 
     c = rpt.costs.CostRbf();
 
-    if driftAll:
+    if algoPrmts.change_point_for_all:
         dd = []
         for dk in order_cluster:
             for  i in d[dk]:
@@ -154,7 +154,6 @@ def do_cluster_changePoint(data_uncut, linkage_method ='ward', linkage_metric ='
         sig = np.array(dd)
         signal = np.transpose(sig)
         algo = rpt.Pelt(model="rbf", custom_cost=c).fit(signal)
-
         x_lines = dingOptimalNumberOfPoints(algo)
         x_all_lines[0] = x_lines
 

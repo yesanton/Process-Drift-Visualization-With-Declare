@@ -3,7 +3,6 @@ from src.auxiliary.constant_definitions import NAME_FILE_SEPARATOR
 
 def compose_name(*argv):
     name = ''
-
     # correctly identify the extension of the file
     end = len(argv) - 1
     if argv[-1][0] == '.':
