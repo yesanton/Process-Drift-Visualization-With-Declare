@@ -2,20 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42fb79c6-5da8-4b9f-8b9d-4b52de7dd6fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/auxiliary/mine_features_from_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/auxiliary/simplifiers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data_exporters/export_csv.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data_importers/import_csv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data_exporters/export_json.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_intermediate/declare_from_minerful/italian_help_desk_0_200_50.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_intermediate/timestamp_sorted/ConditionalMove.xes" beforeDir="false" afterPath="$PROJECT_DIR$/data/data_intermediate/timestamp_sorted_logs/ConditionalMove.xes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_intermediate/timestamp_sorted/italian_help_desk.xes" beforeDir="false" afterPath="$PROJECT_DIR$/data/data_intermediate/timestamp_sorted_logs/italian_help_desk.xes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/auxiliary/constant_definitions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/auxiliary/constant_definitions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_exporters/export_xes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_exporters/export_xes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_importers/import_xes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_importers/import_xes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/minerful_adapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/minerful_adapter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clustering_changePoint_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_algorithms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command_line.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/auxiliary/command_line.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core_driftMap_drawing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/draw_drift_map.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core_driftPlot_drawing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/draw_drift_plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_exporters/export_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_exporters/export_csv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_importers/import_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_importers/import_csv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/draw_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/draw_graph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/extra_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/extra_methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/minerful_adapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/auxiliary/minerful_adapter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenario_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenario_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/start_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/agregated_functions.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,8 +44,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\anton\Documents\WritePrograms\Process-Drift-Visualization-With-Declare\data\data_initial" />
       <recent name="C:\Users\anton\Documents\WritePrograms\Process-Drift-Visualization-With-Declare\src\auxiliary" />
+      <recent name="C:\Users\anton\Documents\WritePrograms\Process-Drift-Visualization-With-Declare\data\data_initial" />
       <recent name="C:\Users\anton\Documents\WritePrograms\Process-Drift-Visualization-With-Declare\src" />
       <recent name="C:\Users\anton\Documents\WritePrograms\Process-Drift-Visualization-With-Declare\data" />
       <recent name="C:\Users\anton\Documents\WritePrograms\Process-Drift-Visualization-With-Declare\data_from_minerful" />
@@ -121,7 +122,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/scenario_1.py" />
-      <option name="PARAMETERS" value="-logName italian_help_desk -subL 200 -sliBy 50 -noMinerful" />
+      <option name="PARAMETERS" value="-logName italian_help_desk -subL 200 -sliBy 50" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -142,7 +143,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/start_script.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\anton\Documents\WritePrograms\Process-Drift-Visualization-With-Declare\src\agregated_functions.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -183,7 +184,9 @@
       <workItem from="1575995801343" duration="628000" />
       <workItem from="1576143826854" duration="8396000" />
       <workItem from="1576169433478" duration="3178000" />
-      <workItem from="1576490162438" duration="2822000" />
+      <workItem from="1576490162438" duration="9258000" />
+      <workItem from="1576570801352" duration="9662000" />
+      <workItem from="1576580523269" duration="131000" />
     </task>
     <servers />
   </component>
@@ -207,46 +210,21 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/clustering_changePoint_methods.py</url>
+          <url>file://$PROJECT_DIR$/src/data_algorithms.py</url>
           <line>156</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/core_driftPlot_drawing.py</url>
-          <line>72</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/core_driftPlot_drawing.py</url>
-          <line>56</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/scenario_1.py</url>
-          <line>39</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/data_importers/import_csv.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/scenario_1.py</url>
-          <line>34</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/scenario_1.py</url>
-          <line>27</line>
-          <option name="timeStamp" value="35" />
+          <url>file://$PROJECT_DIR$/src/data_exporters/export_csv.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$start_script.coverage" NAME="start_script Coverage Results" MODIFIED="1576233219682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$scenario_1.coverage" NAME="scenario_1 Coverage Results" MODIFIED="1576493017830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$scenario_1.coverage" NAME="scenario_1 Coverage Results" MODIFIED="1576579893999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$experiments_autocorrelation.coverage" NAME="experiments_autocorrelation Coverage Results" MODIFIED="1575964473342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments" />
     <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$draw_graph.coverage" NAME="draw_graph Coverage Results" MODIFIED="1576151483636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

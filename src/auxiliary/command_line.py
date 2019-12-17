@@ -26,10 +26,6 @@ def get_commandline_parameters():
     parser.add_argument("-subL", type=int)
     parser.add_argument("-sliBy", type=int)
     parser.add_argument("-cluCut", type=int, help="Cutoff threshold for cluster algorithm")
-    parser.add_argument('-noMinerful', action='store_true', default=False,
-                        dest='noMinerful',
-                        help='set this optional parameter if there are already minerful mined constraints')
-
     parser.add_argument('-driftAll', action='store_true', default=False,
                         dest='driftAll',
                         help='set this optional parameter if you want to generale change points for the whole set at the same time (if not set, every cluster will get its own changepoint)')
@@ -72,9 +68,6 @@ def get_commandline_parameters():
     else:
         dataset_name = ''
 
-    noMinerful = False
-    if args.noMinerful:
-        noMinerful = True
 
 
 
@@ -101,4 +94,4 @@ def get_commandline_parameters():
 
     colorTheme = args.colorTheme
 
-    return dataset_name, tStart, subL, sliBy, noMinerful, fcluster_value, fcluster_metric, linkage_method, linkage_metric, args.driftAll, args.noSort
+    return dataset_name, tStart, subL, sliBy, fcluster_value, fcluster_metric, linkage_method, linkage_metric, args.driftAll, args.noSort, colorTheme

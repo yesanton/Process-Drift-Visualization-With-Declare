@@ -7,6 +7,7 @@ import numpy as np
 import ruptures as rpt
 from scipy.cluster.hierarchy import dendrogram, linkage
 from scipy.cluster.hierarchy import fcluster
+import numpy
 
 '''method used in the main processing method for cleaning data
    removes all unchanging or stable time-series
@@ -188,3 +189,28 @@ def do_cluster_changePoint(data_uncut, linkage_method ='ward', linkage_metric ='
 
     return data, y_lines, x_all_lines, clusters_with_declare_names, d, order_cluster
 
+def calculate_erratic_value(power_smooth, xnew, averaged_line):
+    # some dumb way to smooth the line
+    ynew = [(power_smooth[0] + power_smooth[1] + power_smooth[2]) / 3] + \
+           [(power_smooth[0] + power_smooth[1] + power_smooth[2] + power_smooth[3]) / 4] + \
+           [(i + j + k + l + g) / 5 for i, j, k, l, g in
+            zip(power_smooth[:-4], power_smooth[1:-3], power_smooth[2:-2], power_smooth[3:-1], power_smooth[4:])] + \
+           [(power_smooth[-4] + power_smooth[-3] + power_smooth[-2] + power_smooth[-1]) / 4] + \
+           [(power_smooth[-3] + power_smooth[-2] + power_smooth[-1]) / 3]
+
+    standard_erratic_as_ideal = 0
+    real_erratic_score = 9
+
+    # calculate erratic measure (described in the paper)
+    y_0 = ynew[0]
+    for y in ynew[1:]:
+        standard_erratic_as_ideal += xnew[1] - xnew[0]
+        # multiplied by len(averaged_line)
+        # to get the calculation of the line as in the squared plot
+        real_erratic_score += numpy.math.sqrt((xnew[1] - xnew[0]) ** 2 + ((y - y_0) * len(averaged_line)) ** 2)
+        y_0 = y
+
+    print("without DRIFT: " + str(standard_erratic_as_ideal))
+    print("current DRIFT: " + str(real_erratic_score))
+
+    return standard_erratic_as_ideal, real_erratic_score

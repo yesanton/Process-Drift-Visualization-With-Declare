@@ -10,8 +10,8 @@ import pandas as pd
 # more details on the python lib:
 # https://stackoverflow.com/questions/33282368/plotting-a-2d-heatmap-with-matplotlib
 
-def draw_drift_map_with_clusters(data, PATHoUT, ts = None, y_lines = None, x_lines_all = None, cluster_order = None, color_theme = "plasma"):
-    PATHoUT = "graphs_produced/" + PATHoUT
+def draw_drift_map_with_clusters(data, PATHoUT, folder_out, ts = None, y_lines = None, x_lines_all = None, cluster_order = None, color_theme = "plasma"):
+    PATHoUT = folder_out / PATHoUT
 
     data_c = copy.deepcopy(data)
     for i in range(len(data)):
