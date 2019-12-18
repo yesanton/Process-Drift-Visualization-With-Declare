@@ -5,7 +5,7 @@ from src.auxiliary.constant_definitions import FOLDER_DATA_TIMESTAMP_SORTED_LOGS
     FOLDER_TIMESTAMP_TICKS_FOR_GRAPHS, PNG_FILE_EXTENSION, FOLDER_GRAPHS_DRIFT_MAPS, FOLDER_GRAPHS_STATISTICS, \
     FOLDER_GRAPHS_DRIFT_AVERAGED_TIMESERIES, JSON_FILE_EXTENSION, \
     FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS, FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS_PRUNED, \
-    FOLDER_GRAPHS_DRIFT_PLOTS_PLOTS
+    FOLDER_GRAPHS_DRIFT_PLOTS_PLOTS, FOLDER_GRAPHS_DFG
 
 
 class FilesManagement:
@@ -90,6 +90,11 @@ class FilesManagement:
     def get_path_drift_plot_all_timeseries_pruned(self, i):
         ensure_path_exists(FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS_PRUNED)
         return FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS_PRUNED / (str(i) + self.name_file_erratic + CSV_FILE_EXTENSION)
+
+    def get_path_dfg_visualization_for_constraints(self, i):
+        ensure_path_exists(FOLDER_GRAPHS_DFG)
+        return FOLDER_GRAPHS_DFG / (str(i) + self.name_file_erratic + PNG_FILE_EXTENSION)
+
 
 class AlgorithmParameters:
     def __init__(self, window_size,

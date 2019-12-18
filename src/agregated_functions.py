@@ -1,5 +1,5 @@
 from src.auxiliary.minerful_adapter import prune_constraints_minerful
-from src.data_algorithms import calculate_erratic_value
+from src.data_algorithms_cluster_and_change_point import calculate_erratic_value
 from src.data_exporters.export_csv import export_one_line_csvs, export_many_line_csvs
 from src.data_exporters.export_json import export_constraints_per_cluster
 from src.visualize_drift_plot import draw_drift_plot_for_one_cluster

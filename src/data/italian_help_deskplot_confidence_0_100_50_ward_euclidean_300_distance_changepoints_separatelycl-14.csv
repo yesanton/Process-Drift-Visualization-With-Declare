@@ -1,0 +1,3 @@
+'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
+'AlternatePrecedence(Assign seriousness,  VERIFIED)';'AlternatePrecedence';' VERIFIED';'Assign seriousness';1.000;1.000;1.000
+'AlternatePrecedence(Take in charge ticket,  VERIFIED)';'AlternatePrecedence';' VERIFIED';'Take in charge ticket';1.000;1.000;1.000

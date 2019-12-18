@@ -1,0 +1,11 @@
+'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
+'NotChainSuccession(Assign seriousness,  Take in charge ticket)';'NotChainSuccession';'Assign seriousness';' Take in charge ticket';1.000;1.000;1.000
+'NotCoExistence(Assign seriousness,  Wait)';'NotCoExistence';'Assign seriousness';' Wait';1.000;1.000;1.000
+'NotCoExistence(Closed,  Wait)';'NotCoExistence';'Closed';' Wait';1.000;1.000;1.000
+'NotCoExistence(Resolve ticket,  Wait)';'NotCoExistence';'Resolve ticket';' Wait';1.000;1.000;1.000
+'NotCoExistence(Take in charge ticket,  Wait)';'NotCoExistence';'Take in charge ticket';' Wait';1.000;1.000;1.000
+'NotCoExistence(Wait,  Assign seriousness)';'NotCoExistence';'Wait';' Assign seriousness';1.000;1.000;1.000
+'NotCoExistence(Wait,  Closed)';'NotCoExistence';'Wait';' Closed';1.000;1.000;1.000
+'NotCoExistence(Wait,  Resolve ticket)';'NotCoExistence';'Wait';' Resolve ticket';1.000;1.000;1.000
+'ChainResponse(Wait,  Take in charge ticket)';'ChainResponse';'Wait';' Take in charge ticket';1.000;1.000;1.000
+'NotCoExistence(Wait,  Take in charge ticket)';'NotCoExistence';'Wait';' Take in charge ticket';1.000;1.000;1.000

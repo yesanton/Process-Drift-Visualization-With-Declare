@@ -14,7 +14,7 @@ def import_timestamp_ticks(fileMngm):
 def import_check(file):
     return file.is_file()
 
-def import_minerful_constraints_data(fileMngm, algoPrmts):
+def import_minerful_constraints_timeseries_data(fileMngm, algoPrmts):
     csvfile = open(fileMngm.get_path_minerful_constraints(), 'r')
     csv_reader = csv.reader(csvfile, delimiter=';', quotechar='|')
 
@@ -84,3 +84,17 @@ def import_minerful_constraints_data(fileMngm, algoPrmts):
             constraints.append(j[1:] + i)
 
     return constraints
+
+def import_constraints_to_dictionary(file_name):
+    store_constraints = dict()
+    with open(file_name) as one_cluster_example:
+        reader = csv.reader(one_cluster_example, delimiter=';', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        next(reader, None)
+        for row in reader:
+            constr = [i[1:-1].strip() for i in row[1:4]]
+
+            if not constr[0] in store_constraints:
+                store_constraints[constr[0]] = set()
+            store_constraints[constr[0]].add((constr[1], constr[2]))
+
+    return store_constraints
