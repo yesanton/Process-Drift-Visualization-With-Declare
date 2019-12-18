@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42fb79c6-5da8-4b9f-8b9d-4b52de7dd6fb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agregated_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/agregated_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auxiliary/command_line.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/auxiliary/command_line.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auxiliary/constant_definitions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/auxiliary/constant_definitions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auxiliary/mine_features_from_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/auxiliary/mine_features_from_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auxiliary/minerful_adapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/auxiliary/minerful_adapter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auxiliary/simplifiers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/auxiliary/simplifiers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_algorithms.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_algorithms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_exporters/export_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_exporters/export_csv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_exporters/export_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_exporters/export_json.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_importers/import_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_importers/import_csv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_importers/import_xes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_importers/import_xes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/draw_drift_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/draw_drift_map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/draw_drift_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/draw_drift_plot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenario_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenario_1.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -211,7 +198,7 @@
       <workItem from="1576490162438" duration="9258000" />
       <workItem from="1576570801352" duration="9662000" />
       <workItem from="1576580523269" duration="10958000" />
-      <workItem from="1576660478164" duration="5001000" />
+      <workItem from="1576660478164" duration="5312000" />
     </task>
     <servers />
   </component>

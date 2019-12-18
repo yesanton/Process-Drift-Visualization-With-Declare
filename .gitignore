@@ -6,3 +6,4 @@ data/data_initial/*
 data/data_intermediate/*
 data/data_results_final/*
 data/*
+.idea
