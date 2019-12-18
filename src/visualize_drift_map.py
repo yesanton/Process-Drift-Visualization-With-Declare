@@ -1,7 +1,6 @@
 ''' the main script that describes drawing of the DriftMAP
 
 Author: Anton Yeshchenko
-
 '''
 import seaborn as sns; sns.set()
 import matplotlib.pylab as plt

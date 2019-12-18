@@ -9,9 +9,8 @@ from scipy.cluster.hierarchy import dendrogram, linkage
 from scipy.cluster.hierarchy import fcluster
 import numpy
 
-'''method used in the main processing method for cleaning data
-   removes all unchanging or stable time-series
-'''
+# method used in the main processing method for cleaning data
+# removes all unchanging or stable time-series
 def remove_redundant_timeseries_HEADER(data_uncut):
     data = []
     zeros_removed = 0
@@ -44,10 +43,6 @@ def remove_redundant_timeseries_HEADER(data_uncut):
 
     return data
 
-
-'''
-
-'''
 def sort_by_closest_neigbour_HEADER(data):
     print ('there were : ' + str(len(data)) + " values")
     # we start attaching other vectors to this one
@@ -69,10 +64,8 @@ def sort_by_closest_neigbour_HEADER(data):
 
     return new_data[1:]
 
-
-''' main method of data analysis
-    the clusters and the change points are found here
-'''
+# main method of data analysis
+# the clusters and the change points are found here
 def do_cluster_changePoint(data_uncut, algoPrmts):
     # first step is to use only those constrains that are changing
     data_uncut = remove_redundant_timeseries_HEADER(data_uncut)
@@ -107,7 +100,6 @@ def do_cluster_changePoint(data_uncut, algoPrmts):
         if not algoPrmts.no_sort_in_clusters:
             d[key] = sort_by_closest_neigbour_HEADER(d[key])
 
-
         clusters_with_declare_names[key] = [d[key][0][:3]]
         data.append(d[key][0][3:])
 
@@ -117,9 +109,7 @@ def do_cluster_changePoint(data_uncut, algoPrmts):
         count += len(d[key])
         y_lines.append(count)
         print ("Cluster size: " + str(len(d[key])))
-
     print ('number of clusters: ' + str(len(d)))
-
 
     '''NOW find the horisontal cluster
        now we use unclastured cut data(without header)
@@ -130,7 +120,6 @@ def do_cluster_changePoint(data_uncut, algoPrmts):
         point_detection_penalty = 50
         x_lines = algo.predict(pen=point_detection_penalty)
 
-
         while point_detection_penalty >= len(x_lines):
             point_detection_penalty -= 1
             x_lines = algo.predict(pen=point_detection_penalty)
@@ -139,10 +128,8 @@ def do_cluster_changePoint(data_uncut, algoPrmts):
             x_lines = x_lines[-1:]
         return x_lines
 
-
     x_all_lines = {}
     # in ths case we want to detect the drifts in the whole range of constrains at the same time
-
     c = rpt.costs.CostRbf();
 
     if algoPrmts.change_point_for_all:
@@ -156,11 +143,8 @@ def do_cluster_changePoint(data_uncut, algoPrmts):
         algo = rpt.Pelt(model="rbf", custom_cost=c).fit(signal)
         x_lines = dingOptimalNumberOfPoints(algo)
         x_all_lines[0] = x_lines
-
         # pen - penalizing the number of change points
-
     else:
-
         dd = []
         for dk in order_cluster:
             for i in d[dk]:
@@ -171,14 +155,11 @@ def do_cluster_changePoint(data_uncut, algoPrmts):
             algo = rpt.Pelt(model="rbf", custom_cost=c, min_size=2,jump=2).fit(signal)
 
             x_lines = dingOptimalNumberOfPoints(algo)
-
             x_all_lines[dk] = x_lines
-
             sig = None
             signal = None
             algo = None
             dd = []
-
 
     # print some info
     print ('x lines: ')

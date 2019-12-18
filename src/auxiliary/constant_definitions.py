@@ -1,6 +1,3 @@
-import os
-from pathlib import Path
-
 from pathlib import Path
 
 ROOT_DIR =  Path(__file__).parent.parent.parent # This is your Project Root
@@ -20,8 +17,6 @@ FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS = FOLDER_GRAPHS_DRIFT_PLOTS / "c
 FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS_PRUNED = FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS / "constraints_pruned"
 
 FOLDER_GRAPHS_STATISTICS = Path(ROOT_DIR) / 'data' / "data_results_final" / "statistics"
-
-
 
 XES_FILE_EXTENSION = '.xes'
 CSV_FILE_EXTENSION = '.csv'

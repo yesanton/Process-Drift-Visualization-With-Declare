@@ -1,21 +1,12 @@
 import subprocess
 import os
-from pathlib import Path
-
-from src.auxiliary.constant_definitions import CSV_FILE_EXTENSION
-from src.auxiliary.simplifiers import compose_name
-
 
 def mine_minerful_for_declare_constraints(fileMngm,algoPrmts):
-
     env = dict(os.environ)
     env['JAVA_OPTS'] = 'foo'
     subprocess.call(['java', '-version'])
-
     file_input = str(fileMngm.get_path_input_sorted_xes())
-
     file_output = str(fileMngm.get_path_minerful_constraints())
-
 
     subprocess.call(['java', "-Xmx16G", "--add-modules", "java.xml.bind", '-cp', 'MINERful.jar', 'minerful.MinerFulMinerSlider',
                      "-iLF",
@@ -37,8 +28,6 @@ def prune_constraints_minerful(fileMngm, file_ind):
     # Make a copy of the environment
     env = dict(os.environ)
     env['JAVA_OPTS'] = 'foo'
-
-    # TODO put this inside of minerful adapter
     subprocess.call(['java', "-Xmx16G", "--add-modules", "java.xml.bind", '-cp', 'MINERful.jar',
                      'minerful.MinerFulSimplificationStarter',
                      "-iMF",
@@ -47,12 +36,5 @@ def prune_constraints_minerful(fileMngm, file_ind):
                      "-oCSV", str(fileMngm.get_path_drift_plot_all_timeseries_pruned(file_ind)),
                      "-prune", "hierarchyconflictredundancy"], env=env,
                     cwd="minerful_scripts")
-    # subprocess.run(["./run-MINERfulSimplifier.sh",
-    #                 "-iMF",
-    #                 '../' + path_to_save,
-    #                 "-iME", 'json',
-    #                 "-oCSV", new_file_path,
-    #                 "-prune", "hierarchyconflictredundancy"],
-    #                 cwd="minerful_scripts")
 
 

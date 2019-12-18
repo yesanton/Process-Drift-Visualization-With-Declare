@@ -6,11 +6,11 @@ call help to see argument list
 Author:  Anton Yeshchenko
 '''
 
-from src.agregated_functions import process_constraints
+from src.agregated_functions import process_constraint_clusters
 from src.auxiliary.mine_features_from_data import save_separately_timestamp_for_each_constraint_window
 from src.data_algorithms import do_cluster_changePoint
 from src.auxiliary.command_line import get_commandline_parameters
-from src.draw_drift_map import draw_drift_map_with_clusters
+from src.visualize_drift_map import draw_drift_map_with_clusters
 from src.data_exporters.export_csv import export_one_line_csvs
 from src.data_exporters.export_xes import export_xes_log
 from src.data_importers.import_csv import import_timestamp_ticks, import_check, import_minerful_constraints_data
@@ -51,16 +51,15 @@ draw_drift_map_with_clusters(constraints,
                              cluster_order = cluster_order)
 
 # handle now each cluster of constraints in the following function
-process_constraints(fileMngm,
-                    cluster_order,
-                    clusters_with_declare_names,
-                    ts_ticks,
-                    clusters_dict,
-                    horisontal_separation_bounds_by_cluster,
-                    erratic_measure_out = True,
-                    drift_plots = True,
-                    export_constraints = True,
-                    export_constraints_simplified = True)
+process_constraint_clusters(fileMngm,
+                            cluster_order,
+                            clusters_with_declare_names,
+                            ts_ticks,
+                            clusters_dict,
+                            horisontal_separation_bounds_by_cluster,
+                            erratic_measure_out = True,
+                            export_constraints = True,
+                            export_constraints_simplified = True)
 
 
 #Todo

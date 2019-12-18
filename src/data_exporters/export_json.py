@@ -26,7 +26,6 @@ def export_constraints_per_cluster(constraints, fileMngm, file_ind):
         for el in dict_out['constraints'][key]['parameters']:
             el[0] = el[0]
 
-    # fileMngm.get_path_drift_plot_all_timeseries(j)
     with open(fileMngm.get_path_drift_plot_all_timeseries(file_ind), 'w') as fp:
         json.dump(dict_out, fp)
         fp.close()

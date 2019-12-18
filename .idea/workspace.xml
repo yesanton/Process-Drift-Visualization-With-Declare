@@ -4,10 +4,17 @@
     <list default="true" id="42fb79c6-5da8-4b9f-8b9d-4b52de7dd6fb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/agregated_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/agregated_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auxiliary/command_line.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/auxiliary/command_line.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/auxiliary/constant_definitions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/auxiliary/constant_definitions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auxiliary/data_structures.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/auxiliary/data_structures.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auxiliary/mine_features_from_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/auxiliary/mine_features_from_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/auxiliary/minerful_adapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/auxiliary/minerful_adapter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auxiliary/simplifiers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/auxiliary/simplifiers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_algorithms.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_algorithms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_exporters/export_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_exporters/export_csv.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data_exporters/export_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_exporters/export_json.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_importers/import_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_importers/import_csv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_importers/import_xes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_importers/import_xes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/draw_drift_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/draw_drift_map.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/draw_drift_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/draw_drift_plot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenario_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenario_1.py" afterDir="false" />
     </list>
@@ -204,7 +211,7 @@
       <workItem from="1576490162438" duration="9258000" />
       <workItem from="1576570801352" duration="9662000" />
       <workItem from="1576580523269" duration="10958000" />
-      <workItem from="1576660478164" duration="4067000" />
+      <workItem from="1576660478164" duration="5001000" />
     </task>
     <servers />
   </component>
@@ -229,7 +236,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/auxiliary/minerful_adapter.py</url>
-          <line>16</line>
+          <line>8</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
@@ -244,7 +251,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$start_script.coverage" NAME="start_script Coverage Results" MODIFIED="1576233219682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$scenario_1.coverage" NAME="scenario_1 Coverage Results" MODIFIED="1576664592098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$scenario_1.coverage" NAME="scenario_1 Coverage Results" MODIFIED="1576667117898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$command_line.coverage" NAME="command_line Coverage Results" MODIFIED="1576585645463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/auxiliary" />
     <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$experiments_autocorrelation.coverage" NAME="experiments_autocorrelation Coverage Results" MODIFIED="1575964473342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments" />
     <SUITE FILE_PATH="coverage/Process_Drift_Visualization_With_Declare$draw_graph.coverage" NAME="draw_graph Coverage Results" MODIFIED="1576151483636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

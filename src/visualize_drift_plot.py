@@ -31,7 +31,6 @@ def draw_drift_plot_for_one_cluster(ts=None,
             vert = vertical[key]
         else:
             vert = vertical[0]
-
         vert = vert[:-1]
         for line in vert:
             plt.axvline(x=line, color='black', dashes=(2, 2))
@@ -39,16 +38,10 @@ def draw_drift_plot_for_one_cluster(ts=None,
     plt.ylim(top=1)
 
     # export the image
-    plt.savefig(fileMngm.get_path_drift_plot(j), bbox_inches='tight')
+    plt.savefig(fileMngm.get_path_drift_plot(file_ind), bbox_inches='tight')
     return power_smooth, xnew, averaged_line
 
-
-''' This function draws Drift plots for each cluster and returns the Erratic measure of that cluster
-'''
-
-
-
-
+# This function draws Drift plots for each cluster and returns the Erratic measure of that cluster
 def drawDriftPlotforAllClusters(ts = None, clusters_dict=None, cluster_order = None):
     lines_for_lineplot = []
     for key in cluster_order:

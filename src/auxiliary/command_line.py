@@ -31,14 +31,11 @@ def get_commandline_parameters():
                              'https://matplotlib.org/users/colormaps.html, we recommend \'plasma\' or \'PiYG\' or \'bw\'')
     parser.add_argument("-typeConstr", default='confidence', help="\'support\', \'confidence\' or \'interestFactor\'")
 
-
     # Initialization of the default parameters for the command line arguments
     args = parser.parse_args()
     linkage_method = 'ward'
     linkage_metric = 'euclidean'
     fcluster_metric = 'distance' # other option is = 'maxclust'
-
-
 
     algoPrmts = AlgorithmParameters(args.subL,
                                    args.sliBy,
@@ -50,7 +47,6 @@ def get_commandline_parameters():
                                    args.noSort,
                                    args.colorTheme,
                                    args.typeConstr)
-
     fileMngm = FilesManagement(args.logName,algoPrmts)
 
     return fileMngm, algoPrmts

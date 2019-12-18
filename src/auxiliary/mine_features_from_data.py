@@ -1,14 +1,8 @@
 import math
 
-
 def save_separately_timestamp_for_each_constraint_window(log, algoPrmts):
-
     # every first timestamp of each trace is stored here
     timestamps = [trace._list[0]._dict['time:timestamp'].strftime('%m-%d-%Y') for trace in log._list]
-
-    # csvfile = open(Path('./timestamps.csv'), 'w')
-    # results_writer = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-
     time_out = []
     n_th = 0
     number_of_timestamps = (len(timestamps) - algoPrmts.window_size) / algoPrmts.sliding_window_size
