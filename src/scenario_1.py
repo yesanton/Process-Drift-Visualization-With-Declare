@@ -50,7 +50,7 @@ draw_drift_map_with_clusters(constraints,
                              x_lines_all=horisontal_separation_bounds_by_cluster,
                              cluster_order = cluster_order)
 
-# todo handle now each cluster of constraints in the following function
+# handle now each cluster of constraints in the following function
 process_constraints(fileMngm,
                     cluster_order,
                     clusters_with_declare_names,
@@ -63,5 +63,6 @@ process_constraints(fileMngm,
                     export_constraints_simplified = True)
 
 
-
+#Todo
+# add graphing DFG
 

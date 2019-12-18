@@ -32,3 +32,27 @@ def mine_minerful_for_declare_constraints(fileMngm,algoPrmts):
                     file_output],
                     env=env,
                     cwd="minerful_scripts")
+
+def prune_constraints_minerful(fileMngm, file_ind):
+    # Make a copy of the environment
+    env = dict(os.environ)
+    env['JAVA_OPTS'] = 'foo'
+
+    # TODO put this inside of minerful adapter
+    subprocess.call(['java', "-Xmx16G", "--add-modules", "java.xml.bind", '-cp', 'MINERful.jar',
+                     'minerful.MinerFulSimplificationStarter',
+                     "-iMF",
+                     str(fileMngm.get_path_drift_plot_all_timeseries(file_ind)),
+                     "-iME", 'json',
+                     "-oCSV", str(fileMngm.get_path_drift_plot_all_timeseries_pruned(file_ind)),
+                     "-prune", "hierarchyconflictredundancy"], env=env,
+                    cwd="minerful_scripts")
+    # subprocess.run(["./run-MINERfulSimplifier.sh",
+    #                 "-iMF",
+    #                 '../' + path_to_save,
+    #                 "-iME", 'json',
+    #                 "-oCSV", new_file_path,
+    #                 "-prune", "hierarchyconflictredundancy"],
+    #                 cwd="minerful_scripts")
+
+

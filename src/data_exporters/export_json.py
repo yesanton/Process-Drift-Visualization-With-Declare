@@ -1,9 +1,6 @@
-import os
 import json
-import subprocess
-#TODO problematic function here
-# fix!
-def export_constraints_per_cluster(constraints, save_name, logFolder):
+
+def export_constraints_per_cluster(constraints, fileMngm, file_ind):
     dict_out = {}
     dict_out["constraints"] = []
 
@@ -17,14 +14,10 @@ def export_constraints_per_cluster(constraints, save_name, logFolder):
 
         dict_out["constraints"].append(temp_dict)
 
-    if not os.path.exists(logFolder):
-        os.makedirs(logFolder)
-
     for key in range(len(dict_out['constraints'])):
         dict_out['constraints'][key]['template'] = dict_out['constraints'][key]['template'].rstrip().lstrip()
 
-        #TODO put real numbers for confidence support etc.
-
+        # T$ODO put real numbers for confidence support etc.
         dict_out['constraints'][key]['support'] = 1
         dict_out['constraints'][key]['confidence'] = 1
         dict_out['constraints'][key]['interestFactor'] = 1
@@ -33,38 +26,8 @@ def export_constraints_per_cluster(constraints, save_name, logFolder):
         for el in dict_out['constraints'][key]['parameters']:
             el[0] = el[0]
 
-
-    path_to_save = logFolder / save_name
-    with open(path_to_save, 'w') as fp:
+    # fileMngm.get_path_drift_plot_all_timeseries(j)
+    with open(fileMngm.get_path_drift_plot_all_timeseries(file_ind), 'w') as fp:
         json.dump(dict_out, fp)
         fp.close()
-
-
-    new_file_path = logFolder /  'constraints_pruned'
-    if not os.path.exists(new_file_path):
-        os.makedirs(new_file_path)
-
-
-    new_file_path = new_file_path / (save_name[:-4]+'csv')
-
-    # Make a copy of the environment
-    env = dict(os.environ)
-    env['JAVA_OPTS'] = 'foo'
-
-    # TODO put this inside of minerful adapter
-    subprocess.call(['java', "-Xmx16G", "--add-modules", "java.xml.bind", '-cp', 'MINERful.jar', 'minerful.MinerFulSimplificationStarter',
-         "-iMF",
-                    str(path_to_save),
-                    "-iME", 'json',
-                    "-oCSV", str(new_file_path),
-                    "-prune", "hierarchyconflictredundancy"], env=env,
-                       cwd="minerful_scripts")
-    # subprocess.run(["./run-MINERfulSimplifier.sh",
-    #                 "-iMF",
-    #                 '../' + path_to_save,
-    #                 "-iME", 'json',
-    #                 "-oCSV", new_file_path,
-    #                 "-prune", "hierarchyconflictredundancy"],
-    #                 cwd="minerful_scripts")
-
-    dict_out = None
+    dict_out = None #  clean up

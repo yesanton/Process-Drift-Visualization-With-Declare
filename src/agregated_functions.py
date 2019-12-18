@@ -1,7 +1,6 @@
 import csv
 
-from src.auxiliary.constant_definitions import FOLDER_GRAPHS_DRIFT_PLOTS, \
-    FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS
+from src.auxiliary.minerful_adapter import prune_constraints_minerful
 from src.data_algorithms import calculate_erratic_value
 from src.data_exporters.export_csv import export_one_line_csvs
 from src.data_exporters.export_json import export_constraints_per_cluster
@@ -30,13 +29,13 @@ def process_constraints(fileMngm,
 
     # draw for each cluster results and write to file
     for i, j in zip(cluster_order, range(len(cluster_order))):
-        # todo this is to the import folder
-        # output the declare constraints in the good format for minerful to draw
 
-        # todo remove last argument
+        # output the declare constraints in the good format for minerful to draw
         export_constraints_per_cluster(clusters_with_declare_names[i],
-                                       save_name=fileMngm.get_path_drift_plot_all_timeseries(j),
-                                       logFolder=FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS)
+                                       fileMngm=fileMngm, file_ind=j)
+
+        # prune constraints after we record full constraints to the file
+        prune_constraints_minerful(fileMngm, file_ind=j)
 
         power_smooth, \
         xnew, \
@@ -44,10 +43,11 @@ def process_constraints(fileMngm,
                                                         clusters_dict=clusters_dict,
                                                         key=i,
                                                         vertical=horisontal_separation_bounds_by_cluster,
-                                                        name_save=fileMngm.get_path_drift_plot(j),
-                                                        logFolder=FOLDER_GRAPHS_DRIFT_PLOTS)
+                                                        file_ind=j,
+                                                        fileMngm = fileMngm)
 
 
+        # export here the timeseries from each cluster
         export_one_line_csvs(averaged_line,
                              fileMngm.get_path_drift_plot_averaged_timeseries(j))
 

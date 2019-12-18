@@ -1,11 +1,11 @@
 import os
-
+from src.auxiliary.simplifiers import compose_name
 from src.auxiliary.constant_definitions import FOLDER_DATA_TIMESTAMP_SORTED_LOGS, XES_FILE_EXTENSION, \
     FOLDER_DATA_INITIAL_LOGS, CSV_FILE_EXTENSION, FOLDER_DATA_MINERFUL_DECLARE_CONSTRAINTS, \
     FOLDER_TIMESTAMP_TICKS_FOR_GRAPHS, PNG_FILE_EXTENSION, FOLDER_GRAPHS_DRIFT_MAPS, FOLDER_GRAPHS_STATISTICS, \
-    FOLDER_GRAPHS_DRIFT_AVERAGED_TIMESERIES, FOLDER_GRAPHS_DRIFT_PLOTS, JSON_FILE_EXTENSION, \
-    FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS
-from src.auxiliary.simplifiers import compose_name
+    FOLDER_GRAPHS_DRIFT_AVERAGED_TIMESERIES, JSON_FILE_EXTENSION, \
+    FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS, FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS_PRUNED, \
+    FOLDER_GRAPHS_DRIFT_PLOTS_PLOTS
 
 
 class FilesManagement:
@@ -33,7 +33,7 @@ class FilesManagement:
                                                     PNG_FILE_EXTENSION)
         else:
             self.name_file_drift_map = compose_name(self.name_file_drift_map,
-                                                    "_changepoints_separately",
+                                                    "changepoints_separately",
                                                     PNG_FILE_EXTENSION)
 
         self.name_file_erratic = compose_name(log_name,
@@ -42,8 +42,7 @@ class FilesManagement:
                                               algoPrmt.linkage_method,
                                               algoPrmt.linkage_metric,
                                               algoPrmt.clustering_cutoff_param,
-                                              algoPrmt.fcluster_metric,
-                                              CSV_FILE_EXTENSION)
+                                              algoPrmt.fcluster_metric)
 
         self.name_file_drift_plot = compose_name(log_name,
                                               algoPrmt.window_size,
@@ -57,9 +56,11 @@ class FilesManagement:
         return FOLDER_DATA_INITIAL_LOGS / compose_name(self.log_name,XES_FILE_EXTENSION)
 
     def get_path_input_sorted_xes(self):
+        ensure_path_exists(FOLDER_DATA_TIMESTAMP_SORTED_LOGS)
         return FOLDER_DATA_TIMESTAMP_SORTED_LOGS / compose_name(self.log_name, XES_FILE_EXTENSION)
 
     def get_path_minerful_constraints(self):
+        ensure_path_exists(FOLDER_DATA_MINERFUL_DECLARE_CONSTRAINTS)
         return FOLDER_DATA_MINERFUL_DECLARE_CONSTRAINTS / self.namefile_minerful_constr
 
     def get_path_timestamp_ticks(self):
@@ -67,23 +68,28 @@ class FilesManagement:
         return FOLDER_TIMESTAMP_TICKS_FOR_GRAPHS / self.namefile_timestamp_ticks
 
     def get_path_drift_map(self):
+        ensure_path_exists(FOLDER_GRAPHS_DRIFT_MAPS)
         return FOLDER_GRAPHS_DRIFT_MAPS / self.name_file_drift_map
 
     def get_path_erratic_measures(self):
         ensure_path_exists(FOLDER_GRAPHS_STATISTICS)
-        return FOLDER_GRAPHS_STATISTICS / self.name_file_erratic
+        return FOLDER_GRAPHS_STATISTICS / compose_name(self.name_file_erratic, CSV_FILE_EXTENSION)
 
     def get_path_drift_plot_averaged_timeseries(self, i):
         ensure_path_exists(FOLDER_GRAPHS_DRIFT_AVERAGED_TIMESERIES)
         return FOLDER_GRAPHS_DRIFT_AVERAGED_TIMESERIES / (str(i) + self.name_file_erratic + CSV_FILE_EXTENSION)
 
     def get_path_drift_plot(self, i):
-        ensure_path_exists(FOLDER_GRAPHS_DRIFT_PLOTS)
-        return FOLDER_GRAPHS_DRIFT_PLOTS / (str(i) + self.name_file_erratic + PNG_FILE_EXTENSION)
+        ensure_path_exists(FOLDER_GRAPHS_DRIFT_PLOTS_PLOTS)
+        return FOLDER_GRAPHS_DRIFT_PLOTS_PLOTS / (str(i) + self.name_file_erratic + PNG_FILE_EXTENSION)
 
     def get_path_drift_plot_all_timeseries(self, i):
         ensure_path_exists(FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS)
         return FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS / (str(i) + self.name_file_erratic + JSON_FILE_EXTENSION)
+
+    def get_path_drift_plot_all_timeseries_pruned(self, i):
+        ensure_path_exists(FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS_PRUNED)
+        return FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS_PRUNED / (str(i) + self.name_file_erratic + CSV_FILE_EXTENSION)
 
 class AlgorithmParameters:
     def __init__(self, window_size,

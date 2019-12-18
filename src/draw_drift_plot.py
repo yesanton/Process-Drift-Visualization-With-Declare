@@ -2,22 +2,15 @@
 
 Author: Anton Yeshchenko
 '''
-import csv
-import os
 import matplotlib.pyplot as plt
-
 from scipy.interpolate import make_interp_spline, BSpline
 
-from src.auxiliary.simplifiers import compose_name
-from src.data_exporters.export_csv import export_one_line_csvs
-
-''' This function draws Drift plots for each cluster and returns the Erratic measure of that cluster
-'''
-
-
-def draw_drift_plot_for_one_cluster(ts=None, clusters_dict=None, key=None, vertical=None, name_save="graph.png",
-                                    logFolder=''):
-
+def draw_drift_plot_for_one_cluster(ts=None,
+                                    clusters_dict=None,
+                                    key=None,
+                                    vertical=None,
+                                    file_ind = None,
+                                    fileMngm=None):
     averaged_line = [0] * (len(clusters_dict[key][0]) - 3)
 
     for i in range(len(clusters_dict[key])):
@@ -46,17 +39,12 @@ def draw_drift_plot_for_one_cluster(ts=None, clusters_dict=None, key=None, verti
     plt.ylim(top=1)
 
     # export the image
-    new_path = logFolder /  'plots'
-    if not os.path.exists(new_path):
-        os.makedirs(new_path)
-    plt.savefig(new_path / name_save, bbox_inches='tight')
-
-
-    new_path = logFolder / 'timeseries'
-
-    export_one_line_csvs(averaged_line, compose_name(name_save, '.csv'), new_path)
-
+    plt.savefig(fileMngm.get_path_drift_plot(j), bbox_inches='tight')
     return power_smooth, xnew, averaged_line
+
+
+''' This function draws Drift plots for each cluster and returns the Erratic measure of that cluster
+'''
 
 
 
