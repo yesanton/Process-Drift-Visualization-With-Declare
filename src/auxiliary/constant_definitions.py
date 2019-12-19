@@ -11,7 +11,6 @@ FOLDER_DATA_INTERMEDIATE = FOLDER_DATA / "data_intermediate"
 FOLDER_DATA_RESULTS_FINAL = FOLDER_DATA / "data_results_final"
 
 FOLDER_DATA_TIMESTAMP_SORTED_LOGS = Path("timestamp_sorted_logs")
-
 FOLDER_DATA_MINERFUL_DECLARE_CONSTRAINTS = Path("declare_from_minerful")
 FOLDER_TIMESTAMP_TICKS_FOR_GRAPHS = Path("timestamp_ticks_for_graphs")
 
