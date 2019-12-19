@@ -1,5 +1,0 @@
-'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
-'AlternateSuccession(Assign seriousness,  Wait)';'AlternateSuccession';'Assign seriousness';' Wait';1.000;1.000;1.000
-'ChainSuccession(Take in charge ticket,  Wait)';'ChainSuccession';'Take in charge ticket';' Wait';1.000;1.000;1.000
-'AlternateSuccession(Wait,  Closed)';'AlternateSuccession';'Wait';' Closed';1.000;1.000;1.000
-'AlternateSuccession(Wait,  Resolve ticket)';'AlternateSuccession';'Wait';' Resolve ticket';1.000;1.000;1.000

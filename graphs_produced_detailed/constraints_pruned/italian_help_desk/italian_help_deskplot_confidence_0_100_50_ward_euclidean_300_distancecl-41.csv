@@ -1,3 +1,0 @@
-'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
-'AlternateSuccession(Take in charge ticket,  Closed)';'AlternateSuccession';'Take in charge ticket';' Closed';1.000;1.000;1.000
-'AlternateSuccession(Take in charge ticket,  Resolve ticket)';'AlternateSuccession';'Take in charge ticket';' Resolve ticket';1.000;1.000;1.000

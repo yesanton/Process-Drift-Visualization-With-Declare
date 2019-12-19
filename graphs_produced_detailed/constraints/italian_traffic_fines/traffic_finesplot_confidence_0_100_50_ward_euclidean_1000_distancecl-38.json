@@ -1,1 +1,0 @@
-{"constraints": [{"template": "Precedence", "parameters": [["Send Fine"], [" Payment"]]}, {"template": "AlternatePrecedence", "parameters": [["Send Fine"], [" Payment"]]}]}

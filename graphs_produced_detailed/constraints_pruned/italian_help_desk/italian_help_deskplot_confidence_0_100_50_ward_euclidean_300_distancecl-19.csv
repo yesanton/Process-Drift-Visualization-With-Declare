@@ -1,4 +1,0 @@
-'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
-'AlternatePrecedence(Wait,  Closed)';'AlternatePrecedence';' Closed';'Wait';1.000;1.000;1.000
-'AlternatePrecedence(Wait,  Resolve ticket)';'AlternatePrecedence';' Resolve ticket';'Wait';1.000;1.000;1.000
-'Participation(Wait)';'Participation';'Wait';;1.000;1.000;1.000

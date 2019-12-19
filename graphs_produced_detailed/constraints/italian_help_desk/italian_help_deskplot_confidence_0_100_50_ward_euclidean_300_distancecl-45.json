@@ -1,1 +1,0 @@
-{"constraints": [{"template": "NotChainSuccession", "parameters": [["Wait"], [" Take in charge ticket"]], "support": 1, "confidence": 1, "interestFactor": 1}, {"template": "NotSuccession", "parameters": [["Wait"], [" Take in charge ticket"]], "support": 1, "confidence": 1, "interestFactor": 1}]}

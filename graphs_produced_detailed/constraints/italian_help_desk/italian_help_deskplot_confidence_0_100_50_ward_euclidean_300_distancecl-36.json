@@ -1,1 +1,0 @@
-{"constraints": [{"template": "Precedence", "parameters": [["Wait"], [" Create SW anomaly"]], "support": 1, "confidence": 1, "interestFactor": 1}, {"template": "AlternatePrecedence", "parameters": [["Wait"], [" Create SW anomaly"]], "support": 1, "confidence": 1, "interestFactor": 1}]}

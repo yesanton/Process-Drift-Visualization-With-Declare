@@ -1,3 +1,0 @@
-'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
-'AlternateSuccession(Assign seriousness,  Closed)';'AlternateSuccession';'Assign seriousness';' Closed';1.000;1.000;1.000
-'AlternateSuccession(Assign seriousness,  Resolve ticket)';'AlternateSuccession';'Assign seriousness';' Resolve ticket';1.000;1.000;1.000

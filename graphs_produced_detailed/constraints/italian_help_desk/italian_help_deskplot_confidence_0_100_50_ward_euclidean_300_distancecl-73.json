@@ -1,1 +1,0 @@
-{"constraints": [{"template": "AlternatePrecedence", "parameters": [["Assign seriousness"], [" Wait"]], "support": 1, "confidence": 1, "interestFactor": 1}]}

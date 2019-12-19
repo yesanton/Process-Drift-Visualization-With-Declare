@@ -1,4 +1,0 @@
-'Constraint';'Template';'Activation';'Target';'Support';'Confidence level';'Interest factor'
-'NotChainSuccession(Assign seriousness,  Resolve ticket)';'NotChainSuccession';'Assign seriousness';' Resolve ticket';1.000;1.000;1.000
-'Response(Assign seriousness,  Take in charge ticket)';'Response';'Assign seriousness';' Take in charge ticket';1.000;1.000;1.000
-'RespondedExistence(Take in charge ticket,  Assign seriousness)';'RespondedExistence';'Take in charge ticket';' Assign seriousness';1.000;1.000;1.000

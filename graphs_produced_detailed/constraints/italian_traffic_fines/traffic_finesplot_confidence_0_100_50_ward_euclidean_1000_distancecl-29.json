@@ -1,1 +1,0 @@
-{"constraints": [{"template": "NotSuccession", "parameters": [["Send Fine"], [" Payment"]]}, {"template": "NotCoExistence", "parameters": [["Payment"], [" Send Fine"]]}, {"template": "NotCoExistence", "parameters": [["Send Fine"], [" Payment"]]}]}
