@@ -42,6 +42,7 @@ clusters_dict, \
 cluster_order = \
     do_cluster_changePoint(constraints, algoPrmts)
 
+print("- - - start drawing drift map" )
 draw_drift_map_with_clusters(constraints,
                              fileMngm,
                              algoPrmts,
@@ -50,6 +51,7 @@ draw_drift_map_with_clusters(constraints,
                              x_lines_all=horisontal_separation_bounds_by_cluster,
                              cluster_order = cluster_order)
 
+print("- - - start processing the timeseries in clusters" )
 # handle now each cluster of constraints in the following function
 process_constraint_clusters(fileMngm,
                             cluster_order,

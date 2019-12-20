@@ -5,7 +5,9 @@ from src.auxiliary.constant_definitions import FOLDER_DATA_TIMESTAMP_SORTED_LOGS
     FOLDER_TIMESTAMP_TICKS_FOR_GRAPHS, PNG_FILE_EXTENSION, FOLDER_GRAPHS_DRIFT_MAPS, FOLDER_GRAPHS_STATISTICS, \
     FOLDER_GRAPHS_DRIFT_AVERAGED_TIMESERIES, JSON_FILE_EXTENSION, \
     FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS, FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS_PRUNED, \
-    FOLDER_GRAPHS_DRIFT_PLOTS_PLOTS, FOLDER_GRAPHS_DFG, FOLDER_DATA_INTERMEDIATE, FOLDER_DATA_RESULTS_FINAL
+    FOLDER_GRAPHS_DRIFT_PLOTS_PLOTS, FOLDER_GRAPHS_DFG, FOLDER_DATA_INTERMEDIATE, FOLDER_DATA_RESULTS_FINAL, \
+    FOLDER_AUTOCORRELATION
+
 
 class FilesManagement:
     def __init__(self, log_name, algoPrmt):
@@ -104,6 +106,10 @@ class FilesManagement:
         ensure_path_exists(fgd)
         return fgd / (str(i) + self.name_file_erratic + PNG_FILE_EXTENSION)
 
+    def get_path_autocorrelation_graphs_for_constraints(self, i):
+        pat = FOLDER_DATA_RESULTS_FINAL / self.log_name / FOLDER_AUTOCORRELATION
+        ensure_path_exists(pat)
+        return pat / (str(i) + self.name_file_erratic + PNG_FILE_EXTENSION)
 
 class AlgorithmParameters:
     def __init__(self, window_size,
