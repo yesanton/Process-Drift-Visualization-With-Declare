@@ -3,6 +3,14 @@ Example run:
 python3 draw_graph.py -logName bpi_challenge_2013_open  -subL 100 -sliBy 50 -driftAll
 call help to see argument list
 
+examples to run:
+-logName bpi_challenge_2013_incidents -subL 400 -sliBy 150 -cluCut 500
+-logName Sepsis -subL 50 -sliBy 25 -cluCut 600
+-logName ConditionalRemoval -subL 1000 -sliBy 500  -cluCut 600
+-logName Loop -subL 800 -sliBy 400  -cluCut 600
+-logName italian_help_desk -subL 200  -sliBy 75  -cluCut 300
+-logName OIR -subL 400  -sliBy 200  -cluCut 500
+
 Author:  Anton Yeshchenko
 '''
 

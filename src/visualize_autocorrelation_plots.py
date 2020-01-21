@@ -20,6 +20,8 @@ def visualize_autocorrelation_plots(fileMngm, lag_for_autocorrelation = 20):
             b = []
             for a in r:
                 b.append(a)
+        if len(b[0]) < 20:
+            lag_for_autocorrelation = 10
         sm.graphics.tsa.plot_acf(np.array(b[0]).astype(np.float), lags=lag_for_autocorrelation)
         plt.savefig(fileMngm.get_path_autocorrelation_graphs_for_constraints(curr_ind), bbox_inches='tight')
         plt.close()

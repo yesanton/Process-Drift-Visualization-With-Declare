@@ -2,7 +2,10 @@ import math
 
 def save_separately_timestamp_for_each_constraint_window(log, algoPrmts):
     # every first timestamp of each trace is stored here
-    timestamps = [trace._list[0]._dict['time:timestamp'].strftime('%m-%d-%Y') for trace in log._list]
+    try:
+        timestamps = [trace._list[0]._dict['time:timestamp'].strftime('%m-%d-%Y') for trace in log._list]
+    except AttributeError:
+        timestamps = [trace._list[0]._dict['time:timestamp'][0:8] for trace in log._list]
     time_out = []
     n_th = 0
     number_of_timestamps = (len(timestamps) - algoPrmts.window_size) / algoPrmts.sliding_window_size
