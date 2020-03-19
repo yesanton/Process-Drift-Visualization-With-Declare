@@ -30,7 +30,10 @@ def draw_drift_plot_for_one_cluster(ts=None,
         if len(vertical) > 1:
             vert = vertical[key]
         else:
-            vert = vertical[0]
+            try:
+                vert = vertical[list(vertical.keys())[0]]
+            except KeyError:
+                print ("here is the problem!")
         vert = vert[:-1]
         for line in vert:
             plt.axvline(x=line, color='black', dashes=(2, 2))
