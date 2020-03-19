@@ -14,6 +14,9 @@ def import_timestamp_ticks(fileMngm):
 def import_check(file):
     return file.is_file()
 
+''' the output is:
+constraints 
+'''
 def import_minerful_constraints_timeseries_data(fileMngm, algoPrmts):
     csvfile = open(fileMngm.get_path_minerful_constraints(), 'r')
     csv_reader = csv.reader(csvfile, delimiter=';', quotechar='|')
