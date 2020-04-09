@@ -7,4 +7,6 @@ data/data_results_final/*
 data/*
 .idea
 .DS_Store
-
+src/__pycache__/visualize_dfg_with_constraints.cpython-37.pyc
+src/pm4py_modified_scripts/__pycache__/factory_pm4py.cpython-37.pyc
+src/pm4py_modified_scripts/__pycache__/pydotplus_pm4py.cpython-37.pyc
