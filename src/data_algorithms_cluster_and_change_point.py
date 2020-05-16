@@ -179,18 +179,30 @@ def calculate_erratic_value(power_smooth, xnew, averaged_line):
            [(power_smooth[-3] + power_smooth[-2] + power_smooth[-1]) / 3]
 
     standard_erratic_as_ideal = 0
-    real_erratic_score = 9
+    real_erratic_score = 0 #9
 
     # calculate erratic measure (described in the paper)
     y_0 = ynew[0]
-    for y in ynew[1:]:
+
+    y_0_polyline = power_smooth[0]
+    polyline_erratic_score = 0
+
+    for (y,y_original) in zip(ynew[1:], power_smooth[1:]):
         standard_erratic_as_ideal += xnew[1] - xnew[0]
         # multiplied by len(averaged_line)
-        # to get the calculation of the line as in the squared plot
+        # to get the calculation of the line as in the squared plot (length of the curve)
         real_erratic_score += numpy.math.sqrt((xnew[1] - xnew[0]) ** 2 + ((y - y_0) * len(averaged_line)) ** 2)
+
+        # get the erratic score as in the paper (polyline)
+        # polyline_erratic_score += numpy.math.sqrt((xnew[1] - xnew[0]) ** 2 + ((y_original - y_0_polyline) * len(averaged_line)) ** 2)
+        polyline_erratic_score += numpy.math.sqrt(1 + ((y_original - y_0_polyline) * len(averaged_line)) ** 2)
+
+
         y_0 = y
+        y_0_polyline = y_original
 
     print("without DRIFT: " + str(standard_erratic_as_ideal))
-    print("current DRIFT: " + str(real_erratic_score))
+    print("current DRIFT (curve length): " + str(real_erratic_score))
+    print("current DRIFT (polyine length): " + str(polyline_erratic_score))
 
-    return standard_erratic_as_ideal, real_erratic_score
+    return standard_erratic_as_ideal, polyline_erratic_score

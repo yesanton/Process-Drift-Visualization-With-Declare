@@ -11,6 +11,7 @@ examples to run:
 -logName italian_help_desk -subL 200  -sliBy 75  -cluCut 300
 -logName OIR -subL 400  -sliBy 200  -cluCut 500
 -logName bpic_2011_hospital -subL 40 -sliBy 20 -cluCut 1200
+-logName bpic_2011_hospital -subL 100 -sliBy 50 -cluCut 1200
 Author:  Anton Yeshchenko
 '''
 

@@ -7,6 +7,11 @@ from src.data_importers.import_csv import import_check, import_constraints_to_di
 def visualize_dfg_with_constraints(fileMngm):
     # import log
     log = xes_import_factory.apply(str(fileMngm.get_path_input_sorted_xes()))
+
+    # bpi 2011 specific (experiment)
+    #heu_net = heuristics_miner.apply_heu(log, parameters={"dependency_thresh": 0.99, "min_act_count":5000})
+
+    # this is usual
     heu_net = heuristics_miner.apply_heu(log, parameters={"dependency_thresh": 0.99})
 
     curr_ind = 0
