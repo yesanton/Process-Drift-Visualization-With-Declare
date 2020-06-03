@@ -12,7 +12,11 @@ def visualize_dfg_with_constraints(fileMngm):
     #heu_net = heuristics_miner.apply_heu(log, parameters={"dependency_thresh": 0.99, "min_act_count":5000})
 
     # this is usual
-    heu_net = heuristics_miner.apply_heu(log, parameters={"dependency_thresh": 0.99})
+    # heu_net = heuristics_miner.apply_heu(log, parameters={"dependency_thresh": 0.99})
+
+    # now for the specific experiment bbb
+    heu_net = heuristics_miner.apply_heu(log, parameters={"dependency_thresh": 0.5, "min_act_count": 500, 'min_dfg_occurrences': 500})
+
 
     curr_ind = 0
     while import_check(fileMngm.get_path_drift_plot_all_timeseries_pruned(curr_ind)):
