@@ -15,7 +15,7 @@ examples to run:
 -logName bastian -subL 100 -sliBy 50 -cluCut 1200
 Author:  Anton Yeshchenko
 '''
-
+from src.auxiliary.web_parameters import get_http_parameters
 from src.agregated_functions import process_constraint_clusters
 from src.auxiliary.mine_features_from_data import save_separately_timestamp_for_each_constraint_window
 from src.data_algorithms_cluster_and_change_point import do_cluster_changePoint
@@ -27,49 +27,65 @@ from src.data_importers.import_csv import import_timestamp_ticks, import_check, 
 from src.data_importers.import_xes import import_xes_and_sort_timestamp, import_xes
 from src.auxiliary.minerful_adapter import mine_minerful_for_declare_constraints
 
-fileMngm, algoPrmts = get_commandline_parameters()
+# make this add to be able to run on the server with Flask
+from flask import Flask, request
+app = Flask(__name__)
 
-log = import_xes(fileMngm)
-if not log:
-    log = import_xes_and_sort_timestamp(fileMngm)
-    export_xes_log(log, fileMngm)
+@app.route('/', methods=['GET'])
+def run_scenario1():
+    # post_id = request.args.get('id')
+    # return post_id
 
-if not import_check(fileMngm.get_path_minerful_constraints()):
-    mine_minerful_for_declare_constraints(fileMngm, algoPrmts)
+    # this is for working with command line
+    # fileMngm, algoPrmts = get_commandline_parameters()
 
-ts_ticks = import_timestamp_ticks(fileMngm)
-if not ts_ticks:
-    ts_ticks = save_separately_timestamp_for_each_constraint_window(log, algoPrmts)
-    export_one_line_csvs(ts_ticks, fileMngm.get_path_timestamp_ticks())
+    # and this is added instead of the previous lines to work with web version with requests
+    # TODO: uncomment this:
+    fileMngm, algoPrmts = get_http_parameters(request.args)
+    return "get_http_parameters(request.args)"
 
-constraints = import_minerful_constraints_timeseries_data(fileMngm, algoPrmts)
+    log = import_xes(fileMngm)
+    if not log:
+        log = import_xes_and_sort_timestamp(fileMngm)
+        export_xes_log(log, fileMngm)
 
-constraints, \
-cluster_bounds, \
-horisontal_separation_bounds_by_cluster, \
-clusters_with_declare_names, \
-clusters_dict, \
-cluster_order = \
-    do_cluster_changePoint(constraints, algoPrmts)
+    if not import_check(fileMngm.get_path_minerful_constraints()):
+        mine_minerful_for_declare_constraints(fileMngm, algoPrmts)
 
-print("- - - start drawing drift map" )
-draw_drift_map_with_clusters(constraints,
-                             fileMngm,
-                             algoPrmts,
-                             ts=ts_ticks,
-                             y_lines=cluster_bounds,
-                             x_lines_all=horisontal_separation_bounds_by_cluster,
-                             cluster_order = cluster_order)
+    ts_ticks = import_timestamp_ticks(fileMngm)
+    if not ts_ticks:
+        ts_ticks = save_separately_timestamp_for_each_constraint_window(log, algoPrmts)
+        export_one_line_csvs(ts_ticks, fileMngm.get_path_timestamp_ticks())
 
-print("- - - start processing the timeseries in clusters" )
-# handle now each cluster of constraints in the following function
-process_constraint_clusters(fileMngm,
-                            cluster_order,
-                            clusters_with_declare_names,
-                            ts_ticks,
-                            clusters_dict,
-                            horisontal_separation_bounds_by_cluster,
-                            erratic_measure_out = True,
-                            export_constraints = True,
-                            export_constraints_simplified = True)
+    constraints = import_minerful_constraints_timeseries_data(fileMngm, algoPrmts)
 
+    constraints, \
+    cluster_bounds, \
+    horisontal_separation_bounds_by_cluster, \
+    clusters_with_declare_names, \
+    clusters_dict, \
+    cluster_order = \
+        do_cluster_changePoint(constraints, algoPrmts)
+
+    print("- - - start drawing drift map" )
+    draw_drift_map_with_clusters(constraints,
+                                 fileMngm,
+                                 algoPrmts,
+                                 ts=ts_ticks,
+                                 y_lines=cluster_bounds,
+                                 x_lines_all=horisontal_separation_bounds_by_cluster,
+                                 cluster_order = cluster_order)
+
+    print("- - - start processing the timeseries in clusters" )
+    # handle now each cluster of constraints in the following function
+    process_constraint_clusters(fileMngm,
+                                cluster_order,
+                                clusters_with_declare_names,
+                                ts_ticks,
+                                clusters_dict,
+                                horisontal_separation_bounds_by_cluster,
+                                erratic_measure_out = True,
+                                export_constraints = True,
+                                export_constraints_simplified = True)
+
+    return 'Finished executing everything'
