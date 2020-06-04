@@ -2,13 +2,17 @@ from pathlib import Path
 
 
 ROOT_DIR =  Path(__file__).parent.parent.parent # This is your Project Root
-
-
 FOLDER_DATA = Path(ROOT_DIR) / 'data'
 
 FOLDER_DATA_INITIAL_LOGS = FOLDER_DATA / 'data_input'
 FOLDER_DATA_INTERMEDIATE = FOLDER_DATA / "data_intermediate"
 FOLDER_DATA_RESULTS_FINAL = FOLDER_DATA / "data_results_final"
+
+### in case for relative path
+FOLDER_DATA_INITIAL_LOGS_RELATIVE = Path('/data') / 'data_input'
+FOLDER_DATA_INTERMEDIATE_RELATIVE = Path('/data') / "data_intermediate"
+FOLDER_DATA_RESULTS_FINAL_RELATIVE = Path('/data') / "data_results_final"
+###
 
 FOLDER_DATA_TIMESTAMP_SORTED_LOGS = Path("timestamp_sorted_logs")
 FOLDER_DATA_MINERFUL_DECLARE_CONSTRAINTS = Path("declare_from_minerful")

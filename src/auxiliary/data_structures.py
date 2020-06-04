@@ -6,7 +6,8 @@ from src.auxiliary.constant_definitions import FOLDER_DATA_TIMESTAMP_SORTED_LOGS
     FOLDER_GRAPHS_DRIFT_AVERAGED_TIMESERIES, JSON_FILE_EXTENSION, \
     FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS, FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS_PRUNED, \
     FOLDER_GRAPHS_DRIFT_PLOTS_PLOTS, FOLDER_GRAPHS_DFG, FOLDER_DATA_INTERMEDIATE, FOLDER_DATA_RESULTS_FINAL, \
-    FOLDER_AUTOCORRELATION
+    FOLDER_AUTOCORRELATION, FOLDER_DATA_INITIAL_LOGS_RELATIVE, \
+    FOLDER_DATA_INTERMEDIATE_RELATIVE, FOLDER_DATA_RESULTS_FINAL_RELATIVE
 
 
 class FilesManagement:
@@ -110,6 +111,56 @@ class FilesManagement:
         pat = FOLDER_DATA_RESULTS_FINAL / self.log_name / FOLDER_AUTOCORRELATION
         ensure_path_exists(pat)
         return pat / (str(i) + self.name_file_erratic + PNG_FILE_EXTENSION)
+
+    # now part with relative path
+
+    def get_path_input_xes_URL(self):
+        return FOLDER_DATA_INITIAL_LOGS_RELATIVE / compose_name(self.log_name,XES_FILE_EXTENSION)
+
+    def get_path_input_sorted_xes_URL(self):
+        fdtms = FOLDER_DATA_INTERMEDIATE_RELATIVE / self.log_name / FOLDER_DATA_TIMESTAMP_SORTED_LOGS
+        return fdtms / compose_name(self.log_name, XES_FILE_EXTENSION)
+
+    def get_path_minerful_constraints_URL(self):
+        fdmdc = FOLDER_DATA_INTERMEDIATE_RELATIVE / self.log_name / FOLDER_DATA_MINERFUL_DECLARE_CONSTRAINTS
+        return fdmdc / self.namefile_minerful_constr
+
+    def get_path_timestamp_ticks_URL(self):
+        fttfg = FOLDER_DATA_INTERMEDIATE_RELATIVE / self.log_name / FOLDER_TIMESTAMP_TICKS_FOR_GRAPHS
+        return fttfg / self.namefile_timestamp_ticks
+
+    def get_path_drift_map_URL(self):
+        fgdm = FOLDER_DATA_RESULTS_FINAL_RELATIVE / self.log_name / FOLDER_GRAPHS_DRIFT_MAPS
+        return fgdm / self.name_file_drift_map
+
+    def get_path_erratic_measures_URL(self):
+        fgs = FOLDER_DATA_RESULTS_FINAL_RELATIVE / self.log_name / FOLDER_GRAPHS_STATISTICS
+        return fgs / compose_name(self.name_file_erratic, CSV_FILE_EXTENSION)
+
+    def get_path_drift_plot_averaged_timeseries_URL(self, i):
+        fgdat = FOLDER_DATA_RESULTS_FINAL_RELATIVE / self.log_name / FOLDER_GRAPHS_DRIFT_AVERAGED_TIMESERIES
+        return fgdat / (str(i) + self.name_file_erratic + CSV_FILE_EXTENSION)
+
+    def get_path_drift_plot_URL(self, i):
+        fgdpp = FOLDER_DATA_RESULTS_FINAL_RELATIVE / self.log_name / FOLDER_GRAPHS_DRIFT_PLOTS_PLOTS
+        return fgdpp / (str(i) + self.name_file_erratic + PNG_FILE_EXTENSION)
+
+    def get_path_drift_plot_all_timeseries_URL(self, i):
+        fgdacic = FOLDER_DATA_RESULTS_FINAL_RELATIVE / self.log_name / FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS
+        return fgdacic / (str(i) + self.name_file_erratic + JSON_FILE_EXTENSION)
+
+    def get_path_drift_plot_all_timeseries_pruned_URL(self, i):
+        fgdacicp = FOLDER_DATA_RESULTS_FINAL_RELATIVE / self.log_name / FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS_PRUNED
+        return fgdacicp / (str(i) + self.name_file_erratic + CSV_FILE_EXTENSION)
+
+    def get_path_dfg_visualization_for_constraints_URL(self, i):
+        fgd = FOLDER_DATA_RESULTS_FINAL_RELATIVE / self.log_name / FOLDER_GRAPHS_DFG
+        return fgd / (str(i) + self.name_file_erratic + PNG_FILE_EXTENSION)
+
+    def get_path_autocorrelation_graphs_for_constraints_URL(self, i):
+        pat = FOLDER_DATA_RESULTS_FINAL_RELATIVE / self.log_name / FOLDER_AUTOCORRELATION
+        return pat / (str(i) + self.name_file_erratic + PNG_FILE_EXTENSION)
+
 
 class AlgorithmParameters:
     def __init__(self, window_size,

@@ -3,7 +3,17 @@
 Author: Anton Yeshchenko
 '''
 import seaborn as sns; sns.set()
+
+#If you are running a webserver and using it to save Matplotlib make sure to set the backend
+# to a non-interactive one (matplotlib.use('agg') or matplotlib.pyplot.switch_backend('Agg'))
+# so that your server does not try to create (and then destroy) GUI windows that will never be
+# seen (or if they are will be more of a nuisance).
+
+
+import matplotlib
+matplotlib.pyplot.switch_backend('Agg')
 import matplotlib.pylab as plt
+
 import copy
 import pandas as pd
 # more details on the python lib:

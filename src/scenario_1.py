@@ -15,6 +15,8 @@ examples to run:
 -logName bastian -subL 100 -sliBy 50 -cluCut 1200
 Author:  Anton Yeshchenko
 '''
+import json
+
 from src.auxiliary.web_parameters import get_http_parameters
 from src.agregated_functions import process_constraint_clusters
 from src.auxiliary.mine_features_from_data import save_separately_timestamp_for_each_constraint_window
@@ -29,9 +31,15 @@ from src.auxiliary.minerful_adapter import mine_minerful_for_declare_constraints
 
 # make this add to be able to run on the server with Flask
 from flask import Flask, request
-app = Flask(__name__)
+import flask
+app = Flask(__name__, static_url_path='/data/', static_folder='../data/')
+import os
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
-@app.route('/', methods=['GET'])
+
+
+
+@app.route('/buildDriftMap', methods=['GET'])
 def run_scenario1():
     # post_id = request.args.get('id')
     # return post_id
@@ -40,9 +48,7 @@ def run_scenario1():
     # fileMngm, algoPrmts = get_commandline_parameters()
 
     # and this is added instead of the previous lines to work with web version with requests
-    # TODO: uncomment this:
     fileMngm, algoPrmts = get_http_parameters(request.args)
-    return "get_http_parameters(request.args)"
 
     log = import_xes(fileMngm)
     if not log:
@@ -88,4 +94,18 @@ def run_scenario1():
                                 export_constraints = True,
                                 export_constraints_simplified = True)
 
-    return 'Finished executing everything'
+
+
+    # return flask.url_for('static', filename='results/README.md')
+
+    # jsonStr = json.dumps(fileMngm.__dict__)
+    at = []
+    for i in range(len(cluster_order)):
+        at.append(str(fileMngm.get_path_drift_plot_averaged_timeseries_URL(i)))
+
+
+
+
+    return flask.jsonify(path_to_driftmap=str(fileMngm.get_path_drift_map_URL()),
+                         path_to_erratic_measure=str(fileMngm.get_path_erratic_measures_URL()),
+                         paths_to_drift_plots=at)
