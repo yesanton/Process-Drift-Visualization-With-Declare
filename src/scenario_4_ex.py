@@ -3,6 +3,8 @@ Augmented Dickey-Fuller test
 '''
 import csv
 import numpy as np
+
+from data_exporters.export_csv import export_many_line_csvs
 from src.auxiliary.command_line import get_commandline_parameters
 from pandas import read_csv
 from statsmodels.tsa.stattools import adfuller
@@ -16,6 +18,9 @@ fileMngm, algoPrmts = get_commandline_parameters()
 # patthh = fileMngm.get_path_drift_plot_averaged_timeseries(10)
 # # patthh = 'C:\Users\anton\Documents\WritePrograms\Process-Drift-Visualization-With-Declare\data\data_results_final\traffic_fines_1\graphs\drift_plots\timeseries\10traffic_fines_1_1000_500_ward_euclidean_1000_distance.csv'
 # #\
+
+export = [['cluster', 'ADF Statistic', 'p-value', '1%', '5%', '10%']]
+
 curr_ind = 0
 while import_check(fileMngm.get_path_drift_plot_averaged_timeseries(curr_ind)):
     b = []
@@ -29,14 +34,24 @@ while import_check(fileMngm.get_path_drift_plot_averaged_timeseries(curr_ind)):
 
     result = adfuller(X)
 
+    export_1 = []
+    export_1.append(curr_ind)
+    export_1.append(result[0])
+    export_1.append(result[1])
+
     print("Data number " + str(curr_ind))
     print('ADF Statistic: %f' % result[0])
     print('p-value: %f' % result[1])
     print('Critical Values:')
     for key, value in result[4].items():
         print('\t%s: %.3f' % (key, value))
+        export_1.append(value)
+    export.append(export_1)
 
     curr_ind += 1
+
+export_many_line_csvs(export, fileMngm.get_path_stationarity())
+print ('script end')
 # Running the example prints the test statistic value of -4. The more negative this statistic,
 # more likely we are to reject the null hypothesis (we have a stationary dataset).
 #

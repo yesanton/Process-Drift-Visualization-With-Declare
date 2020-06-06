@@ -21,7 +21,7 @@ from src.auxiliary.mine_features_from_data import save_separately_timestamp_for_
 from src.data_algorithms_cluster_and_change_point import do_cluster_changePoint, remove_redundant_timeseries_HEADER
 from src.auxiliary.command_line import get_commandline_parameters
 from src.visualize_drift_map import draw_drift_map_with_clusters
-from src.data_exporters.export_csv import export_one_line_csvs
+from src.data_exporters.export_csv import export_one_line_csvs, export_many_line_csvs
 from src.data_exporters.export_xes import export_xes_log
 from src.data_importers.import_csv import import_timestamp_ticks, import_check, import_minerful_constraints_timeseries_data
 from src.data_importers.import_xes import import_xes_and_sort_timestamp, import_xes
@@ -109,13 +109,13 @@ def run_scenario1():
     # jsonStr = json.dumps(fileMngm.__dict__)
     at = []
     for i in range(len(cluster_order)):
-        at.append(str(fileMngm.get_path_drift_plot_averaged_timeseries_URL(i)))
+        at.append(fileMngm.get_path_drift_plot_averaged_timeseries_URL(i))
 
 
 
 
-    return flask.jsonify(path_to_driftmap=str(fileMngm.get_path_drift_map_URL()),
-                         path_to_erratic_measure=str(fileMngm.get_path_erratic_measures_URL()),
+    return flask.jsonify(path_to_driftmap=fileMngm.get_path_drift_map_URL(),
+                         path_to_erratic_measure=fileMngm.get_path_erratic_measures_URL(),
                          paths_to_drift_plots=at)
 
 
@@ -127,52 +127,71 @@ def run_scenario2_eDFG():
     fileMngm, algoPrmts = get_http_parameters(request.args)
     visualize_dfg_with_constraints(fileMngm)
 
+    print ("done making graphs")
 
     #now here saving and sending back the links to these visualizations
     curr_ind = 0
     at = []
     while import_check(fileMngm.get_path_drift_plot_all_timeseries_pruned(curr_ind)):
-
         at.append(fileMngm.get_path_dfg_visualization_for_constraints_URL(curr_ind))
-
+        curr_ind += 1
     return flask.jsonify(paths_to_edfgs=at)
 
 
 @app.route('/makeAutocorrelationPlots', methods=['GET'])
 def run_scenario3_autocorrelation():
-    fileMngm, algoPrmts = get_commandline_parameters()
+    fileMngm, algoPrmts = get_http_parameters(request.args)
     visualize_autocorrelation_plots(fileMngm)
+
+    # now here saving and sending back the links to these visualizations
+    curr_ind = 0
+    at = []
+    while import_check(fileMngm.get_path_drift_plot_averaged_timeseries(curr_ind)):
+        at.append(fileMngm.get_path_autocorrelation_graphs_for_constraints_URL(curr_ind))
+        curr_ind += 1
+    return flask.jsonify(paths_to_edfgs=at)
+
 
 @app.route('/makeStationarityTest', methods=['GET'])
 def run_scenario4_stationarity():
-    fileMngm, algoPrmts = get_commandline_parameters()
-
+    fileMngm, algoPrmts = get_http_parameters(request.args)
+    export = [['cluster','ADF Statistic', 'p-value', '1%', '5%', '10%']]
     curr_ind = 0
     while import_check(fileMngm.get_path_drift_plot_averaged_timeseries(curr_ind)):
         b = []
-
         with open(fileMngm.get_path_drift_plot_averaged_timeseries(curr_ind)) as save_time_series_per_cl:
             r = csv.reader(save_time_series_per_cl, dialect='excel')
             for a in r:
                 for i in a:
                     b.append(float(i))
         X = np.array(b)
-
         result = adfuller(X)
-
+        export_1 = []
+        export_1.append(curr_ind)
         print("Data number " + str(curr_ind))
+        export_1.append(result[0])
         print('ADF Statistic: %f' % result[0])
+        export_1.append(result[1])
         print('p-value: %f' % result[1])
         print('Critical Values:')
         for key, value in result[4].items():
             print('\t%s: %.3f' % (key, value))
-
+            export_1.append(value)
         curr_ind += 1
+        export.append(export_1)
+
+    print (export)
+    export_many_line_csvs(export, fileMngm.get_path_stationarity())
+
+    return flask.jsonify(path_to_stationarity=fileMngm.get_path_stationarity_URL())
+
+
+
 
 
 @app.route('/makeSpreadOfConstraints', methods=['GET'])
 def run_scenario5_spread():
-    fileMngm, algoPrmts = get_commandline_parameters()
+    fileMngm, algoPrmts = get_http_parameters(request.args)
 
     constraints = import_minerful_constraints_timeseries_data(fileMngm, algoPrmts)
     constraints = remove_redundant_timeseries_HEADER(constraints)
@@ -180,4 +199,5 @@ def run_scenario5_spread():
     measure = mean([max(co[3:]) - min(co[3:]) for co in constraints])
     print("average spread of all measures: " + str(measure))
 
+    return flask.jsonify(spread_constraints=measure)
 
