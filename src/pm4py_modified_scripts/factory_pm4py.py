@@ -2,7 +2,7 @@ import os
 import shutil
 import subprocess
 import sys
-import pm4py_modified_scripts.pydotplus_pm4py as pydotplus
+import src.pm4py_modified_scripts.pydotplus_pm4py as pydotplus
 
 PYDOTPLUS = "pydotplus"
 
