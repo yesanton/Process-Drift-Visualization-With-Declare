@@ -15,6 +15,9 @@ Author:  Anton Yeshchenko
 import json
 from statistics import mean
 
+from werkzeug.utils import secure_filename
+
+from src.auxiliary.data_structures import FilesManagement
 from src.auxiliary.web_parameters import get_http_parameters
 from src.agregated_functions import process_constraint_clusters
 from src.auxiliary.mine_features_from_data import save_separately_timestamp_for_each_constraint_window
@@ -152,6 +155,8 @@ def run_scenario3_autocorrelation():
     return flask.jsonify(paths_to_edfgs=at)
 
 
+# example:
+#         http://127.0.0.1:5000/makeStationarityTest?logName=Sepsis&subL=100&sliBy=50
 @app.route('/makeStationarityTest', methods=['GET'])
 def run_scenario4_stationarity():
     fileMngm, algoPrmts = get_http_parameters(request.args)
@@ -188,7 +193,6 @@ def run_scenario4_stationarity():
 
 
 
-
 @app.route('/makeSpreadOfConstraints', methods=['GET'])
 def run_scenario5_spread():
     fileMngm, algoPrmts = get_http_parameters(request.args)
@@ -201,3 +205,29 @@ def run_scenario5_spread():
 
     return flask.jsonify(spread_constraints=measure)
 
+
+# uploading the event log
+UPLOAD_FOLDER = FilesManagement.get_path_uploading_file()
+ALLOWED_EXTENSIONS = {'xes'}
+
+#todo:
+# fix the upoading of two same named files, but trying to work on it separately.
+# potential issues for the fix taht will influecen all other APIs
+
+@app.route('/uploadFile', methods=['GET', 'POST'])
+def upload_event_log():
+    # function to check if the file is in allowed format
+    def allowed_file(filename):
+        return '.' in filename and \
+               filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+    if request.method == 'POST':
+        f = request.files['file_name']
+        print (f.filename)
+        if allowed_file(f.filename):
+            f.save(UPLOAD_FOLDER / secure_filename(f.filename))
+        else:
+            return 'file format is not allowed'
+        return "finally something happened"
+
+    return "Did anything happen?"

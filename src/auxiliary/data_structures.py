@@ -171,6 +171,12 @@ class FilesManagement:
         fgs = FOLDER_DATA_RESULTS_FINAL_RELATIVE / self.log_name / FOLDER_GRAPHS_STATISTICS
         return str(fgs / compose_name('stationarity', self.name_file_erratic, CSV_FILE_EXTENSION))
 
+    # uploading an event log path
+    @staticmethod
+    def get_path_uploading_file():
+        return FOLDER_DATA_INITIAL_LOGS
+
+
 class AlgorithmParameters:
     def __init__(self, window_size,
                        sliBy,
