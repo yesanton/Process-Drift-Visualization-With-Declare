@@ -207,6 +207,9 @@ def run_scenario5_spread():
 
 
 # uploading the event log
+# documentation:
+# https://flask.palletsprojects.com/en/1.1.x/patterns/fileuploads/#uploading-files
+# and short version: https://flask.palletsprojects.com/en/1.1.x/quickstart/#static-files
 UPLOAD_FOLDER = FilesManagement.get_path_uploading_file()
 ALLOWED_EXTENSIONS = {'xes'}
 
