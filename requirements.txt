@@ -1,0 +1,7 @@
+Flask
+scikit-learn
+ruptures
+matplotlib
+seaborn
+pm4py
+statsmodels

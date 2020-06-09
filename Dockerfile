@@ -2,34 +2,27 @@
 FROM openjdk:10-jdk
 
 # Set the working directory.
-WORKDIR /usr/src/app
+WORKDIR /app
 
-# Run the command inside your image filesystem.
-# run all things to install packages and python, everything put in one run
-#RUN npm install
+RUN apt-get update && apt-get -y install \
+	python3-pip \
+        && apt-get clean \
+        && rm -rf /tmp/* /var/tmp/* \
+        && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get update && apt-get -y install python3-pip && pip3 install Flask && pip3 install -U scikit-learn && pip3 install ruptures && pip3 install matplotlib && pip3 install seaborn && pip3 install pm4py
+# Copy python package requirements
+COPY requirements.txt .
 
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Copy the file from your host to your current location.
 COPY . .
 
-# Inform Docker that the container is listening on the specified port at runtime.
-EXPOSE 5000
+ENV FLASK_APP /app/src/scenarios_server.py
 
-# Run the specified command within the container.
-#CMD [ "npm", "start" ]
-
-CMD [ "cd", "src"]
-CMD [ "export", "FLASK_APP=scenario_1.py" ]
-CMD ["flask", "run"]
-# export FLASK_APP=scenario_1.py
-#??? to make debug
-# export FLASK_ENV=development
-#flask run
-
+ENTRYPOINT ["flask", "run", "--host", "0.0.0.0"]
 
 # that is how i run it
-#   docker run -it  --name flaskcont -p 5000:5000 -d 8ce42d1b8b80
+#   docker run -it  --name flaskcont -p 5000:5000 -d <image ID or name>
 #   docker start flaskcont
-#   docker  exec -it flaskcont bash
+#   docker  exec -it flaskcont bash (to get to the shell)
