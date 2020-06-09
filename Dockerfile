@@ -18,6 +18,7 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 # Copy the file from your host to your current location.
 COPY . .
 
+WORKDIR /app/src
 ENV FLASK_APP /app/src/scenarios_server.py
 
 ENTRYPOINT ["flask", "run", "--host", "0.0.0.0"]
