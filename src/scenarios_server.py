@@ -34,6 +34,7 @@ from src.auxiliary.command_line import get_commandline_parameters
 from src.visualize_dfg_with_constraints import visualize_dfg_with_constraints
 
 
+import uuid
 import csv
 import numpy as np
 from statsmodels.tsa.stattools import adfuller
@@ -224,13 +225,20 @@ def upload_event_log():
         return '.' in filename and \
                filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+
+    # cleaning up space in the data folder if necessary
+    # root_directory = Path('.')
+    # sum(f.stat().st_size for f in root_directory.glob('**/*') if f.is_file())
+
+
     if request.method == 'POST':
         f = request.files['file_name']
         print (f.filename)
         if allowed_file(f.filename):
-            f.save(UPLOAD_FOLDER / secure_filename(f.filename))
+            unique_id = str(uuid.uuid1())
+            f.save(UPLOAD_FOLDER / secure_filename(unique_id + '.xes'))
         else:
             return 'file format is not allowed'
-        return "finally something happened"
+        return flask.jsonify(session_id=unique_id)
 
     return "Did anything happen?"
