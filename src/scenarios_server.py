@@ -17,6 +17,7 @@ from statistics import mean
 
 from werkzeug.utils import secure_filename
 
+from src.auxiliary.web_server_functions import clean_from_old_files
 from src.auxiliary.data_structures import FilesManagement
 from src.auxiliary.web_parameters import get_http_parameters
 from src.agregated_functions import process_constraint_clusters
@@ -40,7 +41,7 @@ import numpy as np
 from statsmodels.tsa.stattools import adfuller
 # https://machinelearningmastery.com/time-series-data-stationary-python/
 from src.data_importers.import_csv import import_check
-
+from pathlib import Path
 
 # make this add to be able to run on the server with Flask
 from flask import Flask, request
@@ -153,7 +154,7 @@ def run_scenario3_autocorrelation():
     while import_check(fileMngm.get_path_drift_plot_averaged_timeseries(curr_ind)):
         at.append(fileMngm.get_path_autocorrelation_graphs_for_constraints_URL(curr_ind))
         curr_ind += 1
-    return flask.jsonify(paths_to_edfgs=at)
+    return flask.jsonify(paths_to_autocorrelation=at)
 
 
 # example:
@@ -214,9 +215,10 @@ def run_scenario5_spread():
 UPLOAD_FOLDER = FilesManagement.get_path_uploading_file()
 ALLOWED_EXTENSIONS = {'xes'}
 
-#todo:
-# fix the upoading of two same named files, but trying to work on it separately.
-# potential issues for the fix taht will influecen all other APIs
+STORAGE_MAX_GB = os.getenv("MEMORY_LIMIT")
+if not STORAGE_MAX_GB:
+    # todo change this
+    STORAGE_MAX_GB = 1
 
 @app.route('/uploadFile', methods=['GET', 'POST'])
 def upload_event_log():
@@ -227,9 +229,25 @@ def upload_event_log():
 
 
     # cleaning up space in the data folder if necessary
-    # root_directory = Path('.')
-    # sum(f.stat().st_size for f in root_directory.glob('**/*') if f.is_file())
+    root_directory = Path(FilesManagement.get_path_all_data())
 
+    def sizeof_fmt(num, suffix='B'):
+        for unit in ['', 'Ki', 'Mi', 'Gi', 'Ti', 'Pi', 'Ei', 'Zi']:
+            if abs(num) < 1024.0:
+                return "%3.1f%s%s" % (num, unit, suffix)
+            num /= 1024.0
+        return "%.1f%s%s" % (num, 'Yi', suffix), num
+
+    memory_taken_by_data_files = sum(f.stat().st_size for f in root_directory.glob('**/*') if f.is_file())
+
+    print('memory taken by data files ' + sizeof_fmt(memory_taken_by_data_files))
+    # print('raw memory calculation ' + str(memory_taken_by_data_files))
+
+    # # todo change if to while
+    # if (memory_taken_by_data_files / 1073741824 + 1073741824) > STORAGE_MAX_GB: # also changed to gb (and add one more gb for a newly uploading file)
+    #     print (clean_from_old_files())
+    #
+    # return "root_directory"
 
     if request.method == 'POST':
         f = request.files['file_name']
