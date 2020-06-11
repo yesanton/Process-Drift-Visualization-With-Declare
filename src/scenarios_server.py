@@ -255,8 +255,11 @@ def upload_event_log():
         if allowed_file(f.filename):
             unique_id = str(uuid.uuid1())
             f.save(UPLOAD_FOLDER / secure_filename(unique_id + '.xes'))
+            return flask.jsonify(session_id=unique_id)
         else:
+            # todo:
+            #      return 405 instead of 200, IT IS A BAD clause
             return 'file format is not allowed'
-        return flask.jsonify(session_id=unique_id)
+
 
     return "Did anything happen?"
