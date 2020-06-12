@@ -4,4 +4,4 @@ export const uploadFile = (body: FormData) => fetch(`${API_URL}/uploadFile`, {
   method: 'POST',
   body,
   mode: 'no-cors',
-}).then(res => res.json()).catch(console.error);
+}).then(response => response.text()).catch(console.error);

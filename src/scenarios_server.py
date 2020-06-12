@@ -14,9 +14,7 @@ Author:  Anton Yeshchenko
 '''
 import json
 from statistics import mean
-
 from werkzeug.utils import secure_filename
-
 from src.auxiliary.web_server_functions import clean_from_old_files
 from src.auxiliary.data_structures import FilesManagement
 from src.auxiliary.web_parameters import get_http_parameters
@@ -46,10 +44,10 @@ from pathlib import Path
 # make this add to be able to run on the server with Flask
 from flask import Flask, request
 import flask
+import os
 
 
 app = Flask(__name__, static_url_path='/data/', static_folder='../data/')
-import os
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 @app.route('/makeDriftMap', methods=['GET'])
@@ -218,7 +216,10 @@ ALLOWED_EXTENSIONS = {'xes'}
 STORAGE_MAX_GB = os.getenv("MEMORY_LIMIT")
 if not STORAGE_MAX_GB:
     # todo change this
-    STORAGE_MAX_GB = 1
+    STORAGE_MAX_GB = 100
+# storage preserved for a possible analysis in this session. 1 gb is an adequate estimate for all possible things.
+STORAGE_PRESERVED = 1
+
 
 @app.route('/uploadFile', methods=['GET', 'POST'])
 def upload_event_log():
@@ -240,26 +241,43 @@ def upload_event_log():
 
     memory_taken_by_data_files = sum(f.stat().st_size for f in root_directory.glob('**/*') if f.is_file())
 
-    print('memory taken by data files ' + sizeof_fmt(memory_taken_by_data_files))
-    # print('raw memory calculation ' + str(memory_taken_by_data_files))
+    print('Storage occupied by data           : ' + sizeof_fmt(memory_taken_by_data_files))
+    print('Storage preserved for new analysis : ' + str(STORAGE_PRESERVED))
+    print('Storage limit                      : ' + str(STORAGE_MAX_GB))
 
-    # # todo change if to while
-    # if (memory_taken_by_data_files / 1073741824 + 1073741824) > STORAGE_MAX_GB: # also changed to gb (and add one more gb for a newly uploading file)
-    #     print (clean_from_old_files())
-    #
-    # return "root_directory"
+    while (memory_taken_by_data_files / 1073741824 + STORAGE_PRESERVED) > STORAGE_MAX_GB: # also changed to gb (and add one more gb for a newly uploading file)
+        print('Storage to free                    : ' + str(memory_taken_by_data_files / 1073741824 + STORAGE_PRESERVED - STORAGE_MAX_GB) + ' GiB')
+        clean_from_old_files()
+        memory_taken_by_data_files1 = sum(f.stat().st_size for f in root_directory.glob('**/*') if f.is_file())
+        print('Storage occupied by data           : ' + sizeof_fmt(memory_taken_by_data_files1))
+        memory_taken_by_data_files = memory_taken_by_data_files1
 
+
+    print('Importing a new file')
     if request.method == 'POST':
         f = request.files['file_name']
         print (f.filename)
         if allowed_file(f.filename):
             unique_id = str(uuid.uuid1())
-            f.save(UPLOAD_FOLDER / secure_filename(unique_id + '.xes'))
-            return flask.jsonify(session_id=unique_id)
+            filename_no_ext = f.filename[:len(f.filename)-4]
+            if len(filename_no_ext) > 25:
+                new_file_name = filename_no_ext[:25] + '_' + unique_id
+            else:
+                new_file_name = filename_no_ext + '_' + unique_id
+
+            f.save(UPLOAD_FOLDER / secure_filename(new_file_name + '.xes'))
+            print('returning json now with id: ' + str(secure_filename(new_file_name + '.xes')))
+            # return flask.jsonify(session_id=unique_id)
+            response = app.response_class(
+                response=json.dumps({"session_id": new_file_name}),
+                status=200,
+                mimetype='application/json'
+            )
+            return response
+
         else:
-            # todo:
-            #      return 405 instead of 200, IT IS A BAD clause
-            return 'file format is not allowed'
+            # The HTTP 415 Unsupported Media Type client error response code indicates that the server refuses
+            # to accept the request because the payload format is in an unsupported format.
+            return 'File format is not allowed, it should be .xes instead', 415
 
-
-    return "Did anything happen?"
+    return "Is was it a POST request?", 400
