@@ -5,3 +5,4 @@ matplotlib
 seaborn
 pm4py
 statsmodels
+flask-cors

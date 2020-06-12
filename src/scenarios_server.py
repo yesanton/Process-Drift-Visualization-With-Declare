@@ -45,9 +45,13 @@ from pathlib import Path
 from flask import Flask, request
 import flask
 import os
-
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__, static_url_path='/data/', static_folder='../data/')
+# enable resource sharing
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
+# CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 @app.route('/makeDriftMap', methods=['GET'])
@@ -222,6 +226,7 @@ STORAGE_PRESERVED = 1
 
 
 @app.route('/uploadFile', methods=['GET', 'POST'])
+# @cross_origin()
 def upload_event_log():
     # function to check if the file is in allowed format
     def allowed_file(filename):
@@ -268,12 +273,12 @@ def upload_event_log():
             f.save(UPLOAD_FOLDER / secure_filename(new_file_name + '.xes'))
             print('returning json now with id: ' + str(secure_filename(new_file_name + '.xes')))
             # return flask.jsonify(session_id=unique_id)
-            response = app.response_class(
-                response=json.dumps({"session_id": new_file_name}),
-                status=200,
-                mimetype='application/json'
-            )
-            return response
+            # response = app.response_class(
+            #     response=json.dumps({"session_id": new_file_name}),
+            #     status=200,
+            #     mimetype='application/json'
+            # )
+            return flask.jsonify(session_id=new_file_name)
 
         else:
             # The HTTP 415 Unsupported Media Type client error response code indicates that the server refuses

@@ -55,7 +55,7 @@ the '-logName' refers to the .xes found in the folder \'data_initial/ \'
 
 Code support any standard event log with that features case ID, timestamps, and activity labels.
 
-# Web support introduced June 2020
+# Web support added June 2020
 ## Server with flask and docker
 
 One could create a docker image using this repository (look at the `DOCKERREADME.md` for more details)

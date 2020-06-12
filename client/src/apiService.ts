@@ -3,5 +3,5 @@ const API_URL = 'http://127.0.0.1:5000';
 export const uploadFile = (body: FormData) => fetch(`${API_URL}/uploadFile`, {
   method: 'POST',
   body,
-  mode: 'no-cors',
+  // mode: 'no-cors',
 }).then(response => response.text()).catch(console.error);
