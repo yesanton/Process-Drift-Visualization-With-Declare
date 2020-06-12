@@ -17,7 +17,7 @@ export const FormComponent = () => {
     if (file) {
       const formData = new FormData();
       // formData.append('file', file.file);
-      formData.append('file_name', file.file);
+      formData.append('file', file.file);
       try {
         const response = await uploadFile(formData);
         console.log({ response })

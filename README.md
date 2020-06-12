@@ -55,6 +55,46 @@ the '-logName' refers to the .xes found in the folder \'data_initial/ \'
 
 Code support any standard event log with that features case ID, timestamps, and activity labels.
 
+# Web support introduced June 2020
+## Server with flask and docker
+
+One could create a docker image using this repository (look at the `DOCKERREADME.md` for more details)
+
+The server part is written in the src/scenarios_server.py and it supports following API calls. 
+
+POST request for uploading file:
+
+| `/uploadFile` | the command used to upload the file|
+|:-----------------|:----------|
+
+attach file with a tag `file`
+Example: `http://127.0.0.1:5000/uploadFile?enctype=multipart/form-data`
+
+GET requests for operations on the file:
+
+| commands         | type      | description                       |
+|:-----------------|:----------|:----------------------------------|
+| `/makeDriftMap`  | `GET`     | Returns a paths on the server to created (1) `path_to_driftmap` to each (2) `path_to_erratic_measure` and (3) `paths_to_drift_plots`
+| `/makeEDFG`      | `GET`     | Returns a paths to all created extended directly-follows-graphs(4) `paths_to_edfgs`
+| `/makeAutocorrelationPlots`  | `GET`     | Returns paths to all created autocorrelaton plots (5) `paths_to_autocorrelation`
+| `/makeStationarityTest`  | `GET`     | Returns values used for incremental drift test in (6) `path_to_stationarity`
+| `/makeSpreadOfConstraints`  | `GET`     | Returns a spread of constraints measure (7) `spread_constraints`
+
+All of these `GET` requests support following parameters:
+
+| parameter | description of parameters                       |
+|:----------|:----------------------------------|
+| logName   | The name (of the file), it is also returned from the  uploading data request
+| subL      | Integer, window size 
+| sliBy     | Integer, sliding window size
+| cluCut    | Integer, cut threshold
+| driftAll  | No parameters, it is true or false
+| noSort    | No parameters, it is true or false
+| colorTheme| Color scheme that is available from https://matplotlib.org/users/colormaps.html, a string value like "bw"
+| typeConstruct | Is the type of Declare relationship that we analyse with the technique (default is 'confidence')
+
+Example: http://127.0.0.1:5000/makeAutocorrelationPlots?logName=Sepsis2&subL=50&sliBy=25&cluCut=600
+
 ## Why
 
 This is the source code and tool supporting the conference paper:

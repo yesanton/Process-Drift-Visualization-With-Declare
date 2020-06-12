@@ -255,7 +255,7 @@ def upload_event_log():
 
     print('Importing a new file')
     if request.method == 'POST':
-        f = request.files['file_name']
+        f = request.files['file']
         print (f.filename)
         if allowed_file(f.filename):
             unique_id = str(uuid.uuid1())
