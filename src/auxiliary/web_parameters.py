@@ -132,7 +132,7 @@ def get_possible_args(session, fp):
     noSort = False
 
 
-    colorTheme = ['plasma', 'bw', 'PiYG']
+    colorTheme = ['plasma', 'bwr', 'PiYG']
     colorTheme_default = 'plasma'
 
     typeConstr = ['confidence', 'support', 'InterestF']
