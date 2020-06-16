@@ -1,4 +1,9 @@
+from pathlib import Path
+
 from pm4py.objects.log.importer.xes import factory as xes_import_factory
+
+from src.auxiliary.data_structures import FilesManagement
+
 
 def import_xes_and_sort_timestamp(fileMngm):
     full_path_file = fileMngm.get_path_input_xes()
@@ -10,7 +15,12 @@ def import_xes_and_sort_timestamp(fileMngm):
     return xes_import_factory.apply(str(full_path_file), parameters=parameters)
 
 def import_xes(fileMngm):
-    if not fileMngm.get_path_input_sorted_xes().is_file():
-        return None
-    return xes_import_factory.apply(str(fileMngm.get_path_input_sorted_xes()))
+    if isinstance(fileMngm, FilesManagement):
+        file_path = fileMngm.get_path_input_sorted_xes()
+    else:
+        file_path = Path(fileMngm)
 
+
+    if not file_path.is_file():
+        return None
+    return xes_import_factory.apply(str(file_path))

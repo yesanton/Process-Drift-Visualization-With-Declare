@@ -17,7 +17,7 @@ from statistics import mean
 from werkzeug.utils import secure_filename
 from src.auxiliary.web_server_functions import clean_from_old_files
 from src.auxiliary.data_structures import FilesManagement
-from src.auxiliary.web_parameters import get_http_parameters
+from src.auxiliary.web_parameters import get_http_parameters, get_possible_args
 from src.agregated_functions import process_constraint_clusters
 from src.auxiliary.mine_features_from_data import save_separately_timestamp_for_each_constraint_window
 from src.data_algorithms_cluster_and_change_point import do_cluster_changePoint, remove_redundant_timeseries_HEADER
@@ -278,8 +278,15 @@ def upload_event_log():
             #     status=200,
             #     mimetype='application/json'
             # )
-            return flask.jsonify(session_id=new_file_name)
 
+            #get recommended parameteres
+            _, algoPrmts = get_http_parameters(request.args)
+            fm = FilesManagement(new_file_name, algoPrmts)
+            d = fm.get_path_input_xes()
+
+
+            # return flask.jsonify(session_id=new_file_name)
+            return get_possible_args(new_file_name, d)
         else:
             # The HTTP 415 Unsupported Media Type client error response code indicates that the server refuses
             # to accept the request because the payload format is in an unsupported format.

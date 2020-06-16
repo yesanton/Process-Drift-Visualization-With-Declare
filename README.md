@@ -64,7 +64,7 @@ The server part is written in the src/scenarios_server.py and it supports follow
 
 POST request for uploading file:
 
-| `/uploadFile` | the command used to upload the file|
+| `/uploadFile` | the command used to upload the file. it returns a number of parameters that are recommended for the initial analysis of the uploaded file|
 |:-----------------|:----------|
 
 attach file with a tag `file`

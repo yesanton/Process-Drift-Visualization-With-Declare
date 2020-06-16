@@ -10,6 +10,9 @@ Author:  Anton Yeshchenko
 # lib documentation
 # https://pymotw.com/2/argparse/
 import argparse
+import json
+
+from src.data_importers.import_xes import import_xes
 from src.auxiliary.data_structures import FilesManagement, AlgorithmParameters
 
 def get_http_parameters(args):
@@ -102,3 +105,59 @@ def get_http_parameters(args):
     fileMngm = FilesManagement(logName,algoPrmts)
 
     return fileMngm, algoPrmts
+
+def get_possible_args(session, fp):
+    d = {"session_id" : session}
+    # todo remove this
+    # fp = '/Users/yesh/Documents/WritePrograms/Process-Drift-Visualization-With-Declare/data/data_input/bpi_challenge_2013_incide_03c0556e-afb9-11ea-9d26-6003089299b4.xes'
+    # print(fp)
+
+    log = import_xes(fp)
+    number_of_cases = len(log)
+    sliBy_default = int(number_of_cases / 61)
+    subL_default = int(sliBy_default * 2)
+
+    sliBy_min = int(number_of_cases / 401)
+    sliBy_max = int(number_of_cases / 21)
+
+    subL_min = sliBy_min * 2
+    subL_max = sliBy_max * 2
+
+    cluCut_min = 100
+    cluCut_default = 300
+    cluCut_max = 3000
+
+    driftAll = True
+
+    noSort = False
+
+
+    colorTheme = ['plasma', 'bw', 'PiYG']
+    colorTheme_default = 'plasma'
+
+    typeConstr = ['confidence', 'support', 'InterestF']
+    typeConstr_default = 'confidence'
+    print (len(log))
+
+    d['sliBy_default'] = sliBy_default
+    d['subL_default'] = subL_default
+    d['sliBy_min'] = sliBy_min
+    d['sliBy_max'] = sliBy_max
+    d['subL_min'] = subL_min
+    d['subL_max'] = subL_max
+    d['cluCut_min'] = cluCut_min
+    d['cluCut_max'] = cluCut_max
+    d['cluCut_default'] = cluCut_default
+    d['driftAll'] = driftAll
+    d['noSort'] = noSort
+    d['colorTheme'] = colorTheme
+    d['colorTheme_default'] = colorTheme_default
+    d['typeConstr'] = typeConstr
+    d['typeConstr_default'] = typeConstr_default
+
+    # print(d)
+
+    return json.dumps(d)
+
+# todo remove this
+# get_possible_args(None, None)
