@@ -1,43 +1,49 @@
 import React, { useState, useContext } from "react";
+import { Upload, Button, message } from "antd";
+import { UploadOutlined } from "@ant-design/icons";
 
-import { uploadFile } from '../../apiService';
-import { AppContext, SET_SESSION_ID_ACTION } from '../../context/appContext';
-import './FormComponent.css';
+import { uploadFile } from "../../apiService";
+import { AppContext, SET_SESSION_ACTION } from "../../context/appContext";
+import "./FormComponent.css";
 
 export const FormComponent = () => {
-  const {dispatch} = useContext(AppContext);
-  const [file, setFile] = useState<{file: File, file_name: string}>();
+  const { dispatch } = useContext(AppContext);
+  const [loading, setLoading] = useState<boolean>(false);
 
-  const handleChange = (event: React.SyntheticEvent<HTMLInputElement>) => {
-    const target = event.target as HTMLInputElement;
-    if (target.files && target.files.length) {
-      const file = target.files[0];
-      setFile({file, file_name: file.name});
-    }
-  }
-
-  const handleSubmitForm = async () => {
+  const handleSubmitForm = async ({
+    file,
+    onSuccess,
+    onError,
+  }: {
+    file: File;
+    onSuccess: (response: object, file: File) => void;
+    onError: (event: Error, body?: Object) => void;
+  }) => {
     if (file) {
+      setLoading(true);
       const formData = new FormData();
-      formData.append('file', file.file);
+      formData.append("file", file);
       try {
         const response = await uploadFile(formData);
-        console.log({response})
-        dispatch({type: SET_SESSION_ID_ACTION, payload: {sessionId: response.session_id}});
+        dispatch({ type: SET_SESSION_ACTION, payload: response });
+        onSuccess(response, file);
       } catch (error) {
         console.log(error);
+        onError(error);
       }
+      setLoading(false);
     }
   };
 
   return (
-    <div className="FormComponent">
-      <input
-        type="file"
-        accept=".xes"
-        onChange={handleChange}
-      />
-      <input type="button" value="Submit!" onClick={handleSubmitForm} />
-    </div>
+    <Upload
+      accept=".xes"
+      name="file"
+      customRequest={handleSubmitForm}
+    >
+      <Button loading={loading}>
+        <UploadOutlined /> Click to Upload
+      </Button>
+    </Upload>
   );
 };

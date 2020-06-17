@@ -9,32 +9,35 @@ enum ColorTheme {
 enum TypeConstr {
   plasma = "confidence",
   bw = "support",
-  PiYG = "InterestF",
+  PiYG = "interestF",
 };
 
 type TAppContextState = {
-  sessionId?: string;
-  cluCut?: {
-    default?: number;
-    max?: number;
-    min?: number;
-  };
+  session_id?: string;
+  cluCut_default?: number;
+  cluCut_max?: number;
+  cluCut_min?: number;
   colorTheme?: ColorTheme [];
-  selectedTheme?: ColorTheme;
+  colorTheme_default?: ColorTheme;
   driftAll?: boolean;
   noSort?: boolean;
-  sliBy?: {
-    default?: number;
-    max?: number;
-    min?: number;
-  };
-  subL?: {
-    default?: number;
-    max?: number;
-    min?: number;
-  };
+  sliBy_default?: number;
+  sliBy_max?: number;
+  sliBy_min?: number;
+  subL_default?: number;
+  subL_max?: number;
+  subL_min?: number;
   typeConstr?: TypeConstr [];
-  selectedTypeConstr?: TypeConstr;
+  typeConstr_default?: TypeConstr;
+  defined?: {
+    cluCut?:number;
+    sliBy?: number;
+    subL?: number;
+    driftAll?: boolean;
+    noSort?: boolean;
+    colorTheme?: ColorTheme;
+    typeConstr?: TypeConstr;
+  }
 }
 
 type TStoreAction = { type: string; payload: { [key: string]: any } };
@@ -48,18 +51,30 @@ export const AppContext = createContext<{
 });
 AppContext.displayName = "AppContext";
 
-export const SET_SESSION_ID_ACTION = "SET_SESSION_ID_ACTION";
+export const SET_SESSION_ACTION = "SET_SESSION_ACTION";
+export const UPDATE_SESSION_ACTION = "UPDATE_SESSION_ACTION";
+export const UPDATE_DEFINED_PARAM_ACTION = "UPDATE_DEFINED_PARAM_ACTION";
 
 const reducer = (
   state: TAppContextState,
   action: TStoreAction,
 ): TAppContextState => {
   switch (action.type) {
-    case SET_SESSION_ID_ACTION: {
+    case SET_SESSION_ACTION: {
       return {
         ...state,
-        sessionId: action.payload?.sessionId,
-      };
+        ...action.payload,
+      }
+    }
+
+    case UPDATE_DEFINED_PARAM_ACTION: {
+      return {
+        ...state,
+        defined: {
+          ...state.defined,
+          ...action.payload,
+        }
+      }
     }
 
     default:
@@ -68,13 +83,15 @@ const reducer = (
 };
 
 const wrappedDispatch = (dispatch: React.Dispatch<any>) => (action: TStoreAction) => {
-  console.log("DISPATCH ACTION", action);
-
+  console.log('DISPATCH:', action);
   dispatch(action);
 };
 
 export const AppContextProvider: FC = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, {});
+
+  console.log({state})
+  
   return (
     <AppContext.Provider value={{ state, dispatch: wrappedDispatch(dispatch) }}>
       {children}
