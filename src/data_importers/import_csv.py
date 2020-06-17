@@ -74,8 +74,7 @@ def import_minerful_constraints_timeseries_data(fileMngm, algoPrmts):
             else:
                 counter += 1
 
-    # For now we only concentrate on confidence as it is most representative measure
-    if algoPrmts.constraint_type_used not in set(['confidence', 'support', 'interestFactor']):
+    if algoPrmts.constraint_type_used not in set(['confidence', 'support', 'interestF']):
         raise ValueError(algoPrmts.constraint_type_used + " is not a constraint type")
     elif algoPrmts.constraint_type_used == 'confidence': cn = "Confidence"
     elif algoPrmts.constraint_type_used == 'support': cn = "Support"
@@ -83,7 +82,7 @@ def import_minerful_constraints_timeseries_data(fileMngm, algoPrmts):
 
     constraints = []
     for i, j in zip(sequences, header_output):
-        if j[0] == "Confidence":
+        if j[0] == cn:
             constraints.append(j[1:] + i)
 
     return constraints

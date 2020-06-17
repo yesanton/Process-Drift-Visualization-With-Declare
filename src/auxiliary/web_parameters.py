@@ -135,7 +135,7 @@ def get_possible_args(session, fp):
     colorTheme = ['plasma', 'bwr', 'PiYG']
     colorTheme_default = 'plasma'
 
-    typeConstr = ['confidence', 'support', 'InterestF']
+    typeConstr = ['confidence', 'support', 'interestF']
     typeConstr_default = 'confidence'
     print (len(log))
 
