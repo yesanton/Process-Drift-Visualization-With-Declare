@@ -1,18 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import { FormComponent } from './FormComponent';
+import { FormComponent } from './components/FormComponent';
+import { AppContextProvider } from './context/appContext';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-      <main>
-        <FormComponent />
-      </main>
-    </div>
+    <AppContextProvider>
+      <div className="App">
+        <header className="App-header">
+          <h1>PROJECT TITLE</h1>
+        </header>
+        <main>
+          <FormComponent />
+        </main>
+      </div>
+    </AppContextProvider>
   );
 }
 
