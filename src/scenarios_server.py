@@ -116,7 +116,7 @@ def run_scenario1():
     # jsonStr = json.dumps(fileMngm.__dict__)
     at = []
     for i in range(len(cluster_order)):
-        at.append(fileMngm.get_path_drift_plot_averaged_timeseries_URL(i))
+        at.append(fileMngm.get_path_drift_plot_URL(i))
 
 
 

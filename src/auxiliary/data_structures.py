@@ -154,10 +154,10 @@ class FilesManagement:
         # ensure_path_exists(fgdat)
         return str(fgdat / (str(i) + self.name_file_erratic + CSV_FILE_EXTENSION))
 
-    # def get_path_drift_plot_URL(self, i):
-    #     fgdpp = FOLDER_DATA_RESULTS_FINAL_RELATIVE / self.log_name / FOLDER_GRAPHS_DRIFT_PLOTS_PLOTS
-    ##     ensure_path_exists(fgdpp)
-    #     return str(fgdpp / (str(i) + self.name_file_erratic + PNG_FILE_EXTENSION))
+    def get_path_drift_plot_URL(self, i):
+        fgdpp = FOLDER_DATA_RESULTS_FINAL_RELATIVE / self.log_name / FOLDER_GRAPHS_DRIFT_PLOTS_PLOTS
+    #     ensure_path_exists(fgdpp)
+        return str(fgdpp / (str(i) + self.name_file_erratic + PNG_FILE_EXTENSION))
 
     # def get_path_drift_plot_all_timeseries_URL(self, i):
     #     fgdacic = FOLDER_DATA_RESULTS_FINAL_RELATIVE / self.log_name / FOLDER_GRAPHS_DRIFT_ALL_CONSTRAINTS_IN_CLUSTERS
