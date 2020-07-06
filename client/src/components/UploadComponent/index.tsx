@@ -1,12 +1,11 @@
 import React, { useState, useContext } from "react";
-import { Upload, Button, message } from "antd";
+import { Upload, Button } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 
 import { uploadFile } from "../../apiService";
 import { AppContext, SET_SESSION_ACTION } from "../../context/appContext";
-import "./FormComponent.css";
 
-export const FormComponent = () => {
+export const UploadComponent = () => {
   const { dispatch } = useContext(AppContext);
   const [loading, setLoading] = useState<boolean>(false);
 

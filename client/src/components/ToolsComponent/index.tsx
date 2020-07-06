@@ -7,9 +7,10 @@ import { RadioChangeEvent } from "antd/lib/radio";
 import {
   AppContext,
   UPDATE_DEFINED_PARAM_ACTION,
+  SET_ALGORITHM_RESULT,
 } from "../../context/appContext";
 
-import { makeDriftMap } from "../../apiService";
+import { makeDriftMap, parseErraticMeasureCsv } from "../../apiService";
 
 const getDefaultMark = (defaultValue: number = 0) => ({
   [defaultValue]: defaultValue,
@@ -45,11 +46,21 @@ export const ToolsComponent: FC = () => {
     if (state.session_id) {
       setLoading(true);
       try {
-        const res = await  makeDriftMap({ session_id: state.session_id, params: state.defined ?? {} });
+        const algorithmResult = await makeDriftMap({ session_id: state.session_id, params: state.defined ?? {} });
+        const erraticMeasureData = await parseErraticMeasureCsv(algorithmResult.path_to_erratic_measure);
+
+        dispatch({
+          type: SET_ALGORITHM_RESULT,
+          payload: {
+            ...algorithmResult,
+            erraticMeasureData,
+          },
+        });
       } catch(error) {
         console.error(error);
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     }
   };
 
