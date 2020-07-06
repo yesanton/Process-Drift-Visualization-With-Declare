@@ -6,22 +6,23 @@ export const ErraticMeasureComponent: FC<{
   data: Array<Array<string>>;
 }> = ({ selected, data }) => {
   const [, min, cluster_em] = data[selected];
-  const maxEm = useMemo(() => {
-    return Math.round(Math.max(...data.map(([, , cluster_em]) => +cluster_em)) / +min);
+  const maxEm = useMemo<number>(() => {
+    return +(Math.max(...data.map(([, , cluster_em]) => +cluster_em)) / +min).toFixed(3);
   }, [data, min]);
-  const currentEm = Math.round(+cluster_em / +min);
+  const currentEm: number = +(+cluster_em / +min).toFixed(3);
 
   return (
     <Slider
       disabled
       marks={{
         1: 1,
-        [currentEm]: currentEm,
         [maxEm]: maxEm,
       }}
       min={1}
       max={maxEm}
-      value={Math.round(+cluster_em / +min)}
+      step={0.01}
+      tooltipVisible
+      value={currentEm}
     />
   );
 };

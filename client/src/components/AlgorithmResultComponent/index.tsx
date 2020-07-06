@@ -40,14 +40,14 @@ export const AlgorithmResultComponent: FC = () => {
         ))}
       </Select>
       <Row>
-        <Col span={12}>
+        <Col span={10}>
           <Typography.Title level={3}>Erratic measure</Typography.Title>
           <ErraticMeasureComponent
             selected={algorithmSliceIndex}
             data={erraticMeasureData}
           />
         </Col>
-        <Col span={12}>
+        <Col span={12} offset={2}>
           <img src={`${API_URL}${paths_to_drift_plots[algorithmSliceIndex]}`} alt="drift plot"/>
         </Col>
       </Row>
