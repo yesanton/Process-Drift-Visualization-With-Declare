@@ -1,7 +1,7 @@
 import React, { FC, useMemo } from "react";
 import { Slider } from "antd";
 
-export const ErraticMeasureComponent: FC<{
+export const ErraticMeasureSlider: FC<{
   selected: number;
   data: Array<Array<string>>;
 }> = ({ selected, data }) => {
@@ -20,7 +20,7 @@ export const ErraticMeasureComponent: FC<{
       }}
       min={1}
       max={maxEm}
-      step={0.01}
+      step={0.001}
       tooltipVisible
       value={currentEm}
     />

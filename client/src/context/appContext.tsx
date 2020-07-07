@@ -46,6 +46,7 @@ type TAlgorithmResult = {
   path_to_driftmap: string;
   erraticMeasureData: Array<Array<string>>;
   paths_to_drift_plots: Array<string>;
+  spread_constraints: string;
   [key: string]: any;
 };
 

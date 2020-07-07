@@ -10,7 +10,13 @@ import {
   SET_ALGORITHM_RESULT,
 } from "../../context/appContext";
 
-import { makeDriftMap, parseErraticMeasureCsv } from "../../apiService";
+import {
+  makeDriftMap,
+  parseErraticMeasureCsv,
+  makeSpreadOfConstraints,
+  makeStationarityTest,
+  makeAutocorrelationPlots,
+} from "../../apiService";
 
 const getDefaultMark = (defaultValue: number = 0) => ({
   [defaultValue]: defaultValue,
@@ -46,17 +52,35 @@ export const ToolsComponent: FC = () => {
     if (state.session_id) {
       setLoading(true);
       try {
-        const algorithmResult = await makeDriftMap({ session_id: state.session_id, params: state.defined ?? {} });
-        const erraticMeasureData = await parseErraticMeasureCsv(algorithmResult.path_to_erratic_measure);
+        const params = { logName: state.session_id, ...state.defined };
+        const algorithmResult = await makeDriftMap(params);
+        const { spread_constraints } = await makeSpreadOfConstraints(params);
+        const stationarityTestResult = await makeStationarityTest(params);
+        const erraticMeasureData = await parseErraticMeasureCsv(
+          algorithmResult.path_to_erratic_measure
+        );
+        // const {
+        //   paths_to_autocorrelation: autocorrelationPlots,
+        // } = await makeAutocorrelationPlots(params);
+
+
+        try {
+          await makeAutocorrelationPlots(params);
+        } catch(error) {
+          console.error(error);
+        }
 
         dispatch({
           type: SET_ALGORITHM_RESULT,
           payload: {
             ...algorithmResult,
             erraticMeasureData,
+            spread_constraints,
+            stationarityTestResult,
+            // autocorrelationPlots,
           },
         });
-      } catch(error) {
+      } catch (error) {
         console.error(error);
       } finally {
         setLoading(false);
@@ -130,7 +154,9 @@ export const ToolsComponent: FC = () => {
           </Radio>
         ))}
       </Radio.Group>
-      <Button loading={loading} onClick={onStartAlgorithm}>Start algorithm</Button>
+      <Button loading={loading} onClick={onStartAlgorithm}>
+        Start algorithm
+      </Button>
     </div>
   );
 };

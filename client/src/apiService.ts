@@ -11,6 +11,19 @@ const cleanUpParams = (params: { [key: string]: any }) =>
 
     return acc;
   }, {});
+
+const generateGetURLWithParams = (
+  path: string,
+  params?: { [key: string]: any }
+): string => {
+  let url = new URL(`${API_URL}${path}`);
+  url.search = new URLSearchParams({
+    ...(params ? cleanUpParams(params) : {}),
+  }).toString();
+
+  return url.toString();
+};
+
 export const uploadFile = (body: FormData) =>
   fetch(`${API_URL}/uploadFile`, {
     method: "POST",
@@ -19,20 +32,13 @@ export const uploadFile = (body: FormData) =>
     .then((response) => response.json())
     .catch(console.error);
 
-export const makeDriftMap = ({
-  session_id,
-  params,
-}: {
-  session_id: string;
-  params?: { [key: string]: any };
+export const makeDriftMap = (params: {
+  logName: string;
+  [key: string]: any;
 }) => {
-  let url = new URL(`${API_URL}/makeDriftMap`);
-  url.search = new URLSearchParams({
-    logName: session_id,
-    ...(params ? cleanUpParams(params) : {}),
-  }).toString();
-
-  return fetch(url.toString()).then((response) => response.json());
+  return fetch(
+    generateGetURLWithParams("/makeDriftMap", params)
+  ).then((response) => response.json());
 };
 
 export const parseErraticMeasureCsv = (path: string) =>
@@ -52,3 +58,50 @@ export const parseErraticMeasureCsv = (path: string) =>
       return data.slice(1);
     })
     .catch(console.error);
+
+export const makeStationarityTest = (params: {
+  logName: string;
+  [key: string]: any;
+}) =>
+  fetch(generateGetURLWithParams("/makeStationarityTest", params))
+    .then((response) => response.json())
+    .then(({ path_to_stationarity }) =>
+      fetch(`${API_URL}${path_to_stationarity}`)
+    )
+    .then((res) => res.text())
+    .then((res: string) =>
+      parse<string>(res, {
+        skipEmptyLines: true,
+      })
+    )
+    .then(({ data, errors }: ParseResult<string>) => {
+      if (errors.length > 0) {
+        throw errors;
+      }
+      console.log({ data });
+
+      return data.slice(1);
+    })
+    .catch(console.error);
+
+export const makeSpreadOfConstraints = (params: {
+  logName: string;
+  [key: string]: any;
+}) => {
+  return fetch(
+    generateGetURLWithParams("/makeSpreadOfConstraints", params)
+  ).then((response) => response.json());
+};
+
+export const makeAutocorrelationPlots = (params: {
+  logName: string;
+  [key: string]: any;
+}) =>
+  fetch(
+    generateGetURLWithParams("/makeAutocorrelationPlots", params)
+  ).then((response) => response.json());
+
+export const makeEDFG = (params: { logName: string; [key: string]: any }) =>
+  fetch(
+    generateGetURLWithParams("/makeEDFG", params)
+  ).then((response) => response.json());
