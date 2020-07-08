@@ -98,10 +98,10 @@ export const AlgorithmResultComponent: FC = () => {
             src={`${API_URL}${paths_to_drift_plots[algorithmSliceIndex]}`}
             alt="drift plot"
           />
-          {/* <img
+          <img
             src={`${API_URL}${autocorrelationPlots[algorithmSliceIndex]}`}
             alt="autocorrelation plots"
-          /> */}
+          />
         </Col>
       </Row>
     </div>

@@ -59,16 +59,10 @@ export const ToolsComponent: FC = () => {
         const erraticMeasureData = await parseErraticMeasureCsv(
           algorithmResult.path_to_erratic_measure
         );
-        // const {
-        //   paths_to_autocorrelation: autocorrelationPlots,
-        // } = await makeAutocorrelationPlots(params);
+        const {
+          paths_to_autocorrelation: autocorrelationPlots,
+        } = await makeAutocorrelationPlots(params);
 
-
-        try {
-          await makeAutocorrelationPlots(params);
-        } catch(error) {
-          console.error(error);
-        }
 
         dispatch({
           type: SET_ALGORITHM_RESULT,
@@ -77,7 +71,7 @@ export const ToolsComponent: FC = () => {
             erraticMeasureData,
             spread_constraints,
             stationarityTestResult,
-            // autocorrelationPlots,
+            autocorrelationPlots,
           },
         });
       } catch (error) {
