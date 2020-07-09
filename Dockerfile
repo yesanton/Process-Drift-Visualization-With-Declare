@@ -4,7 +4,7 @@ FROM openjdk:10-jdk
 # Set the working directory.
 WORKDIR /app
 
-RUN apt-get update && apt-get -y install \
+RUN apt-get update && apt-get install -y graphviz && apt-get -y install \
 	python3-pip \
         && apt-get clean \
         && rm -rf /tmp/* /var/tmp/* \

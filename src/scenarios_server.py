@@ -31,8 +31,7 @@ from src.auxiliary.minerful_adapter import mine_minerful_for_declare_constraints
 from src.visualize_autocorrelation_plots import visualize_autocorrelation_plots
 from src.auxiliary.command_line import get_commandline_parameters
 from src.visualize_dfg_with_constraints import visualize_dfg_with_constraints
-
-
+import os
 import uuid
 import csv
 import numpy as np
@@ -44,8 +43,10 @@ from pathlib import Path
 # make this add to be able to run on the server with Flask
 from flask import Flask, request
 import flask
-import os
 from flask_cors import CORS, cross_origin
+
+# os.environ['PATH'] = os.environ['PATH']+os.pathsep+r"/usr/local/lib/python3.8/dist-packages/graphviz"
+# '/usr/local/lib/python3.8/dist-packages/graphviz'
 
 app = Flask(__name__, static_url_path='/data/', static_folder='../data/')
 # enable resource sharing
@@ -157,6 +158,7 @@ def run_scenario3_autocorrelation():
         at.append(fileMngm.get_path_autocorrelation_graphs_for_constraints_URL(curr_ind))
         curr_ind += 1
     return flask.jsonify(paths_to_autocorrelation=at)
+
 
 
 # example:

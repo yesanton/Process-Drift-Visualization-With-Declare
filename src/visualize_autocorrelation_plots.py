@@ -20,10 +20,17 @@ def visualize_autocorrelation_plots(fileMngm, lag_for_autocorrelation = 20):
             b = []
             for a in r:
                 b.append(a)
-        if len(b[0]) < 20:
-            lag_for_autocorrelation = 10
-        sm.graphics.tsa.plot_acf(np.array(b[0]).astype(np.float), lags=lag_for_autocorrelation)
+        # print('----> len(b[0]):  ' + str(len(b[0])))
+        # if len(b[0]) <= 20 and len(b[0]) < 10:
+        #     lag_for_autocorrelation = 10
+        # elif len(b[0]) < 10:
+        #     lag_for_autocorrelation = 5
+        # if len(b[0]) < 5:
+        #     return False
+        sm.graphics.tsa.plot_acf(np.array(b[0]).astype(np.float))# lags=lag_for_autocorrelation)
         plt.savefig(fileMngm.get_path_autocorrelation_graphs_for_constraints(curr_ind), bbox_inches='tight')
         plt.close()
         print('autocorrelation plot ' + str(curr_ind) + ' plotted')
         curr_ind += 1
+
+        # return True
