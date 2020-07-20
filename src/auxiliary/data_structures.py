@@ -231,6 +231,7 @@ class AlgorithmParameters:
 
 def ensure_path_exists(path):
     if not os.path.exists(path):
+        print ('path : ' + str(path) + ' did not exist before')
         try:
             path.mkdir(parents=True, exist_ok=True)
         except Exception as e:

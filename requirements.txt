@@ -1,3 +1,4 @@
+graphviz
 Flask
 scikit-learn
 ruptures
