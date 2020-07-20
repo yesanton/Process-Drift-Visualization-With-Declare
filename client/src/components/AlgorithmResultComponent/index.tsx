@@ -14,6 +14,7 @@ import { makeEDFG } from "../../apiService";
 
 import { ErraticMeasureSlider } from "./ErraticMeasureSlider";
 import { SpreadConstraintsSlider } from "./SpreadConstraintsSlider";
+import './styles.css';
 
 export const AlgorithmResultComponent: FC = () => {
   const { state, dispatch } = useContext<{
@@ -21,29 +22,8 @@ export const AlgorithmResultComponent: FC = () => {
     dispatch: TDispatchType;
   }>(AppContext);
   if (!state.algorithmResult?.path_to_driftmap) {
-    return <div>Start algorithm to see result here!</div>;
+    return null;
   }
-
-  const selectAlgorithmSliceIndex = (index: number) =>
-    dispatch({
-      type: SET_ALGORITHM_SLICE_INDEX,
-      payload: { index },
-    });
-
-  const getEdfgHandler = async () => {
-    if (state.session_id) {
-      const params = { logName: state.session_id, ...state.defined };
-      const { paths_to_edfgs: edfgs } = await makeEDFG(params);
-
-      dispatch({
-        type: SET_ALGORITHM_RESULT,
-        payload: {
-          ...state.algorithmResult,
-          edfgs,
-        },
-      });
-    }
-  };
 
   const {
     algorithmResult: {
@@ -58,7 +38,7 @@ export const AlgorithmResultComponent: FC = () => {
     algorithmSliceIndex = 0,
   } = state;
 
-  console.log({edfgs})
+  console.log({ edfgs });
 
   const pValue: number = stationarityTestResult[algorithmSliceIndex]?.[2];
   const pValueText: string =
@@ -68,20 +48,18 @@ export const AlgorithmResultComponent: FC = () => {
 
   return (
     <div>
-      <img src={`${API_URL}${path_to_driftmap}`} alt="Drift map" />
-      <Select onChange={selectAlgorithmSliceIndex} defaultValue={0}>
-        {erraticMeasureData.map((elem, index) => (
-          <Select.Option value={index}>Section {index}</Select.Option>
-        ))}
-      </Select>
-      {edfgs?.[algorithmSliceIndex] ? (
-        <img
-          src={`${API_URL}${edfgs[algorithmSliceIndex]}`}
-          alt="EDGF"
-        />
-      ) : (
-        <Button onClick={getEdfgHandler}>Get EDFG</Button>
-      )}
+      <Row>
+        <Col span={14}>
+          <img src={`${API_URL}${path_to_driftmap}`} alt="Drift map" className="image"/>
+        </Col>
+        <Col span={10}>
+          <img
+            className="image"
+            src={`${API_URL}${paths_to_drift_plots[algorithmSliceIndex]}`}
+            alt="drift plot"
+          />
+        </Col>
+      </Row>
       <Row>
         <Col span={10}>
           <Typography.Title level={3}>Erratic measure</Typography.Title>
@@ -95,15 +73,19 @@ export const AlgorithmResultComponent: FC = () => {
         </Col>
         <Col span={12} offset={2}>
           <img
-            src={`${API_URL}${paths_to_drift_plots[algorithmSliceIndex]}`}
-            alt="drift plot"
-          />
-          <img
             src={`${API_URL}${autocorrelationPlots[algorithmSliceIndex]}`}
             alt="autocorrelation plots"
+            className="image"
           />
         </Col>
       </Row>
+      {edfgs?.[algorithmSliceIndex] && (
+        <Row>
+          <Col span={24}>
+            <img src={`${API_URL}${edfgs[algorithmSliceIndex]}`} alt="EDGF" className="image"/>
+          </Col>
+        </Row>
+      )}
     </div>
   );
 };

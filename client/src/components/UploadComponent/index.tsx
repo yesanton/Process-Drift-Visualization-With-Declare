@@ -4,10 +4,16 @@ import { UploadOutlined } from "@ant-design/icons";
 
 import { uploadFile } from "../../apiService";
 import { AppContext, SET_SESSION_ACTION } from "../../context/appContext";
+import './Upload.css';
 
 export const UploadComponent = () => {
-  const { dispatch } = useContext(AppContext);
+  const { dispatch, state } = useContext(AppContext);
   const [loading, setLoading] = useState<boolean>(false);
+
+  if (state.session_id) {
+    return null
+  }
+
 
   const handleSubmitForm = async ({
     file,
@@ -36,6 +42,7 @@ export const UploadComponent = () => {
 
   return (
     <Upload
+      className="Upload-button"
       accept=".xes"
       name="file"
       customRequest={handleSubmitForm}
