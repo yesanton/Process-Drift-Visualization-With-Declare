@@ -48,7 +48,7 @@ export const UploadComponent = () => {
       customRequest={handleSubmitForm}
     >
       <Button loading={loading}>
-        <UploadOutlined /> Click to Upload
+        <UploadOutlined /> Click to upload a <b> .xes </b> file
       </Button>
     </Upload>
   );

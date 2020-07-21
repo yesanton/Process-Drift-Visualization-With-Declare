@@ -3,6 +3,7 @@ import { Slider, Col, Checkbox, Radio, Button, Divider, Row, Tooltip } from "ant
 import { CheckboxChangeEvent } from "antd/lib/checkbox";
 import { SliderValue } from "antd/lib/slider";
 import { RadioChangeEvent } from "antd/lib/radio";
+import {QuestionCircleOutlined} from '@ant-design/icons';
 import {
   AppContext,
   UPDATE_DEFINED_PARAM_ACTION,
@@ -87,7 +88,7 @@ export const ToolsComponent: FC = () => {
         {/* <Tooltip title="Win size" color="pink"> */}
             <Col span={24}>
               <Tooltip title="the size of the sliding window for mining declare constraints" color={'green'}>
-                <Divider>Win size<sup>?</sup></Divider>
+                <Divider>Win size <sup><QuestionCircleOutlined /></sup></Divider>
               </Tooltip>
             </Col>
             <Col span={24}>
@@ -104,7 +105,7 @@ export const ToolsComponent: FC = () => {
       <Row>
         <Col span={24}>
           <Tooltip title="this parameter sets the number of event sequences will be skipped with each new window. this number shouldn't be larger than the Win size" color={'pink'} key={"?"}>
-            <Divider>Slide Size<sup>?</sup></Divider>
+            <Divider>Slide Size<sup><QuestionCircleOutlined /></sup></Divider>
           </Tooltip>
         </Col>
         <Col span={24}>
@@ -121,7 +122,7 @@ export const ToolsComponent: FC = () => {
         <Col span={24}>
           <Tooltip title="this parameter affects the hierarchical clustering algorithm to determine the number of clusters, 
                           and there fore number of changing behaviours. the larger the number the less clusters will be found " color={'orange'} key={"?"}> 
-            <Divider>Cut Threshold<sup>?</sup></Divider>
+            <Divider>Cut Threshold <sup><QuestionCircleOutlined /></sup></Divider>
           </Tooltip>
         </Col>
         <Col span={24}>
@@ -137,7 +138,7 @@ export const ToolsComponent: FC = () => {
       <Row>
         <Col span={24}>
           <Tooltip title="choose the color scheme for the Drift Map visualizatoin. All of the options should be colorblind friendly. Read more about color schemas at https://matplotlib.org/examples/color/colormaps_reference.html" color={'volcano'} key={"?"}> 
-            <Divider>Color scheme<sup>?</sup></Divider>            
+            <Divider>Color scheme <sup><QuestionCircleOutlined /></sup></Divider>            
           </Tooltip>
         </Col>
         <Col span={24}>
@@ -156,7 +157,7 @@ export const ToolsComponent: FC = () => {
       <Row>
         <Col span={24}>
         <Tooltip title="Choose between three types of measures on Declare constraints" color={'lime'} key={"?"}> 
-          <Divider>Type of constraint<sup>?</sup></Divider>
+          <Divider>Type of constraint <sup><QuestionCircleOutlined /></sup></Divider>
         </Tooltip>
         </Col>
         <Col span={24}>
@@ -182,7 +183,7 @@ export const ToolsComponent: FC = () => {
               checked={state.defined?.driftAll ?? state.driftAll}
               onChange={onCheckboxChange("driftAll")}
             >
-              drift all<sup>?</sup>
+              drift all <sup><QuestionCircleOutlined /></sup>
             </Checkbox>
           </Tooltip>
           <br />
@@ -191,7 +192,7 @@ export const ToolsComponent: FC = () => {
             checked={state.defined?.noSort ?? state.noSort}
             onChange={onCheckboxChange("noSort")}
           >
-            no sort<sup>?</sup>
+            no sort <sup><QuestionCircleOutlined /></sup>
           </Checkbox>
           </Tooltip>
         </Col>
