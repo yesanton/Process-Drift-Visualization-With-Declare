@@ -19,7 +19,7 @@ function App() {
     <AppContextProvider>
       <div className="App">
         <header className="App-header">
-          <Typography.Title level={1}>PARI MATCH</Typography.Title>
+          <Typography.Title level={1}>Visual drift detection for sequence data analysis system</Typography.Title>
           <AppContext.Consumer>
             {({ state, dispatch }) => {
               const selectAlgorithmSliceIndex = (index: number) =>

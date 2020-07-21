@@ -1,9 +1,8 @@
 import React, { FC, useContext, useState } from "react";
-import { Slider, Col, Checkbox, Radio, Button, Divider, Row } from "antd";
+import { Slider, Col, Checkbox, Radio, Button, Divider, Row, Tooltip } from "antd";
 import { CheckboxChangeEvent } from "antd/lib/checkbox";
 import { SliderValue } from "antd/lib/slider";
 import { RadioChangeEvent } from "antd/lib/radio";
-
 import {
   AppContext,
   UPDATE_DEFINED_PARAM_ACTION,
@@ -87,7 +86,9 @@ export const ToolsComponent: FC = () => {
       <Row>
         {/* <Tooltip title="Win size" color="pink"> */}
             <Col span={24}>
-              <Divider>Win size</Divider>
+              <Tooltip title="the size of the sliding window for mining declare constraints" color={'green'}>
+                <Divider>Win size<sup>?</sup></Divider>
+              </Tooltip>
             </Col>
             <Col span={24}>
               <Slider
@@ -102,7 +103,9 @@ export const ToolsComponent: FC = () => {
       </Row>
       <Row>
         <Col span={24}>
-          <Divider>Slide Size</Divider>
+          <Tooltip title="this parameter sets the number of event sequences will be skipped with each new window. this number shouldn't be larger than the Win size" color={'pink'} key={"?"}>
+            <Divider>Slide Size<sup>?</sup></Divider>
+          </Tooltip>
         </Col>
         <Col span={24}>
           <Slider
@@ -116,7 +119,10 @@ export const ToolsComponent: FC = () => {
       </Row>
       <Row>
         <Col span={24}>
-          <Divider>Cut Threshold</Divider>
+          <Tooltip title="this parameter affects the hierarchical clustering algorithm to determine the number of clusters, 
+                          and there fore number of changing behaviours. the larger the number the less clusters will be found " color={'orange'} key={"?"}> 
+            <Divider>Cut Threshold<sup>?</sup></Divider>
+          </Tooltip>
         </Col>
         <Col span={24}>
           <Slider
@@ -130,7 +136,9 @@ export const ToolsComponent: FC = () => {
       </Row>
       <Row>
         <Col span={24}>
-        <Divider>Color scheme</Divider>
+          <Tooltip title="choose the color scheme for the Drift Map visualizatoin. All of the options should be colorblind friendly. Read more about color schemas at https://matplotlib.org/examples/color/colormaps_reference.html" color={'volcano'} key={"?"}> 
+            <Divider>Color scheme<sup>?</sup></Divider>            
+          </Tooltip>
         </Col>
         <Col span={24}>
           <Radio.Group
@@ -147,7 +155,9 @@ export const ToolsComponent: FC = () => {
       </Row>
       <Row>
         <Col span={24}>
-          <Divider>Type of constraint</Divider>
+        <Tooltip title="Choose between three types of measures on Declare constraints" color={'lime'} key={"?"}> 
+          <Divider>Type of constraint<sup>?</sup></Divider>
+        </Tooltip>
         </Col>
         <Col span={24}>
         <Radio.Group
@@ -164,22 +174,26 @@ export const ToolsComponent: FC = () => {
       </Row>
       <Row>
         <Col span={24}>
-          <Divider>Additional parameters</Divider>
+           <Divider>Additional parameters</Divider>
         </Col>
         <Col span={24}>
-          <Checkbox
-            checked={state.defined?.driftAll ?? state.driftAll}
-            onChange={onCheckboxChange("driftAll")}
-          >
-            drift all
-          </Checkbox>
+          <Tooltip title="Click in driftAll if you want find sudden drifts in all separate clusters of behaviour. Leave it if you want to find sudden drifts on the whole dataset." color={'geekblue'} key={"?"}> 
+            <Checkbox
+              checked={state.defined?.driftAll ?? state.driftAll}
+              onChange={onCheckboxChange("driftAll")}
+            >
+              drift all<sup>?</sup>
+            </Checkbox>
+          </Tooltip>
           <br />
+          <Tooltip title="Click in noSort if you do not want to sort constrants in clusters by similarity for the drift map. This only influences the visul representation" color={'geekblue'} key={"?"}> 
           <Checkbox
             checked={state.defined?.noSort ?? state.noSort}
             onChange={onCheckboxChange("noSort")}
           >
-            no sort
+            no sort<sup>?</sup>
           </Checkbox>
+          </Tooltip>
         </Col>
       </Row>
       <Row>
