@@ -61,7 +61,7 @@ export const AlgorithmResultComponent: FC = () => {
         </Col>
       </Row>
       <Row>
-        <Col span={10}>
+        <Col span={4} offset={3}>
           <Typography.Title level={3}>Erratic measure</Typography.Title>
           <ErraticMeasureSlider
             selected={algorithmSliceIndex}
@@ -71,7 +71,16 @@ export const AlgorithmResultComponent: FC = () => {
           <SpreadConstraintsSlider value={spread_constraints} />
           <Typography.Title level={3}>{pValueText}</Typography.Title>
         </Col>
-        <Col span={12} offset={2}>
+        {edfgs?.[algorithmSliceIndex] && (
+        // <Row>
+          <Col span={16}>
+            <img src={`${API_URL}${edfgs[algorithmSliceIndex]}`} alt="EDGF" className="image"/>
+          </Col>
+        // </Row>
+      )}
+        </Row>
+        <Row>
+        <Col span={4} offset={3}>
           <img
             src={`${API_URL}${autocorrelationPlots[algorithmSliceIndex]}`}
             alt="autocorrelation plots"
@@ -79,13 +88,7 @@ export const AlgorithmResultComponent: FC = () => {
           />
         </Col>
       </Row>
-      {edfgs?.[algorithmSliceIndex] && (
-        <Row>
-          <Col span={24}>
-            <img src={`${API_URL}${edfgs[algorithmSliceIndex]}`} alt="EDGF" className="image"/>
-          </Col>
-        </Row>
-      )}
+      
     </div>
   );
 };
