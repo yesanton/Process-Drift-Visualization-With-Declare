@@ -1,19 +1,18 @@
 import React, { useState, useContext } from "react";
-import { Upload, Button } from "antd";
-import { UploadOutlined } from "@ant-design/icons";
+import { Upload, Button, Result } from "antd";
+import { UploadOutlined, FileSearchOutlined } from "@ant-design/icons";
 
 import { uploadFile } from "../../apiService";
 import { AppContext, SET_SESSION_ACTION } from "../../context/appContext";
-import './Upload.css';
+import "./Upload.css";
 
 export const UploadComponent = () => {
   const { dispatch, state } = useContext(AppContext);
   const [loading, setLoading] = useState<boolean>(false);
 
   if (state.session_id) {
-    return null
+    return null;
   }
-
 
   const handleSubmitForm = async ({
     file,
@@ -41,15 +40,18 @@ export const UploadComponent = () => {
   };
 
   return (
-    <Upload
-      className="Upload-button"
-      accept=".xes"
-      name="file"
-      customRequest={handleSubmitForm}
-    >
-      <Button loading={loading}>
-        <UploadOutlined /> Click to upload a <b> .xes </b> file
-      </Button>
-    </Upload>
+    <div className="Upload-area">
+      <Result
+        icon={<FileSearchOutlined />}
+        title="Text to start"
+        extra={
+          <Upload accept=".xes" name="file" customRequest={handleSubmitForm}>
+            <Button loading={loading}>
+              <UploadOutlined /> Click to upload a <b> .xes </b> file
+            </Button>
+          </Upload>
+        }
+      />
+    </div>
   );
 };

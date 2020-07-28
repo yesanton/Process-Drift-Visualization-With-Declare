@@ -3,7 +3,7 @@
 }
 
 .App main {
-  height: calc(100vh - 10px);
+  height: calc(100vh - 40px);
   display: flex;
   justify-content: center;
 }
