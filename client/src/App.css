@@ -8,6 +8,11 @@
   justify-content: center;
 }
 
+.App-sider {
+  background-color: white;
+  width: 350px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -1,23 +1,19 @@
 import React, { FC, useContext } from "react";
 
-import { Select, Row, Col, Typography, Button } from "antd";
+import {  Row, Col, Typography } from "antd";
 import { API_URL } from "../../apiService";
 import {
   AppContext,
   TAppContextState,
   TDispatchType,
-  SET_ALGORITHM_SLICE_INDEX,
-  SET_ALGORITHM_RESULT,
 } from "../../context/appContext";
-
-import { makeEDFG } from "../../apiService";
 
 import { ErraticMeasureSlider } from "./ErraticMeasureSlider";
 import { SpreadConstraintsSlider } from "./SpreadConstraintsSlider";
 import './styles.css';
 
 export const AlgorithmResultComponent: FC = () => {
-  const { state, dispatch } = useContext<{
+  const { state } = useContext<{
     state: TAppContextState;
     dispatch: TDispatchType;
   }>(AppContext);

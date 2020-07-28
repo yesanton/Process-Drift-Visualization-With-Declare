@@ -16,6 +16,7 @@ export const SpreadConstraintsSlider: FC<{
       step={0.001}
       tooltipVisible
       value={+(+value / 100).toFixed(3)}
+      tooltipPlacement="right"
     />
   );
 };

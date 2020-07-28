@@ -23,6 +23,7 @@ export const ErraticMeasureSlider: FC<{
       step={0.001}
       tooltipVisible
       value={currentEm}
+      tooltipPlacement="right"
     />
   );
 };

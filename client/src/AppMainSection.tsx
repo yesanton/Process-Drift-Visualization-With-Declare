@@ -1,12 +1,13 @@
 import React from "react";
 
-import { Row, Col } from "antd";
+import { Layout } from "antd";
 
 import { AppContext } from "./context/appContext";
 
 import { UploadComponent } from "./components/UploadComponent";
 import { ToolsComponent } from "./components/ToolsComponent";
 import { AlgorithmResultComponent } from "./components/AlgorithmResultComponent";
+import "./App.css";
 
 export const AppMainSection = () => (
   <main>
@@ -15,15 +16,19 @@ export const AppMainSection = () => (
         if (!state.session_id) {
           return <UploadComponent />;
         }
+
+        // if (!state.algorithmResult) {
+        //   return <ToolsComponent />
+        // }
+
+
         return (
-          <Row>
-            <Col span={state.algorithmResult ? 1 : 24}>
-              <ToolsComponent />
-            </Col>
-            <Col span={state.algorithmResult ? 23 : 0}>
+          <Layout>
+            <ToolsComponent />
+            {state.algorithmResult && <Layout.Content>
               <AlgorithmResultComponent />
-            </Col>
-          </Row>
+            </Layout.Content>}
+          </Layout>
         );
       }}
     </AppContext.Consumer>
