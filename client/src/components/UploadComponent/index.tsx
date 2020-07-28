@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
-import { Upload, Button, Result } from "antd";
-import { UploadOutlined, FileSearchOutlined } from "@ant-design/icons";
+import { Upload, Button, Empty, Typography } from "antd";
+import { UploadOutlined } from "@ant-design/icons";
 
 import { uploadFile } from "../../apiService";
 import { AppContext, SET_SESSION_ACTION } from "../../context/appContext";
@@ -41,17 +41,18 @@ export const UploadComponent = () => {
 
   return (
     <div className="Upload-area">
-      <Result
-        icon={<FileSearchOutlined />}
-        title="Text to start"
-        extra={
-          <Upload accept=".xes" name="file" customRequest={handleSubmitForm}>
-            <Button loading={loading}>
-              <UploadOutlined /> Click to upload a <b> .xes </b> file
-            </Button>
-          </Upload>
+      <Empty
+        description={
+          <Typography.Title level={2}>TEXT TO START</Typography.Title>
         }
-      />
+        image={Empty.PRESENTED_IMAGE_SIMPLE}
+      >
+        <Upload accept=".xes" name="file" customRequest={handleSubmitForm}>
+          <Button loading={loading} size="large">
+            <UploadOutlined /> Click to upload a <b> .xes </b> file
+          </Button>
+        </Upload>
+      </Empty>
     </div>
   );
 };
