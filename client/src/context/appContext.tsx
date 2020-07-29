@@ -51,7 +51,7 @@ type TAlgorithmResult = {
   [key: string]: any;
 };
 
-type TStoreAction = { type: string; payload: { [key: string]: any } };
+type TStoreAction = { type: string; payload?: { [key: string]: any } };
 export type TDispatchType = React.Dispatch<TStoreAction>;
 
 export const AppContext = createContext<{
@@ -67,6 +67,7 @@ export const SET_SESSION_ACTION = "SET_SESSION_ACTION";
 export const UPDATE_SESSION_ACTION = "UPDATE_SESSION_ACTION";
 export const UPDATE_DEFINED_PARAM_ACTION = "UPDATE_DEFINED_PARAM_ACTION";
 export const SET_ALGORITHM_RESULT = "SET_ALGORITHM_RESULT";
+export const RESET_ALGORITHM_RESULT = 'RESET_ALGORITHM_RESULT';
 export const SET_ALGORITHM_SLICE_INDEX = "SET_ALGORITHM_SLICE_INDEX";
 export const SET_ALGORITHM_LOADING = 'SET_ALGORITHM_LOADING';
 
@@ -100,17 +101,25 @@ const reducer = (
       };
     }
 
+    case RESET_ALGORITHM_RESULT: {
+      return {
+        ...state,
+        algorithmResult: undefined,
+        algorithmSliceIndex: undefined,
+      };
+    }
+
     case SET_ALGORITHM_SLICE_INDEX: {
       return {
         ...state,
-        algorithmSliceIndex: action.payload.index as number,
+        algorithmSliceIndex: action.payload?.index as number,
       }
     }
 
     case SET_ALGORITHM_LOADING: {
       return {
         ...state,
-        algorithmLoading: action.payload.loading,
+        algorithmLoading: action.payload?.loading,
       }
     }
 

@@ -18,13 +18,13 @@ export const AlgorithmResultComponent: FC = () => {
     state: TAppContextState;
     dispatch: TDispatchType;
   }>(AppContext);
-  if (!state.algorithmResult) {
+  if (state.algorithmLoading || !state.algorithmResult) {
     return (
       <EmptyComponent
         loading={state.algorithmLoading}
         description={
           <Typography.Title level={4}>
-            Start algorithm to see result!
+            {state.algorithmLoading ? 'Algorithm loading...' : 'Start algorithm to see result!'}
           </Typography.Title>
         }
       />
