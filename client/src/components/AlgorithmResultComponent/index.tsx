@@ -1,6 +1,6 @@
 import React, { FC, useContext } from "react";
 
-import {  Row, Col, Typography } from "antd";
+import { Row, Col, Typography } from "antd";
 import { API_URL } from "../../apiService";
 import {
   AppContext,
@@ -10,7 +10,7 @@ import {
 
 import { ErraticMeasureSlider } from "./ErraticMeasureSlider";
 import { SpreadConstraintsSlider } from "./SpreadConstraintsSlider";
-import './styles.css';
+import "./styles.css";
 
 export const AlgorithmResultComponent: FC = () => {
   const { state } = useContext<{
@@ -45,46 +45,47 @@ export const AlgorithmResultComponent: FC = () => {
   return (
     <div>
       <Row>
-        <Col span={14}>
-          <img src={`${API_URL}${path_to_driftmap}`} alt="Drift map" className="image"/>
-        </Col>
         <Col span={10}>
+          <img
+            src={`${API_URL}${path_to_driftmap}`}
+            alt="Drift map"
+            className="image"
+          />
+        </Col>
+        <Col span={8}>
           <img
             className="image"
             src={`${API_URL}${paths_to_drift_plots[algorithmSliceIndex]}`}
             alt="drift plot"
           />
         </Col>
-      </Row>
-      <Row>
-        <Col span={4} offset={3}>
-          <Typography.Title level={3}>Erratic measure</Typography.Title>
-          <ErraticMeasureSlider
-            selected={algorithmSliceIndex}
-            data={erraticMeasureData}
-          />
-          <Typography.Title level={3}>Spread of constraints</Typography.Title>
-          <SpreadConstraintsSlider value={spread_constraints} />
-          <Typography.Title level={3}>{pValueText}</Typography.Title>
-        </Col>
-        {edfgs?.[algorithmSliceIndex] && (
-        // <Row>
-          <Col span={16}>
-            <img src={`${API_URL}${edfgs[algorithmSliceIndex]}`} alt="EDGF" className="image"/>
-          </Col>
-        // </Row>
-      )}
-        </Row>
-        <Row>
-        <Col span={4} offset={3}>
+        <Col span={5} offset={1}>
           <img
             src={`${API_URL}${autocorrelationPlots[algorithmSliceIndex]}`}
             alt="autocorrelation plots"
             className="image"
           />
+          <Typography.Text>Erratic measure</Typography.Text>
+          <ErraticMeasureSlider
+            selected={algorithmSliceIndex}
+            data={erraticMeasureData}
+          />
+          <Typography.Text>Spread of constraints</Typography.Text>
+          <SpreadConstraintsSlider value={spread_constraints} />
+          <Typography.Paragraph>{pValueText}</Typography.Paragraph>
         </Col>
       </Row>
-      
+      <Row>
+        {edfgs?.[algorithmSliceIndex] && (
+          <Col span={24}>
+            <img
+              src={`${API_URL}${edfgs[algorithmSliceIndex]}`}
+              alt="EDGF"
+              className="image"
+            />
+          </Col>
+        )}
+      </Row>
     </div>
   );
 };
