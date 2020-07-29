@@ -43,7 +43,7 @@ export const UploadComponent = () => {
     <div className="Upload-area">
       <Empty
         description={
-          <Typography.Title level={2}>TEXT TO START</Typography.Title>
+          <Typography.Title level={2}>TEXT TO START!</Typography.Title>
         }
         image={Empty.PRESENTED_IMAGE_SIMPLE}
       >
