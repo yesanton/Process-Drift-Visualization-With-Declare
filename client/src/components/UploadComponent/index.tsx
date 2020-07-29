@@ -43,12 +43,7 @@ export const UploadComponent = () => {
     <div className="Upload-area">
       <Empty
         description={
-          <Typography.Title level={2}>Process Drift Detection with Visual Analytics. 
-                                        Our technique supports the discovery of process drifts in the processes from 
-                                        event logs in several different visual representations!
-                                      
-                                        
-                                        </Typography.Title>
+          <Typography.Title level={2}>The technique that supports the discovery of process drifts!</Typography.Title>
         }
         image={Empty.PRESENTED_IMAGE_SIMPLE}
       >
