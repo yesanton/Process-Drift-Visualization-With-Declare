@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Visual drift detection",
+  "name": "Visual drift detection for sequence data analysis system",
   "icons": [
     {
       "src": "favicon.ico",
