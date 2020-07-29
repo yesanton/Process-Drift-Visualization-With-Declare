@@ -34,13 +34,11 @@ export const AlgorithmResultComponent: FC = () => {
     algorithmSliceIndex = 0,
   } = state;
 
-  console.log({ edfgs });
-
-  const pValue: number = stationarityTestResult[algorithmSliceIndex]?.[2];
+  const pValue: number = +stationarityTestResult[algorithmSliceIndex]?.[2];
   const pValueText: string =
     pValue > 0.05
-      ? `Incremental drift present, p = ${pValue}`
-      : `No incremental drift, p = ${pValue}`;
+      ? `Incremental drift present, p = ${pValue.toFixed(4)}`
+      : `No incremental drift, p = ${pValue.toFixed(4)}`;
 
   return (
     <div>

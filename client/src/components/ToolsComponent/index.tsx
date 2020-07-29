@@ -1,4 +1,4 @@
-import React, { FC, useContext, useState } from "react";
+import React, { FC, useContext, useState, useEffect } from "react";
 import {
   Slider,
   Col,
@@ -84,6 +84,7 @@ export const ToolsComponent: FC = () => {
             autocorrelationPlots,
           },
         });
+        toggleSider(true);
       } catch (error) {
         console.error(error);
       } finally {
@@ -285,6 +286,8 @@ export const ToolsComponent: FC = () => {
         <Row>
           <Col span={24}>
             <Button
+              type="primary"
+              disabled={loading}
               loading={loading}
               onClick={onStartAlgorithm}
               style={{ margin: "20px 0" }}

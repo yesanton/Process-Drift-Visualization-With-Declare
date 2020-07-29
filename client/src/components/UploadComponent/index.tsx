@@ -5,6 +5,7 @@ import { UploadOutlined } from "@ant-design/icons";
 import { uploadFile } from "../../apiService";
 import { AppContext, SET_SESSION_ACTION } from "../../context/appContext";
 import "./Upload.css";
+import empty from './empty.jpeg'
 
 export const UploadComponent = () => {
   const { dispatch, state } = useContext(AppContext);
@@ -45,10 +46,10 @@ export const UploadComponent = () => {
         description={
           <Typography.Title level={2}>The technique that supports the discovery of process drifts!</Typography.Title>
         }
-        image={Empty.PRESENTED_IMAGE_SIMPLE}
+        image={empty}
       >
         <Upload accept=".xes" name="file" customRequest={handleSubmitForm}>
-          <Button loading={loading} size="large">
+          <Button loading={loading} size="large" type="primary" disabled={loading}>
             <UploadOutlined /> Click to upload a <b> .xes </b> file
           </Button>
         </Upload>
