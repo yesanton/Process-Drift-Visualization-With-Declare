@@ -40,6 +40,7 @@ export type TAppContextState = {
   };
   algorithmResult?: TAlgorithmResult;
   algorithmSliceIndex?: number;
+  algorithmLoading?: boolean;
 };
 
 type TAlgorithmResult = {
@@ -67,6 +68,7 @@ export const UPDATE_SESSION_ACTION = "UPDATE_SESSION_ACTION";
 export const UPDATE_DEFINED_PARAM_ACTION = "UPDATE_DEFINED_PARAM_ACTION";
 export const SET_ALGORITHM_RESULT = "SET_ALGORITHM_RESULT";
 export const SET_ALGORITHM_SLICE_INDEX = "SET_ALGORITHM_SLICE_INDEX";
+export const SET_ALGORITHM_LOADING = 'SET_ALGORITHM_LOADING';
 
 const reducer = (
   state: TAppContextState,
@@ -102,6 +104,13 @@ const reducer = (
       return {
         ...state,
         algorithmSliceIndex: action.payload.index as number,
+      }
+    }
+
+    case SET_ALGORITHM_LOADING: {
+      return {
+        ...state,
+        algorithmLoading: action.payload.loading,
       }
     }
 

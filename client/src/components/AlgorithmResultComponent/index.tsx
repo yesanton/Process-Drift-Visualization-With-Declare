@@ -7,6 +7,7 @@ import {
   TAppContextState,
   TDispatchType,
 } from "../../context/appContext";
+import { EmptyComponent } from "../Empty";
 
 import { ErraticMeasureSlider } from "./ErraticMeasureSlider";
 import { SpreadConstraintsSlider } from "./SpreadConstraintsSlider";
@@ -17,8 +18,17 @@ export const AlgorithmResultComponent: FC = () => {
     state: TAppContextState;
     dispatch: TDispatchType;
   }>(AppContext);
-  if (!state.algorithmResult?.path_to_driftmap) {
-    return null;
+  if (!state.algorithmResult) {
+    return (
+      <EmptyComponent
+        loading={state.algorithmLoading}
+        description={
+          <Typography.Title level={4}>
+            Start algorithm to see result!
+          </Typography.Title>
+        }
+      />
+    );
   }
 
   const {
