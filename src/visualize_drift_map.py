@@ -36,7 +36,7 @@ def draw_drift_map_with_clusters(data, fileMngm, algoPrmts, ts = None, y_lines =
     # draw horizontal lines
     lines = [y_lines] * (len(data_c[0])+1)
     dataT = pd.DataFrame(lines)
-    asx = sns.lineplot(data=dataT,legend=False, palette=['white'] * len(y_lines), dashes = [(2, 2)] * len(y_lines), linewidth=1) #, dashes=[(2, 2), (2, 2)]
+    ax = sns.lineplot(data=dataT,legend=False, palette=['white'] * len(y_lines), dashes = [(2, 2)] * len(y_lines), linewidth=1) #, dashes=[(2, 2), (2, 2)]
 
     # here is the same but faster
     if x_lines_all:
@@ -53,3 +53,6 @@ def draw_drift_map_with_clusters(data, fileMngm, algoPrmts, ts = None, y_lines =
                     plt.plot([k,k],[from_ind, to_ind], linestyle='-.', color='white', linewidth=1)
    # ax.tight_layout()
     ax.get_figure().savefig(fileMngm.get_path_drift_map(), bbox_inches='tight')
+    plt.cla()
+    plt.clf()
+    plt.close()

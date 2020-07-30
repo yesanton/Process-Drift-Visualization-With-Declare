@@ -2,7 +2,7 @@
 
 Author: Anton Yeshchenko
 '''
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt2
 from scipy.interpolate import make_interp_spline, BSpline
 
 def draw_drift_plot_for_one_cluster(ts=None,
@@ -23,9 +23,9 @@ def draw_drift_plot_for_one_cluster(ts=None,
     xnew = range(0, len(averaged_line))
     spl = make_interp_spline(range(len(averaged_line)), averaged_line, k=2)  # BSpline object
     power_smooth = spl(xnew)
-    plt.clf()
+    plt2.clf()
 
-    plt.stackplot(xnew, power_smooth)  # , labels=['A', 'B', 'C']
+    plt2.stackplot(xnew, power_smooth)  # , labels=['A', 'B', 'C']
     if vertical:
         if len(vertical) > 1:
             vert = vertical[key]
@@ -36,12 +36,15 @@ def draw_drift_plot_for_one_cluster(ts=None,
                 print ("here is the problem!")
         vert = vert[:-1]
         for line in vert:
-            plt.axvline(x=line, color='black', dashes=(2, 2))
-    plt.xticks(xnew, ts, rotation='vertical')
-    plt.ylim(top=1)
+            plt2.axvline(x=line, color='black', dashes=(2, 2))
+    plt2.xticks(xnew, ts, rotation='vertical')
+    plt2.ylim(top=1)
 
     # export the image
-    plt.savefig(fileMngm.get_path_drift_plot(file_ind), bbox_inches='tight')
+    plt2.savefig(fileMngm.get_path_drift_plot(file_ind), bbox_inches='tight')
+    plt2.cla()
+    plt2.clf()
+    plt2.close()
     return power_smooth, xnew, averaged_line
 
 # This function draws Drift plots for each cluster and returns the Erratic measure of that cluster
@@ -56,11 +59,13 @@ def drawDriftPlotforAllClusters(ts = None, clusters_dict=None, cluster_order = N
 
     # Data
     x = range(0, len(lines_for_lineplot[0]))
-    plt.clf()
+    plt2.clf()
     # Plot
-    plt.stackplot(x, lines_for_lineplot)
-    plt.xticks(x, ts, rotation='vertical')
-    plt.legend(loc='upper left')
-    plt.show()
+    plt2.stackplot(x, lines_for_lineplot)
+    plt2.xticks(x, ts, rotation='vertical')
+    plt2.legend(loc='upper left')
+    plt2.show()
 
-
+    plt2.cla()
+    plt2.clf()
+    plt2.close()
