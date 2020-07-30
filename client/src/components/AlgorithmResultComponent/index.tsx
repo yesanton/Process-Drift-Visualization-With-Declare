@@ -7,6 +7,7 @@ import {
   TAppContextState,
   TDispatchType,
 } from "../../context/appContext";
+import { EmptyComponent } from "../Empty";
 
 import { ErraticMeasureSlider } from "./ErraticMeasureSlider";
 import { SpreadConstraintsSlider } from "./SpreadConstraintsSlider";
@@ -17,8 +18,17 @@ export const AlgorithmResultComponent: FC = () => {
     state: TAppContextState;
     dispatch: TDispatchType;
   }>(AppContext);
-  if (!state.algorithmResult?.path_to_driftmap) {
-    return null;
+  if (state.algorithmLoading || !state.algorithmResult) {
+    return (
+      <EmptyComponent
+        loading={state.algorithmLoading}
+        description={
+          <Typography.Title level={4}>
+            {state.algorithmLoading ? 'Algorithm loading...' : 'Start algorithm to see result!'}
+          </Typography.Title>
+        }
+      />
+    );
   }
 
   const {
@@ -34,13 +44,11 @@ export const AlgorithmResultComponent: FC = () => {
     algorithmSliceIndex = 0,
   } = state;
 
-  console.log({ edfgs });
-
-  const pValue: number = stationarityTestResult[algorithmSliceIndex]?.[2];
+  const pValue: number = +stationarityTestResult[algorithmSliceIndex]?.[2];
   const pValueText: string =
     pValue > 0.05
-      ? `Incremental drift present, p = ${pValue}`
-      : `No incremental drift, p = ${pValue}`;
+      ? `Incremental drift present, p = ${pValue.toFixed(4)}`
+      : `No incremental drift, p = ${pValue.toFixed(4)}`;
 
   return (
     <div>

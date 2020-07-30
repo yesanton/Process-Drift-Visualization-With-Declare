@@ -1,4 +1,4 @@
-import React, { FC, useContext, useState } from "react";
+import React, { FC, useContext, useState, useEffect } from "react";
 import {
   Slider,
   Col,
@@ -18,6 +18,8 @@ import {
   AppContext,
   UPDATE_DEFINED_PARAM_ACTION,
   SET_ALGORITHM_RESULT,
+  SET_ALGORITHM_LOADING,
+  RESET_ALGORITHM_RESULT,
 } from "../../context/appContext";
 
 import {
@@ -62,6 +64,8 @@ export const ToolsComponent: FC = () => {
   const onStartAlgorithm = async () => {
     if (state.session_id) {
       setLoading(true);
+      dispatch({ type: SET_ALGORITHM_LOADING, payload: { loading: true } });
+      dispatch({ type: RESET_ALGORITHM_RESULT });
       try {
         const params = { logName: state.session_id, ...state.defined };
         const algorithmResult = await makeDriftMap(params);
@@ -84,10 +88,12 @@ export const ToolsComponent: FC = () => {
             autocorrelationPlots,
           },
         });
+        toggleSider(true);
       } catch (error) {
         console.error(error);
       } finally {
         setLoading(false);
+        dispatch({ type: SET_ALGORITHM_LOADING, payload: { loading: false } });
       }
     }
   };
@@ -100,7 +106,9 @@ export const ToolsComponent: FC = () => {
       width={350}
       className="App-sider"
     >
-      {collapsed && <SettingTwoTone style={{width: '50px', height: '50px'}}/>}
+      {collapsed && (
+        <SettingTwoTone style={{ width: "50px", height: "50px" }} />
+      )}
       <div
         style={{
           opacity: collapsed ? 0 : 1,
@@ -285,6 +293,8 @@ export const ToolsComponent: FC = () => {
         <Row>
           <Col span={24}>
             <Button
+              type="primary"
+              disabled={loading}
               loading={loading}
               onClick={onStartAlgorithm}
               style={{ margin: "20px 0" }}

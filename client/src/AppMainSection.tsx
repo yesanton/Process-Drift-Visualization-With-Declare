@@ -17,17 +17,12 @@ export const AppMainSection = () => (
           return <UploadComponent />;
         }
 
-        // if (!state.algorithmResult) {
-        //   return <ToolsComponent />
-        // }
-
-
         return (
           <Layout>
             <ToolsComponent />
-            {state.algorithmResult && <Layout.Content>
+            <Layout.Content>
               <AlgorithmResultComponent />
-            </Layout.Content>}
+            </Layout.Content>
           </Layout>
         );
       }}
