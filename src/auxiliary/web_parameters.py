@@ -50,7 +50,7 @@ def get_http_parameters(args):
 
     # set this optional parameter if the constrains shouldn\'t be sorted inside of clusters
     noSort = args.get('noSort')
-    if not driftAll:
+    if not noSort:
         noSort = False
     else:
         noSort = True
