@@ -95,6 +95,10 @@ def do_cluster_changePoint(data_uncut, algoPrmts):
     order_cluster = sorted(order_cluster, key=lambda x : -x[1])
     order_cluster = [key for key, _ in order_cluster]
 
+    if algoPrmts.no_sort_in_clusters:
+       print(">>> clusters will not be sorted")
+
+
     for key in order_cluster:
         # preprocess the clusters for plotting better (sorting them by similarity)
         if not algoPrmts.no_sort_in_clusters:

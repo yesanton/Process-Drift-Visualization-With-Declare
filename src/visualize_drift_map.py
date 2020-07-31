@@ -52,6 +52,7 @@ def draw_drift_map_with_clusters(data, fileMngm, algoPrmts, ts = None, y_lines =
                 for k in x_lines_all[i]:
                     plt.plot([k,k],[from_ind, to_ind], linestyle='-.', color='white', linewidth=1)
    # ax.tight_layout()
+    print (' >>> saving the drift map')
     ax.get_figure().savefig(fileMngm.get_path_drift_map(), bbox_inches='tight')
     plt.cla()
     plt.clf()
