@@ -1,0 +1,290 @@
+"use strict";
+
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _react = _interopRequireDefault(require("react"));
+
+var _miniStore = require("mini-store");
+
+var _SubPopupMenu = _interopRequireWildcard(require("./SubPopupMenu"));
+
+var _util = require("./util");
+
+var _legacyUtil = require("./utils/legacyUtil");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var Menu =
+/** @class */
+function () {
+  var Menu = /*#__PURE__*/function (_React$Component) {
+    (0, _inherits2.default)(Menu, _React$Component);
+
+    var _super = _createSuper(Menu);
+
+    function Menu(props) {
+      var _this;
+
+      (0, _classCallCheck2.default)(this, Menu);
+      _this = _super.call(this, props);
+
+      _this.onSelect = function (selectInfo) {
+        var _assertThisInitialize = (0, _assertThisInitialized2.default)(_this),
+            props = _assertThisInitialize.props;
+
+        if (props.selectable) {
+          // root menu
+          var _this$store$getState = _this.store.getState(),
+              _selectedKeys = _this$store$getState.selectedKeys;
+
+          var selectedKey = selectInfo.key;
+
+          if (props.multiple) {
+            _selectedKeys = _selectedKeys.concat([selectedKey]);
+          } else {
+            _selectedKeys = [selectedKey];
+          }
+
+          if (!('selectedKeys' in props)) {
+            _this.store.setState({
+              selectedKeys: _selectedKeys
+            });
+          }
+
+          props.onSelect(_objectSpread(_objectSpread({}, selectInfo), {}, {
+            selectedKeys: _selectedKeys
+          }));
+        }
+      };
+
+      _this.onClick = function (e) {
+        _this.props.onClick(e);
+      }; // onKeyDown needs to be exposed as a instance method
+      // e.g., in rc-select, we need to navigate menu item while
+      // current active item is rc-select input box rather than the menu itself
+
+
+      _this.onKeyDown = function (e, callback) {
+        _this.innerMenu.getWrappedInstance().onKeyDown(e, callback);
+      };
+
+      _this.onOpenChange = function (event) {
+        var _assertThisInitialize2 = (0, _assertThisInitialized2.default)(_this),
+            props = _assertThisInitialize2.props;
+
+        var openKeys = _this.store.getState().openKeys.concat();
+
+        var changed = false;
+
+        var processSingle = function processSingle(e) {
+          var oneChanged = false;
+
+          if (e.open) {
+            oneChanged = openKeys.indexOf(e.key) === -1;
+
+            if (oneChanged) {
+              openKeys.push(e.key);
+            }
+          } else {
+            var index = openKeys.indexOf(e.key);
+            oneChanged = index !== -1;
+
+            if (oneChanged) {
+              openKeys.splice(index, 1);
+            }
+          }
+
+          changed = changed || oneChanged;
+        };
+
+        if (Array.isArray(event)) {
+          // batch change call
+          event.forEach(processSingle);
+        } else {
+          processSingle(event);
+        }
+
+        if (changed) {
+          if (!('openKeys' in _this.props)) {
+            _this.store.setState({
+              openKeys: openKeys
+            });
+          }
+
+          props.onOpenChange(openKeys);
+        }
+      };
+
+      _this.onDeselect = function (selectInfo) {
+        var _assertThisInitialize3 = (0, _assertThisInitialized2.default)(_this),
+            props = _assertThisInitialize3.props;
+
+        if (props.selectable) {
+          var _selectedKeys2 = _this.store.getState().selectedKeys.concat();
+
+          var selectedKey = selectInfo.key;
+
+          var index = _selectedKeys2.indexOf(selectedKey);
+
+          if (index !== -1) {
+            _selectedKeys2.splice(index, 1);
+          }
+
+          if (!('selectedKeys' in props)) {
+            _this.store.setState({
+              selectedKeys: _selectedKeys2
+            });
+          }
+
+          props.onDeselect(_objectSpread(_objectSpread({}, selectInfo), {}, {
+            selectedKeys: _selectedKeys2
+          }));
+        }
+      };
+
+      _this.getOpenTransitionName = function () {
+        var _assertThisInitialize4 = (0, _assertThisInitialized2.default)(_this),
+            props = _assertThisInitialize4.props;
+
+        var transitionName = props.openTransitionName;
+        var animationName = props.openAnimation;
+
+        if (!transitionName && typeof animationName === 'string') {
+          transitionName = "".concat(props.prefixCls, "-open-").concat(animationName);
+        }
+
+        return transitionName;
+      };
+
+      _this.setInnerMenu = function (node) {
+        _this.innerMenu = node;
+      };
+
+      _this.isRootMenu = true;
+      var selectedKeys = props.defaultSelectedKeys;
+      var openKeys = props.defaultOpenKeys;
+
+      if ('selectedKeys' in props) {
+        selectedKeys = props.selectedKeys || [];
+      }
+
+      if ('openKeys' in props) {
+        openKeys = props.openKeys || [];
+      }
+
+      _this.store = (0, _miniStore.create)({
+        selectedKeys: selectedKeys,
+        openKeys: openKeys,
+        activeKey: {
+          '0-menu-': (0, _SubPopupMenu.getActiveKey)(props, props.activeKey)
+        }
+      });
+      return _this;
+    }
+
+    (0, _createClass2.default)(Menu, [{
+      key: "componentDidMount",
+      value: function componentDidMount() {
+        this.updateMiniStore();
+      }
+    }, {
+      key: "componentDidUpdate",
+      value: function componentDidUpdate() {
+        this.updateMiniStore();
+      }
+    }, {
+      key: "updateMiniStore",
+      value: function updateMiniStore() {
+        if ('selectedKeys' in this.props) {
+          this.store.setState({
+            selectedKeys: this.props.selectedKeys || []
+          });
+        }
+
+        if ('openKeys' in this.props) {
+          this.store.setState({
+            openKeys: this.props.openKeys || []
+          });
+        }
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        var props = _objectSpread({}, this.props);
+
+        props.className += " ".concat(props.prefixCls, "-root");
+
+        if (props.direction === 'rtl') {
+          props.className += " ".concat(props.prefixCls, "-rtl");
+        }
+
+        props = _objectSpread(_objectSpread({}, props), {}, {
+          onClick: this.onClick,
+          onOpenChange: this.onOpenChange,
+          onDeselect: this.onDeselect,
+          onSelect: this.onSelect,
+          parentMenu: this,
+          motion: (0, _legacyUtil.getMotion)(this.props)
+        });
+        delete props.openAnimation;
+        delete props.openTransitionName;
+        return _react.default.createElement(_miniStore.Provider, {
+          store: this.store
+        }, _react.default.createElement(_SubPopupMenu.default, Object.assign({}, props, {
+          ref: this.setInnerMenu
+        }), this.props.children));
+      }
+    }]);
+    return Menu;
+  }(_react.default.Component);
+
+  Menu.defaultProps = {
+    selectable: true,
+    onClick: _util.noop,
+    onSelect: _util.noop,
+    onOpenChange: _util.noop,
+    onDeselect: _util.noop,
+    defaultSelectedKeys: [],
+    defaultOpenKeys: [],
+    subMenuOpenDelay: 0.1,
+    subMenuCloseDelay: 0.1,
+    triggerSubMenuAction: 'hover',
+    prefixCls: 'rc-menu',
+    className: '',
+    mode: 'vertical',
+    style: {},
+    builtinPlacements: {},
+    overflowedIndicator: _react.default.createElement("span", null, "\xB7\xB7\xB7")
+  };
+  return Menu;
+}();
+
+var _default = Menu;
+exports.default = _default;
