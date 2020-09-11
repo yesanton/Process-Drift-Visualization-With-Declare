@@ -113,6 +113,7 @@ def get_possible_args(session, fp):
     # print(fp)
 
     log = import_xes(fp)
+    # print(fp)
     number_of_cases = len(log)
     sliBy_default = int(number_of_cases / 61)
     subL_default = int(sliBy_default * 2)

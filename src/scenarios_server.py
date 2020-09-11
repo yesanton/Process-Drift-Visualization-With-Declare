@@ -11,6 +11,11 @@ examples to run:
 -logName bpic_2011_hospital -subL 100 -sliBy 50 -cluCut 1200
 -logName bastian -subL 100 -sliBy 50 -cluCut 1200
 Author:  Anton Yeshchenko
+
+to run it locally use these:
+    $ export FLASK_APP=scenarios_server.py
+    $ export FLASK_ENV=development
+    $ flask run
 '''
 import json
 from statistics import mean
@@ -283,12 +288,12 @@ def upload_event_log():
 
             #get recommended parameteres
             _, algoPrmts = get_http_parameters(request.args)
-            fm = FilesManagement(new_file_name, algoPrmts)
+            fm = FilesManagement(secure_filename(new_file_name), algoPrmts)
             d = fm.get_path_input_xes()
-
+            # print (' d : ' + str(d))
 
             # return flask.jsonify(session_id=new_file_name)
-            return get_possible_args(new_file_name, d)
+            return get_possible_args(secure_filename(new_file_name), d)
         else:
             # The HTTP 415 Unsupported Media Type client error response code indicates that the server refuses
             # to accept the request because the payload format is in an unsupported format.

@@ -20,7 +20,7 @@ def import_xes(fileMngm):
     else:
         file_path = Path(fileMngm)
 
-
+    print (file_path)
     if not file_path.is_file():
         return None
     return xes_import_factory.apply(str(file_path))
