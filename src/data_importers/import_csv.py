@@ -100,3 +100,18 @@ def import_constraints_to_dictionary(file_name):
             store_constraints[constr[0]].add((constr[1], constr[2]))
 
     return store_constraints
+
+
+def import_erratic_measures(file_name):
+    csvfile = open(file_name, 'r')
+    reader = csv.reader(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+    next(reader, None)
+    erratic = []
+
+    for row in reader:
+        err = float(row[2])
+        print (err)
+        erratic.append(err)
+
+
+    return erratic
