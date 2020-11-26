@@ -10,6 +10,8 @@ Our library supports standard process mining logs (xes format).
 
 ### Watch a [youtube video explaining this method here](https://youtu.be/_AZpI_YTjO8)
 
+### Visualization system is available [at the address](https://yesanton.github.io/driftvis)
+
 ## How to run
 
 In order to run the tool, one runs the script that composes the version of the app you need. The example is to run the 
