@@ -7,6 +7,8 @@
 #git clone https://github.com/yesanton/Process-Drift-Visualization-With-Declare.git
 #cd Process-Drift-Visualization-With-Declare/
 
+
+# install python and required libs
 apt-get install software-properties-common
 add-apt-repository ppa:deadsnakes/ppa
 apt-get update
@@ -20,6 +22,8 @@ pip3 install matplotlib
 pip3 install seaborn
 pip3 install pm4py
 
+#install java version 10
+apt install wget
 wget https://download.java.net/java/GA/jdk10/10.0.2/19aef61b38124481863b1413dce1855f/13/openjdk-10.0.2_linux-x64_bin.tar.gz
 tar -xvf openjdk-10.0.2_linux-x64_bin.tar.gz
 mkdir -p /usr/lib/jdk
