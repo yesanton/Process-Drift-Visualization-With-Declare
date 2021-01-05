@@ -4,7 +4,7 @@ def import_xes_and_sort_timestamp(fileMngm):
     full_path_file = fileMngm.get_path_input_xes()
 
     if not full_path_file.is_file():
-        raise FileNotFoundError('File is now found at ' + str(full_path_file))
+        raise FileNotFoundError('File is not found at ' + str(full_path_file))
 
     parameters = {"timestamp_sort": True}
     return xes_import_factory.apply(str(full_path_file), parameters=parameters)
