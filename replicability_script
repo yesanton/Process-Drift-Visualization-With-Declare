@@ -4,7 +4,7 @@
 
 apt update
 apt install -y git
-https://github.com/yesanton/Process-Drift-Visualization-With-Declare.git
+git clone https://github.com/yesanton/Process-Drift-Visualization-With-Declare.git
 cd Process-Drift-Visualization-With-Declare/
 
 apt-get install software-properties-common
