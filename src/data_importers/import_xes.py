@@ -1,4 +1,4 @@
-from pm4py.objects.log.importer.xes import factory as xes_import_factory
+from pm4py.objects.log.importer.xes import importer as xes_import_factory
 
 def import_xes_and_sort_timestamp(fileMngm):
     full_path_file = fileMngm.get_path_input_xes()
