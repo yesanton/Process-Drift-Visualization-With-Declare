@@ -36,6 +36,6 @@ def prune_constraints_minerful(fileMngm, file_ind):
                      "-oCSV", str(fileMngm.get_path_drift_plot_all_timeseries_pruned(file_ind)),
                      "-prune", "hierarchy"], env=env, # or "hierarchyconflictredundancy", or the
                                                       # most accurate "hierarchyconflictredundancydouble"
-                    cwd="minerful_scripts")
+                    cwd="src/minerful_scripts")
 
 
