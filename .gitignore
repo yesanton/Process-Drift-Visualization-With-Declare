@@ -1,7 +1,6 @@
 .idea/*
 __pycache__/*
 data/data_from_minerful/*
-data/data_input_/*
 data/data_intermediate/*
 data/data_results_final/*
 data/*
