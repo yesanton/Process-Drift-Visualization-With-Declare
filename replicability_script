@@ -1,0 +1,4 @@
+#!/bin/bash
+# rsync script
+
+python3 src/scenario_1.py -logName italian_help_desk -subL 100 -sliBy 50 
