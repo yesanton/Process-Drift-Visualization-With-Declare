@@ -1,11 +1,11 @@
 #!/bin/bash
-# after cloning the repo, run this script to get first results
 # tested to work on the clean ubuntu instalation 
 
-apt update
-apt install -y git
-git clone https://github.com/yesanton/Process-Drift-Visualization-With-Declare.git
-cd Process-Drift-Visualization-With-Declare/
+# uncomment out next 4 lines if you need git and clone 
+#apt update
+#apt install -y git
+#git clone https://github.com/yesanton/Process-Drift-Visualization-With-Declare.git
+#cd Process-Drift-Visualization-With-Declare/
 
 apt-get install software-properties-common
 add-apt-repository ppa:deadsnakes/ppa
