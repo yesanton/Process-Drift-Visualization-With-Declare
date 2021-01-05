@@ -12,4 +12,4 @@ to push to the docker hub use
 2. docker images (to see the image name)
 3. docker tag f3e7607440a2 yesanton/processdrift:backend
 4. docker push yesanton/processdrift:backend
-5. manually or automatically restar t the server 
+5. manually or automatically restart the server 

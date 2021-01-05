@@ -64,7 +64,6 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 def run_scenario1():
     # post_id = request.args.get('id')
     # return post_id
-
     # this is for working with command line
     # fileMngm, algoPrmts = get_commandline_parameters()
 
