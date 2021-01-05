@@ -14,7 +14,6 @@ add-apt-repository ppa:deadsnakes/ppa
 apt-get update
 apt-get install python3.8
 
-export PYTHONPATH="$PWD"
 apt install python3-pip
 pip3 install sklearn
 pip3 install ruptures
@@ -33,4 +32,6 @@ update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jdk/jdk-10.0.2/bi
 update-alternatives --config java
 update-alternatives --config javac
 
+
+export PYTHONPATH="$PWD"
 python3 src/scenario_1.py -logName italian_help_desk -subL 100 -sliBy 50 
