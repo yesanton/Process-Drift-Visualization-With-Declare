@@ -22,7 +22,7 @@ def mine_minerful_for_declare_constraints(fileMngm,algoPrmts):
                     '-sliOut',
                     file_output],
                     env=env,
-                    cwd="minerful_scripts")
+                    cwd="src/minerful_scripts")
 
 def prune_constraints_minerful(fileMngm, file_ind):
     # Make a copy of the environment
